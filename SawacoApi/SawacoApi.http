@@ -1,0 +1,6 @@
+@SawacoApi_HostAddress = http://localhost:5115
+
+GET {{SawacoApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

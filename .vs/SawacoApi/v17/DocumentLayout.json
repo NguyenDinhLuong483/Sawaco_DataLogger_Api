@@ -1,0 +1,199 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Project\\ASP.NET Core\\SawacoApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|d:\\project\\asp.net core\\sawacoapi\\sawacoapi\\controllers\\identitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|solutionrelative:sawacoapi\\controllers\\identitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|d:\\project\\asp.net core\\sawacoapi\\sawacoapi\\domain\\services\\iidentityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|solutionrelative:sawacoapi\\domain\\services\\iidentityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|d:\\project\\asp.net core\\sawacoapi\\sawacoapi\\services\\identityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|solutionrelative:sawacoapi\\services\\identityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|d:\\project\\asp.net core\\sawacoapi\\sawacoapi\\domain\\persistances\\repositories\\identityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|solutionrelative:sawacoapi\\domain\\persistances\\repositories\\identityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|d:\\project\\asp.net core\\sawacoapi\\sawacoapi\\domain\\repositories\\iidentityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|solutionrelative:sawacoapi\\domain\\repositories\\iidentityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|d:\\project\\asp.net core\\sawacoapi\\sawacoapi\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|solutionrelative:sawacoapi\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|d:\\project\\asp.net core\\sawacoapi\\sawacoapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|solutionrelative:sawacoapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|d:\\project\\asp.net core\\sawacoapi\\sawacoapi\\mqttclients\\managedmqttclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|solutionrelative:sawacoapi\\mqttclients\\managedmqttclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|d:\\project\\asp.net core\\sawacoapi\\sawacoapi\\mqttclients\\tagchangednotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|solutionrelative:sawacoapi\\mqttclients\\tagchangednotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|d:\\project\\asp.net core\\sawacoapi\\sawacoapi\\hubs\\scadahost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|solutionrelative:sawacoapi\\hubs\\scadahost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Program.cs",
+              "RelativeDocumentMoniker": "SawacoApi\\Program.cs",
+              "ToolTip": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Program.cs",
+              "RelativeToolTip": "SawacoApi\\Program.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAEQAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-16T02:36:29.835Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IdentityRepository.cs",
+              "DocumentMoniker": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Domain\\Persistances\\Repositories\\IdentityRepository.cs",
+              "RelativeDocumentMoniker": "SawacoApi\\Domain\\Persistances\\Repositories\\IdentityRepository.cs",
+              "ToolTip": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Domain\\Persistances\\Repositories\\IdentityRepository.cs",
+              "RelativeToolTip": "SawacoApi\\Domain\\Persistances\\Repositories\\IdentityRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T02:43:38.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IIdentityRepository.cs",
+              "DocumentMoniker": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Domain\\Repositories\\IIdentityRepository.cs",
+              "RelativeDocumentMoniker": "SawacoApi\\Domain\\Repositories\\IIdentityRepository.cs",
+              "ToolTip": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Domain\\Repositories\\IIdentityRepository.cs",
+              "RelativeToolTip": "SawacoApi\\Domain\\Repositories\\IIdentityRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T02:42:46.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IdentityService.cs",
+              "DocumentMoniker": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Services\\IdentityService.cs",
+              "RelativeDocumentMoniker": "SawacoApi\\Services\\IdentityService.cs",
+              "ToolTip": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Services\\IdentityService.cs",
+              "RelativeToolTip": "SawacoApi\\Services\\IdentityService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T02:34:13.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IIdentityService.cs",
+              "DocumentMoniker": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Domain\\Services\\IIdentityService.cs",
+              "RelativeDocumentMoniker": "SawacoApi\\Domain\\Services\\IIdentityService.cs",
+              "ToolTip": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Domain\\Services\\IIdentityService.cs",
+              "RelativeToolTip": "SawacoApi\\Domain\\Services\\IIdentityService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T02:34:45.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IdentityController.cs",
+              "DocumentMoniker": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Controllers\\IdentityController.cs",
+              "RelativeDocumentMoniker": "SawacoApi\\Controllers\\IdentityController.cs",
+              "ToolTip": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Controllers\\IdentityController.cs",
+              "RelativeToolTip": "SawacoApi\\Controllers\\IdentityController.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAuwBUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T02:13:46.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NotificationHub.cs",
+              "DocumentMoniker": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Hubs\\NotificationHub.cs",
+              "RelativeDocumentMoniker": "SawacoApi\\Hubs\\NotificationHub.cs",
+              "ToolTip": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Hubs\\NotificationHub.cs",
+              "RelativeToolTip": "SawacoApi\\Hubs\\NotificationHub.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T04:39:56.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TagChangedNotification.cs",
+              "DocumentMoniker": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\MQTTClients\\TagChangedNotification.cs",
+              "RelativeDocumentMoniker": "SawacoApi\\MQTTClients\\TagChangedNotification.cs",
+              "ToolTip": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\MQTTClients\\TagChangedNotification.cs",
+              "RelativeToolTip": "SawacoApi\\MQTTClients\\TagChangedNotification.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T02:09:19.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ManagedMqttClient.cs",
+              "DocumentMoniker": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\MQTTClients\\ManagedMqttClient.cs",
+              "RelativeDocumentMoniker": "SawacoApi\\MQTTClients\\ManagedMqttClient.cs",
+              "ToolTip": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\MQTTClients\\ManagedMqttClient.cs",
+              "RelativeToolTip": "SawacoApi\\MQTTClients\\ManagedMqttClient.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAvwBgAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T03:34:22.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ScadaHost.cs",
+              "DocumentMoniker": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Hubs\\ScadaHost.cs",
+              "RelativeDocumentMoniker": "SawacoApi\\Hubs\\ScadaHost.cs",
+              "ToolTip": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Hubs\\ScadaHost.cs",
+              "RelativeToolTip": "SawacoApi\\Hubs\\ScadaHost.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAABBwCoAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T03:09:18.249Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
