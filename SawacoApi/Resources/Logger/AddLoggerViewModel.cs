@@ -19,6 +19,9 @@ namespace SawacoApi.Resources.Logger
         public int Battery { get; set; }
         [DataMember]
         [JsonIgnore]
+        public string Temperature {  get; set; }
+        [DataMember]
+        [JsonIgnore]
         public bool Stolen { get; set; }
         [DataMember]
         [JsonIgnore]
@@ -33,6 +36,7 @@ namespace SawacoApi.Resources.Logger
             Longtitude = longtitude;
             Latitude = latitude;
             Name = name;
+            Temperature = "30";
             Battery = 100;
             Stolen = false;
             Bluetooth = "ON";

@@ -9,6 +9,7 @@ namespace SawacoApi.Domain.Models
         public double Latitude { get; set; }
         public string Name { get; set; }
         public int Battery {  get; set; }
+        public string Temperature {  get; set; }
         public bool Stolen {  get; set; }
         public string Bluetooth {  get; set; }
         public DateTime TimeStamp { get; set; }
@@ -20,25 +21,27 @@ namespace SawacoApi.Domain.Models
         {
         }
 
-        public Logger(string id, double longtitude, double latitude, string name, int battery, bool stolen, string bluetooth, DateTime timeStamp, List<StolenLine> stolenLines)
+        public Logger(string id, double longtitude, double latitude, string name, int battery, string temp, bool stolen, string bluetooth, DateTime timeStamp, List<StolenLine> stolenLines)
         {
             Id = id;
             Longtitude = longtitude;
             Latitude = latitude;
             Name = name;
             Battery = battery;
+            Temperature = temp;
             Stolen = stolen;
             Bluetooth = bluetooth;
             TimeStamp = timeStamp;
             StolenLines = stolenLines;
         }
 
-        public void Update(double longtitude, double latitude, string name, int battery, bool stolen, string bluetooth, DateTime timeStamp)
+        public void UpdateAll(double longtitude, double latitude, string name, int battery,string temp, bool stolen, string bluetooth, DateTime timeStamp)
         {
             Longtitude = longtitude;
             Latitude = latitude;
             Name = name;
             Battery = battery;
+            Temperature = temp;
             Stolen = stolen;
             Bluetooth = bluetooth;
             TimeStamp = timeStamp;

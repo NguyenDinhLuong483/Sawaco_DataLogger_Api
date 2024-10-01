@@ -14,6 +14,7 @@ namespace SawacoApi.Domain.Persistances.Context.Configurations
             builder.Property(x => x.Latitude).IsRequired();
             builder.Property(x => x.Name).HasMaxLength(256).IsRequired();
             builder.Property(x => x.Battery);
+            builder.Property(x => x.Temperature);
             builder.Property(x => x.Stolen);
             builder.Property(x => x.Bluetooth).HasMaxLength(10);
             builder.Property(x => x.TimeStamp);

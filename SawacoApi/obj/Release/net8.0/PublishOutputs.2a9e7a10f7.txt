@@ -15,6 +15,7 @@ D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Release\net8.0\PubTmp\Out\Micros
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Release\net8.0\PubTmp\Out\Microsoft.Data.SqlClient.dll
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Release\net8.0\PubTmp\Out\Microsoft.EntityFrameworkCore.dll
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Release\net8.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Release\net8.0\PubTmp\Out\Microsoft.EntityFrameworkCore.InMemory.dll
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Release\net8.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Relational.dll
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Release\net8.0\PubTmp\Out\Microsoft.EntityFrameworkCore.SqlServer.dll
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Release\net8.0\PubTmp\Out\Microsoft.Extensions.Identity.Core.dll
@@ -43,7 +44,6 @@ D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Release\net8.0\PubTmp\Out\System
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Release\net8.0\PubTmp\Out\System.Runtime.Caching.dll
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Release\net8.0\PubTmp\Out\System.Security.Cryptography.ProtectedData.dll
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Release\net8.0\PubTmp\Out\System.Security.Permissions.dll
-D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Release\net8.0\PubTmp\Out\System.Text.Json.dll
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Release\net8.0\PubTmp\Out\System.Windows.Extensions.dll
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Release\net8.0\PubTmp\Out\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Release\net8.0\PubTmp\Out\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll

@@ -6,6 +6,7 @@
         public string LoggerId {  get; set; }
         public double Longtitude {  get; set; }
         public double Latitude { get; set; }
+        public int Battery { get; set; }
         public DateTime TimeStamp { get; set; }
         public Logger Logger { get; set; }
 
@@ -15,12 +16,13 @@
         {
         }
 
-        public StolenLine(string loggerId, double longtitude, double latitude, DateTime timeStamp)
+        public StolenLine(string loggerId, double longtitude, double latitude, int battery, DateTime timeStamp)
         {
             LoggerId = loggerId;
             Longtitude = longtitude;
             Latitude = latitude;
             TimeStamp = timeStamp;
+            Battery = battery;
         }
     }
 }

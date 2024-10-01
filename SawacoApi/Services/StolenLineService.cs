@@ -23,15 +23,29 @@ namespace SawacoApi.Services
 
         public async Task<List<StolenLineViewModel>> GetByLoggerId(string loggerId)
         {
-            var source = await _stolenLineRepository.GerByLoggerIdAsync(loggerId) ?? throw new ResourceNotFoundException("Not found this logger!");
+            var source = await _stolenLineRepository.GetByLoggerIdAsync(loggerId) ?? throw new ResourceNotFoundException("Not found this logger!");
             var stolenLine = _mapper.Map<List<StolenLine>, List<StolenLineViewModel>>(source);  
+            return stolenLine;
+        }
+
+        public async Task<List<StolenLineViewModel>> GetByDate(string id, DateTime startDate, DateTime endDate)
+        {
+            var source = await _stolenLineRepository.GetByDateAsync(id, startDate, endDate) ?? throw new ResourceNotFoundException("Not found this logger!");
+            var stolenLine = _mapper.Map<List<StolenLine>, List<StolenLineViewModel>>(source);
             return stolenLine;
         }
 
         public async Task<bool> DeleteByLoggerId(string loggerId)
         {
-            var logger = await _stolenLineRepository.GerByLoggerIdAsync(loggerId) ?? throw new ResourceNotFoundException("Not found this logger!");
-            _stolenLineRepository.DeleteByLoggerIdAsync(logger);
+            var stolenLine = await _stolenLineRepository.GetByLoggerIdAsync(loggerId) ?? throw new ResourceNotFoundException("Not found this logger!");
+            _stolenLineRepository.DeleteAsync(stolenLine);
+            return await _unitOfWork.CompleteAsync();
+        }
+
+        public async Task<bool> DeleteByDate(string id, DateTime startDate, DateTime endDate)
+        {
+            var stolenLine = await _stolenLineRepository.GetByDateAsync(id, startDate, endDate) ?? throw new ResourceNotFoundException("Not found this logger!");
+            _stolenLineRepository.DeleteAsync(stolenLine);
             return await _unitOfWork.CompleteAsync();
         }
 

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="IIS Web Application Name" description="" value="site6741" tags="IisApp">
+  <parameter name="IIS Web Application Name" description="" value="sawacogps" tags="IisApp">
     <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\Project\\ASP\.NET\ Core\\SawacoApi\\SawacoApi\\obj\\Release\\net8\.0\\PubTmp\\Out\\$" />
   </parameter>
 </parameters>

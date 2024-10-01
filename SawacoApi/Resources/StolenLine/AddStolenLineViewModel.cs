@@ -1,4 +1,5 @@
 ﻿using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace SawacoApi.Resources.StolenLine
 {
@@ -12,14 +13,17 @@ namespace SawacoApi.Resources.StolenLine
         [DataMember]
         public double Latitude { get; set; }
         [DataMember]
-        public DateTime DateTime { get; set; }
+        public int Battery {  get; set; }
+        [DataMember]
+        public DateTime Timestamp { get; set; }
 
-        public AddStolenLineViewModel(string loggerId, double longtitude, double latitude, DateTime dateTime)
+        public AddStolenLineViewModel(string loggerId, double longtitude, double latitude, int battery, DateTime timestamp)
         {
             LoggerId = loggerId;
             Longtitude = longtitude;
             Latitude = latitude;
-            DateTime = dateTime;
+            Battery = battery;
+            Timestamp = timestamp;
         }
     }
 }

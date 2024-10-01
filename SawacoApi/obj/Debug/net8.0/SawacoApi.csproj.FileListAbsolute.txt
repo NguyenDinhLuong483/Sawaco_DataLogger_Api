@@ -57,7 +57,6 @@ D:\Project\ASP.NET Core\SawacoApi\SawacoApi\bin\Debug\net8.0\System.Memory.Data.
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\bin\Debug\net8.0\System.Runtime.Caching.dll
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\bin\Debug\net8.0\System.Security.Permissions.dll
-D:\Project\ASP.NET Core\SawacoApi\SawacoApi\bin\Debug\net8.0\System.Text.Json.dll
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\bin\Debug\net8.0\System.Windows.Extensions.dll
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
@@ -146,3 +145,4 @@ D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Debug\net8.0\SawacoApi.genruntim
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Debug\net8.0\ref\SawacoApi.dll
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\bin\Debug\net8.0\MQTTnet.dll
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
+D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Debug\net8.0\SawacoApi.sourcelink.json

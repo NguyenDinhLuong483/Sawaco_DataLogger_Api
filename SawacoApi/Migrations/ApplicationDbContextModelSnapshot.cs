@@ -50,12 +50,16 @@ namespace SawacoApi.Migrations
                     b.Property<bool>("Stolen")
                         .HasColumnType("bit");
 
+                    b.Property<string>("Temperature")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("TimeStamp")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Loggers", (string)null);
+                    b.ToTable("Loggers");
                 });
 
             modelBuilder.Entity("SawacoApi.Domain.Models.StolenLine", b =>
@@ -65,6 +69,9 @@ namespace SawacoApi.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Battery")
+                        .HasColumnType("int");
 
                     b.Property<double>("Latitude")
                         .HasColumnType("float");
@@ -83,7 +90,7 @@ namespace SawacoApi.Migrations
 
                     b.HasIndex("LoggerId");
 
-                    b.ToTable("StolenLines", (string)null);
+                    b.ToTable("StolenLines");
                 });
 
             modelBuilder.Entity("SawacoApi.Domain.Models.StolenLine", b =>

@@ -21,11 +21,23 @@ namespace SawacoApi.Controllers
         {
             return await _stolenLineService.GetByLoggerId(LoggerId);
         }
-        [HttpDelete]
-        [Route("DeleteStolenLineByLoggerId/LoggerId={LoggerId}")]
-        public async Task<IActionResult> DeleteStolenLineByLoggerId([FromRoute] string LoggerId)
+        [HttpGet]
+        [Route("GetStolenLineByDate/Id={id}")]
+        public async Task<List<StolenLineViewModel>> GetStolenLineByDate([FromRoute] string id, [FromQuery] DateTime startDate, [FromQuery] DateTime endDate)
         {
-            return new OkObjectResult(await _stolenLineService.DeleteByLoggerId(LoggerId));
+            return await _stolenLineService.GetByDate(id, startDate, endDate);
+        }
+        [HttpDelete]
+        [Route("DeleteStolenLineByLoggerId/LoggerId={loggerId}")]
+        public async Task<IActionResult> DeleteStolenLineByLoggerId([FromRoute] string loggerId)
+        {
+            return new OkObjectResult(await _stolenLineService.DeleteByLoggerId(loggerId));
+        }
+        [HttpDelete]
+        [Route("DeleteStolenLineByDate/LoggerId={loggerId}")]
+        public async Task<IActionResult> DeleteStolenLineByDate([FromRoute] string loggerId, [FromQuery] DateTime startDate, [FromQuery]DateTime endDate)
+        {
+            return new OkObjectResult(await _stolenLineService.DeleteByDate(loggerId, startDate, endDate));
         }
         [HttpPost]
         [Route("AddStolenLine")]
@@ -33,5 +45,6 @@ namespace SawacoApi.Controllers
         {
             return new OkObjectResult(await _stolenLineService.AddNewStolenLine(stolenLineViewModel));
         }
+
     }
 }

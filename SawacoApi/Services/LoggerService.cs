@@ -23,15 +23,15 @@ namespace SawacoApi.Services
         }
 
         public async Task<List<LoggerViewModel>> GetLogger()
-        { 
-            var source =  await _loggerRepository.GetAllLoggerAsync() ?? throw new ResourceNotFoundException();
+        {
+            var source = await _loggerRepository.GetAllLoggerAsync() ?? throw new ResourceNotFoundException();
             var viewmodel = _mapper.Map<List<Logger>, List<LoggerViewModel>>(source);
             return viewmodel;
         }
 
         public async Task<LoggerViewModel> GetLoggerById(string id)
         {
-            var source = await _loggerRepository.GetLoggerByIdAsync(id) ?? throw new ResourceNotFoundException();    
+            var source = await _loggerRepository.GetLoggerByIdAsync(id);    
             var viewmodel = _mapper.Map<LoggerViewModel>(source);
             return viewmodel;
         }
@@ -58,7 +58,7 @@ namespace SawacoApi.Services
         public async Task<bool> UpdateLoggerStatus(UpdateLoggerViewModel updateLogger, string loggerId)
         {
             var IsExist = await _loggerRepository.GetLoggerByIdAsync(loggerId) ?? throw new ResourceNotFoundException();
-            IsExist.Update(updateLogger.Longtitude, updateLogger.Latitude, updateLogger.Name,updateLogger.Battery, updateLogger.Stolen, updateLogger.Bluetooth,updateLogger.TimeStamp);
+            IsExist.UpdateAll(updateLogger.Longtitude, updateLogger.Latitude, updateLogger.Name, updateLogger.Battery, updateLogger.Temperature, updateLogger.Stolen, updateLogger.Bluetooth, updateLogger.TimeStamp);
             var update = _loggerRepository.UpdateLoggerAsync(IsExist);
             return await _unitOfWork.CompleteAsync();
         }

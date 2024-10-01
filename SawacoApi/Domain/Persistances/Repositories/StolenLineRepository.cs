@@ -11,11 +11,17 @@ namespace SawacoApi.Domain.Persistances.Repositories
         {
         }
 
-        public async Task<List<StolenLine>> GerByLoggerIdAsync(string loggerId)
+        public async Task<List<StolenLine>> GetByLoggerIdAsync(string loggerId)
         {
             return await _context.StolenLines.OrderBy(x => x.LoggerId == loggerId).ToListAsync();
         }
-        public bool DeleteByLoggerIdAsync(List<StolenLine> stolenLine)
+
+        public async Task<List<StolenLine>> GetByDateAsync(string id, DateTime startDate, DateTime endDate)
+        {
+            return await _context.StolenLines.Where(x => x.LoggerId == id && x.TimeStamp >= startDate && x.TimeStamp <= endDate).ToListAsync();
+        }
+
+        public bool DeleteAsync(List<StolenLine> stolenLine)
         {
             _context.StolenLines.RemoveRange(stolenLine);
             return true;
@@ -24,7 +30,7 @@ namespace SawacoApi.Domain.Persistances.Repositories
         public StolenLine AddStolenLine(StolenLine stolenLine)
         {
             return _context.StolenLines.Add(stolenLine).Entity;
-            
         }
+
     }
 }

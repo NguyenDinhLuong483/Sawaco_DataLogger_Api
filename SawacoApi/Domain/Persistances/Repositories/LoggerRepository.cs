@@ -43,7 +43,7 @@ namespace SawacoApi.Domain.Persistances.Repositories
 
         public bool UpdateLoggerAsync(Logger newlogger)
         {
-            _context.Loggers.Update(newlogger);
+            _context.Update(newlogger);
             return true;
         }
     }
