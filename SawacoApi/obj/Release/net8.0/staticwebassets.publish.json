@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "eYAFwc1xSqDrcPBJ61JL4RBhDKQPA1knrJYSqfNmyiU=",
-  "Source": "SawacoApi",
-  "BasePath": "_content/SawacoApi",
+  "Hash": "0izCC013lDoztWwZQfAhns/4mabZKCn49AINdZOsM58=",
+  "Source": "SawacoApi.API",
+  "BasePath": "_content/SawacoApi.API",
   "Mode": "Default",
   "ManifestType": "Publish",
   "ReferencedProjectsConfiguration": [],

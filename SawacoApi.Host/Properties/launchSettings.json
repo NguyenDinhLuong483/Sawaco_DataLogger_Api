@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "SawacoApi.Host": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

@@ -127,7 +127,6 @@ D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Release\net8.0\SawacoApi.Generat
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Release\net8.0\SawacoApi.AssemblyInfoInputs.cache
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Release\net8.0\SawacoApi.AssemblyInfo.cs
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Release\net8.0\SawacoApi.csproj.CoreCompileInputs.cache
-D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Release\net8.0\SawacoApi.MvcApplicationPartsAssemblyInfo.cs
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Release\net8.0\SawacoApi.MvcApplicationPartsAssemblyInfo.cache
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Release\net8.0\staticwebassets.build.json
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Release\net8.0\staticwebassets.development.json
@@ -146,3 +145,5 @@ D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Release\net8.0\ref\SawacoApi.dll
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\bin\Release\net8.0\MQTTnet.dll
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\bin\Release\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
 D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Release\net8.0\SawacoApi.sourcelink.json
+D:\Project\ASP.NET Core\SawacoApi\SawacoApi\bin\Release\net8.0\SawacoApi.Intrastructure.dll
+D:\Project\ASP.NET Core\SawacoApi\SawacoApi\bin\Release\net8.0\SawacoApi.Intrastructure.pdb

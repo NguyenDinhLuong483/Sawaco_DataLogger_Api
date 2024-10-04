@@ -3,28 +3,8 @@
   "WorkspaceRootPath": "D:\\Project\\ASP.NET Core\\SawacoApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|d:\\project\\asp.net core\\sawacoapi\\sawacoapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|solutionrelative:sawacoapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|d:\\project\\asp.net core\\sawacoapi\\sawacoapi\\hubs\\scadahost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|solutionrelative:sawacoapi\\hubs\\scadahost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|d:\\project\\asp.net core\\sawacoapi\\sawacoapi\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|solutionrelative:sawacoapi\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|d:\\project\\asp.net core\\sawacoapi\\sawacoapi\\services\\stolenlineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|solutionrelative:sawacoapi\\services\\stolenlineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|d:\\project\\asp.net core\\sawacoapi\\sawacoapi\\domain\\persistances\\repositories\\stolenlinerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|solutionrelative:sawacoapi\\domain\\persistances\\repositories\\stolenlinerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|d:\\project\\asp.net core\\sawacoapi\\sawacoapi\\services\\loggerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.csproj|solutionrelative:sawacoapi\\services\\loggerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.API.csproj|d:\\project\\asp.net core\\sawacoapi\\sawacoapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.API.csproj|solutionrelative:sawacoapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,49 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Program.cs",
-              "RelativeDocumentMoniker": "SawacoApi\\Program.cs",
-              "ToolTip": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Program.cs",
-              "RelativeToolTip": "SawacoApi\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T07:31:22.24Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ScadaHost.cs",
-              "DocumentMoniker": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Hubs\\ScadaHost.cs",
-              "RelativeDocumentMoniker": "SawacoApi\\Hubs\\ScadaHost.cs",
-              "ToolTip": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Hubs\\ScadaHost.cs",
-              "RelativeToolTip": "SawacoApi\\Hubs\\ScadaHost.cs",
-              "ViewState": "AQIAAFUAAAAAAAAAAAAAAE4AAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T03:36:51.299Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NotificationHub.cs",
-              "DocumentMoniker": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Hubs\\NotificationHub.cs",
-              "RelativeDocumentMoniker": "SawacoApi\\Hubs\\NotificationHub.cs",
-              "ToolTip": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Hubs\\NotificationHub.cs",
-              "RelativeToolTip": "SawacoApi\\Hubs\\NotificationHub.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T07:04:06.401Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -87,41 +26,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "StolenLineService.cs",
-              "DocumentMoniker": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Services\\StolenLineService.cs",
-              "RelativeDocumentMoniker": "SawacoApi\\Services\\StolenLineService.cs",
-              "ToolTip": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Services\\StolenLineService.cs",
-              "RelativeToolTip": "SawacoApi\\Services\\StolenLineService.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAADUAAABHAAAA",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Program.cs",
+              "RelativeDocumentMoniker": "SawacoApi\\Program.cs",
+              "ToolTip": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Program.cs",
+              "RelativeToolTip": "SawacoApi\\Program.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAAAsAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T06:30:30.104Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "StolenLineRepository.cs",
-              "DocumentMoniker": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Domain\\Persistances\\Repositories\\StolenLineRepository.cs",
-              "RelativeDocumentMoniker": "SawacoApi\\Domain\\Persistances\\Repositories\\StolenLineRepository.cs",
-              "ToolTip": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Domain\\Persistances\\Repositories\\StolenLineRepository.cs",
-              "RelativeToolTip": "SawacoApi\\Domain\\Persistances\\Repositories\\StolenLineRepository.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T06:30:48.446Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LoggerService.cs",
-              "DocumentMoniker": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Services\\LoggerService.cs",
-              "RelativeDocumentMoniker": "SawacoApi\\Services\\LoggerService.cs",
-              "ToolTip": "D:\\Project\\ASP.NET Core\\SawacoApi\\SawacoApi\\Services\\LoggerService.cs",
-              "RelativeToolTip": "SawacoApi\\Services\\LoggerService.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAAADwAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T10:45:52.67Z",
+              "WhenOpened": "2024-10-02T10:21:32.948Z",
               "EditorCaption": ""
             }
           ]

@@ -1,13 +1,3 @@
-using Microsoft.EntityFrameworkCore;
-using MQTTnet.Client;
-using SawacoApi.Domain.Persistances.Context;
-using SawacoApi.Domain.Persistances.Repositories;
-using SawacoApi.Domain.Repositories;
-using SawacoApi.Domain.Services;
-using SawacoApi.Hubs;
-using SawacoApi.Mapping;
-using SawacoApi.MQTTClients;
-using SawacoApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,7 +29,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddHostedService<ScadaHost>();
 builder.Services.Configure<MqttOptions>(builder.Configuration.GetSection("MqttOptions"));
 builder.Services.AddSingleton<ManagedMqttClient>();
-builder.Services.AddSingleton<SawacoApi.MQTTClients.Buffer>();
+builder.Services.AddSingleton<SawacoApi.Intrastructure.MQTTClients.Buffer>();
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<ILoggerService, LoggerService>();

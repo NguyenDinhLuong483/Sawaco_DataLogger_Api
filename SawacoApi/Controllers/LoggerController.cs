@@ -1,9 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using SawacoApi.Domain.Services;
-using SawacoApi.Resources;
-using SawacoApi.Resources.Logger;
-
+﻿
 namespace SawacoApi.Controllers
 {
     [Route("[controller]")]

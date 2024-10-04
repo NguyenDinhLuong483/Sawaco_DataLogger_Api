@@ -1,13 +1,12 @@
 ﻿using Microsoft.AspNetCore.SignalR;
-using SawacoApi.MQTTClients;
 
 namespace SawacoApi.Hubs
 {
     public class NotificationHub : Hub
     {
-        private readonly MQTTClients.Buffer _buffer;
+        private readonly Intrastructure.MQTTClients.Buffer _buffer;
 
-        public NotificationHub(MQTTClients.Buffer buffer)
+        public NotificationHub(Intrastructure.MQTTClients.Buffer buffer)
         {
             _buffer = buffer;
         }

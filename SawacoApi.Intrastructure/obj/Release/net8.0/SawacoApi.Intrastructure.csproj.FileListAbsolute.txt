@@ -1,0 +1,15 @@
+D:\Project\ASP.NET Core\SawacoApi\SawacoApi.Intrastructure\obj\Release\net8.0\SawacoApi.Intrastructure.csproj.AssemblyReference.cache
+D:\Project\ASP.NET Core\SawacoApi\SawacoApi.Intrastructure\obj\Release\net8.0\SawacoApi.Intrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\ASP.NET Core\SawacoApi\SawacoApi.Intrastructure\obj\Release\net8.0\SawacoApi.Intrastructure.AssemblyInfoInputs.cache
+D:\Project\ASP.NET Core\SawacoApi\SawacoApi.Intrastructure\obj\Release\net8.0\SawacoApi.Intrastructure.AssemblyInfo.cs
+D:\Project\ASP.NET Core\SawacoApi\SawacoApi.Intrastructure\obj\Release\net8.0\SawacoApi.Intrastructure.csproj.CoreCompileInputs.cache
+D:\Project\ASP.NET Core\SawacoApi\SawacoApi.Intrastructure\obj\Release\net8.0\SawacoApi.Intrastructure.sourcelink.json
+D:\Project\ASP.NET Core\SawacoApi\SawacoApi.Intrastructure\bin\Release\net8.0\SawacoApi.Intrastructure.deps.json
+D:\Project\ASP.NET Core\SawacoApi\SawacoApi.Intrastructure\bin\Release\net8.0\SawacoApi.Intrastructure.runtimeconfig.json
+D:\Project\ASP.NET Core\SawacoApi\SawacoApi.Intrastructure\bin\Release\net8.0\SawacoApi.Intrastructure.dll
+D:\Project\ASP.NET Core\SawacoApi\SawacoApi.Intrastructure\bin\Release\net8.0\SawacoApi.Intrastructure.pdb
+D:\Project\ASP.NET Core\SawacoApi\SawacoApi.Intrastructure\obj\Release\net8.0\SawacoApi.Intrastructure.dll
+D:\Project\ASP.NET Core\SawacoApi\SawacoApi.Intrastructure\obj\Release\net8.0\refint\SawacoApi.Intrastructure.dll
+D:\Project\ASP.NET Core\SawacoApi\SawacoApi.Intrastructure\obj\Release\net8.0\SawacoApi.Intrastructure.pdb
+D:\Project\ASP.NET Core\SawacoApi\SawacoApi.Intrastructure\obj\Release\net8.0\SawacoApi.Intrastructure.genruntimeconfig.cache
+D:\Project\ASP.NET Core\SawacoApi\SawacoApi.Intrastructure\obj\Release\net8.0\ref\SawacoApi.Intrastructure.dll
