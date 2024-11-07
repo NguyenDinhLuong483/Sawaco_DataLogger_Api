@@ -2,6 +2,7 @@
 using SawacoApi.Intrastructure.Services;
 using SawacoApi.Intrastructure.ViewModel.Logger;
 using SawacoApi.Intrastructure.ViewModel.StolenLine;
+using System.Diagnostics.Eventing.Reader;
 
 namespace SawacoApi.Host.Hosting
 {
@@ -58,7 +59,7 @@ namespace SawacoApi.Host.Hosting
                 {
                     case "Longtitude":
                         Lon = ParseDouble(metric.Value);
-                        TimeStamp = DateTime.Parse(DateTime.Now.AddHours(-2).ToString("dd/MM/yyyy") + " " + metric.Timestamp.ToString("HH:mm:ss"));
+                        TimeStamp = DateTime.Parse(DateTime.UtcNow.AddHours(7).ToShortDateString() + " " + metric.Timestamp.ToString("HH:mm:ss"));
                         break;
                     case "Latitude":
                         Lat = ParseDouble(metric.Value);
@@ -84,26 +85,27 @@ namespace SawacoApi.Host.Hosting
                 var loggerService = scope.ServiceProvider.GetRequiredService<ILoggerService>();
 
                 var isexist = await loggerService.GetLoggerById(Id);
-                if (Stolen && Lat != 0 && Lon != 0)
+                if(isexist is null)
                 {
-                    await loggerService.UpdateLoggerStatus(new UpdateLoggerViewModel(Lon, Lat, isexist.Name, Battery, Temp, true, "ON", TimeStamp), Id);
-                    await stolenLineService.AddNewStolenLine(new AddStolenLineViewModel(Id, Lon, Lat, Battery, TimeStamp));
-                }
-                else if (!Stolen && Lat != 0 && Lon != 0)
-                {
-                    try
-                    {
-                        await loggerService.UpdateLoggerStatus(new UpdateLoggerViewModel(Lon, Lat, isexist.Name, Battery, Temp, false, "ON", TimeStamp), Id);
-                    }
-                    catch
-                    {
-                        await loggerService.CreateNewLogger(new AddLoggerViewModel(Id, Lon, Lat, Id));
-                    }
+                    await loggerService.CreateNewLogger(new AddLoggerViewModel(Id, Lon, Lat, Id));
                 }
                 else
                 {
-                    await loggerService.UpdateLoggerStatus(new UpdateLoggerViewModel(isexist.Longtitude, isexist.Latitude, isexist.Name, Battery, Temp, isexist.Stolen, Bluetooth, TimeStamp), Id);
-                }
+                    if (Stolen && Lat != 0 && Lon != 0)
+                    {
+                        await loggerService.UpdateLoggerStatus(new UpdateLoggerViewModel(Lon, Lat, isexist.Name, Battery, Temp, true, "ON", TimeStamp), Id);
+                        await stolenLineService.AddNewStolenLine(new AddStolenLineViewModel(Id, Lon, Lat, Battery, TimeStamp));
+                    }
+                    else if (!Stolen && Lat != 0 && Lon != 0)
+                    {
+
+                        await loggerService.UpdateLoggerStatus(new UpdateLoggerViewModel(Lon, Lat, isexist.Name, Battery, Temp, false, "ON", TimeStamp), Id);
+                    }
+                    else
+                    {
+                        await loggerService.UpdateLoggerStatus(new UpdateLoggerViewModel(isexist.Longtitude, isexist.Latitude, isexist.Name, Battery, Temp, isexist.Stolen, Bluetooth, TimeStamp), Id);
+                    }
+                }    
             }
         }
         private double ParseDouble(object value)

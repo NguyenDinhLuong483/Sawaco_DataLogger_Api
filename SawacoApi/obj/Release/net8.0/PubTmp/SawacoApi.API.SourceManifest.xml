@@ -1,4 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <sitemanifest>
-  <IisApp path="D:\Project\ASP.NET Core\SawacoApi\SawacoApi\obj\Release\net8.0\PubTmp\Out\" />
+  <IisApp path="C:\My Folder\Projects\Sawaco_DataLogger_Api\SawacoApi\obj\Release\net8.0\PubTmp\Out\" />
 </sitemanifest>

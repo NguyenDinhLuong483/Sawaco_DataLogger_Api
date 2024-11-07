@@ -1,0 +1,221 @@
+[
+  {
+    "ContainingType": "SawacoApi.Controllers.LoggerController",
+    "Method": "CreateNewLogger",
+    "RelativePath": "Logger/CreateNewLogger",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addLogger",
+        "Type": "SawacoApi.Intrastructure.ViewModel.Logger.AddLoggerViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SawacoApi.Controllers.LoggerController",
+    "Method": "DeleteLogger",
+    "RelativePath": "Logger/DeleteLogger/Id={LoggerId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LoggerId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SawacoApi.Controllers.LoggerController",
+    "Method": "GetAllLoggers",
+    "RelativePath": "Logger/GetAllLoggers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SawacoApi.Intrastructure.ViewModel.Logger.LoggerViewModel, SawacoApi.Intrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SawacoApi.Controllers.LoggerController",
+    "Method": "GetLoggerById",
+    "RelativePath": "Logger/GetLoggerById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SawacoApi.Intrastructure.ViewModel.Logger.LoggerViewModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SawacoApi.Controllers.LoggerController",
+    "Method": "UpdateLoggerStatus",
+    "RelativePath": "Logger/UpdateLoggerStatus/Id={loggerId}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateLogger",
+        "Type": "SawacoApi.Intrastructure.ViewModel.Logger.UpdateLoggerViewModel",
+        "IsRequired": true
+      },
+      {
+        "Name": "loggerId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SawacoApi.Controllers.StolenLineController",
+    "Method": "AddStolenLine",
+    "RelativePath": "StolenLine/AddStolenLine",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "stolenLineViewModel",
+        "Type": "SawacoApi.Intrastructure.ViewModel.StolenLine.AddStolenLineViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SawacoApi.Controllers.StolenLineController",
+    "Method": "DeleteStolenLineByDate",
+    "RelativePath": "StolenLine/DeleteStolenLineByDate/LoggerId={loggerId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loggerId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "startDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SawacoApi.Controllers.StolenLineController",
+    "Method": "DeleteStolenLineByLoggerId",
+    "RelativePath": "StolenLine/DeleteStolenLineByLoggerId/LoggerId={loggerId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loggerId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SawacoApi.Controllers.StolenLineController",
+    "Method": "GetStolenLineByDate",
+    "RelativePath": "StolenLine/GetStolenLineByDate/Id={id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "startDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SawacoApi.Intrastructure.ViewModel.StolenLine.StolenLineViewModel, SawacoApi.Intrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SawacoApi.Controllers.StolenLineController",
+    "Method": "GetStolenLineByLoggerId",
+    "RelativePath": "StolenLine/GetStolenLineByLoggerId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LoggerId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SawacoApi.Intrastructure.ViewModel.StolenLine.StolenLineViewModel, SawacoApi.Intrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
