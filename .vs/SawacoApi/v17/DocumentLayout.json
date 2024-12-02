@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.API.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi\\controllers\\loggercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.API.csproj|solutionrelative:sawacoapi\\controllers\\loggercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.API.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi\\controllers\\stolenlinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.API.csproj|solutionrelative:sawacoapi\\controllers\\stolenlinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CBF95B55-A75E-4E7B-8CE1-3F2B54EEF639}|SawacoApi.Host\\SawacoApi.Host.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi.host\\hosting\\hostworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CBF95B55-A75E-4E7B-8CE1-3F2B54EEF639}|SawacoApi.Host\\SawacoApi.Host.csproj|solutionrelative:sawacoapi.host\\hosting\\hostworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.API.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.API.csproj|solutionrelative:sawacoapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi.intrastructure\\services\\loggerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.API.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi\\hubs\\scadahost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.API.csproj|solutionrelative:sawacoapi\\hubs\\scadahost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.API.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.API.csproj|solutionrelative:sawacoapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,6 +47,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "StolenLineController.cs",
+              "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\Controllers\\StolenLineController.cs",
+              "RelativeDocumentMoniker": "SawacoApi\\Controllers\\StolenLineController.cs",
+              "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\Controllers\\StolenLineController.cs",
+              "RelativeToolTip": "SawacoApi\\Controllers\\StolenLineController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T08:55:04.807Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoggerController.cs",
+              "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\Controllers\\LoggerController.cs",
+              "RelativeDocumentMoniker": "SawacoApi\\Controllers\\LoggerController.cs",
+              "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\Controllers\\LoggerController.cs",
+              "RelativeToolTip": "SawacoApi\\Controllers\\LoggerController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T08:54:52.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "LoggerService.cs",
               "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Services\\LoggerService.cs",
               "RelativeDocumentMoniker": "SawacoApi.Intrastructure\\Services\\LoggerService.cs",
@@ -46,25 +79,23 @@
               "RelativeToolTip": "SawacoApi.Intrastructure\\Services\\LoggerService.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAABkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T07:31:07.188Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T07:31:07.188Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "HostWorker.cs",
               "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Host\\Hosting\\HostWorker.cs",
               "RelativeDocumentMoniker": "SawacoApi.Host\\Hosting\\HostWorker.cs",
               "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Host\\Hosting\\HostWorker.cs",
               "RelativeToolTip": "SawacoApi.Host\\Hosting\\HostWorker.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAAAFYAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAAFYAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T08:38:31.315Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T08:38:31.315Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "ScadaHost.cs",
               "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\Hubs\\ScadaHost.cs",
               "RelativeDocumentMoniker": "SawacoApi\\Hubs\\ScadaHost.cs",
@@ -82,7 +113,7 @@
               "RelativeDocumentMoniker": "SawacoApi\\Program.cs",
               "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\Program.cs",
               "RelativeToolTip": "SawacoApi\\Program.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAA4AAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAABvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-02T10:21:32.948Z"
             }
