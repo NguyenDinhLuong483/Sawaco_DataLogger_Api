@@ -1,16 +1,22 @@
-﻿using SawacoApi.Intrastructure.ViewModel.Logger;
-
+﻿
 namespace SawacoApi.Intrastructure.Mapping
 {
     public class ModelToViewModelProfile : Profile
     {
         public ModelToViewModelProfile()
         {
-            CreateMap<Logger, LoggerViewModel>();
-            CreateMap<AddLoggerViewModel, Logger>();
-            CreateMap<UpdateLoggerViewModel, Logger>();
+            CreateMap<GPSDevice, GPSDeviceViewModel>();
             CreateMap<StolenLine, StolenLineViewModel>();
+            CreateMap<Customer, CustomerViewModel>();
+            CreateMap<GPSDevice, DeviceIdViewModel>();
+            CreateMap<GPSObject, ObjectNameViewModel>();
+            CreateMap<GPSObject, GPSObjectViewModel>();
+
             CreateMap<AddStolenLineViewModel, StolenLine>();
+            CreateMap<AddNewCustomerViewModel,  Customer>();
+            CreateMap<AddGPSDeviceViewModel, GPSDevice>();
+            CreateMap<UpdateGPSDeviceViewModel, GPSDevice>();
+            CreateMap<CreateNewObjectViewModel, GPSObject>();
         }
     }
 }

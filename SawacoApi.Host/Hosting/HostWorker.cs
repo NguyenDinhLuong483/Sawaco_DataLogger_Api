@@ -1,9 +1,4 @@
-﻿using SawacoApi.Intrastructure.MQTTClients;
-using SawacoApi.Intrastructure.Services;
-using SawacoApi.Intrastructure.ViewModel.Logger;
-using SawacoApi.Intrastructure.ViewModel.StolenLine;
-using System.Diagnostics.Eventing.Reader;
-
+﻿
 namespace SawacoApi.Host.Hosting
 {
     public class HostWorker : BackgroundService
@@ -13,8 +8,8 @@ namespace SawacoApi.Host.Hosting
         public double Lon, Lat;
         public DateTime TimeStamp;
         public bool Stolen;
-        public string Bluetooth = "", Temp = "";
-        public int Battery;
+        public string Bluetooth = "";
+        public double Battery, Temp;
 
         public HostWorker(ManagedMqttClient mqttClient, IServiceScopeFactory serviceScopeFactory)
         {
@@ -57,7 +52,7 @@ namespace SawacoApi.Host.Hosting
                 metric.LoggerId = Id;
                 switch (metric.Name)
                 {
-                    case "Longtitude":
+                    case "Longitude":
                         Lon = ParseDouble(metric.Value);
                         TimeStamp = DateTime.Parse(DateTime.UtcNow.AddHours(7).ToShortDateString() + " " + metric.Timestamp.ToString("HH:mm:ss"));
                         break;
@@ -68,13 +63,13 @@ namespace SawacoApi.Host.Hosting
                         Stolen = ParseBool(metric.Value);
                         break;
                     case "Temperature":
-                        Temp = metric.Value.ToString() ?? string.Empty;
+                        Temp = ParseDouble(metric.Value);
                         break;
                     case "Bluetooth":
                         Bluetooth = metric.Value.ToString() ?? string.Empty;
                         break;
                     case "Battery":
-                        Battery = (int)ParseDouble(metric.Value);
+                        Battery = ParseDouble(metric.Value);
                         break;
                 }
             }
@@ -82,28 +77,28 @@ namespace SawacoApi.Host.Hosting
             using (IServiceScope scope = _serviceScopeFactory.CreateScope())
             {
                 var stolenLineService = scope.ServiceProvider.GetRequiredService<IStolenLineService>();
-                var loggerService = scope.ServiceProvider.GetRequiredService<ILoggerService>();
+                var loggerService = scope.ServiceProvider.GetRequiredService<IGPSDeviceService>();
 
-                var isexist = await loggerService.GetLoggerById(Id);
+                var isexist = await loggerService.GetGPSDeviceById(Id);
                 if(isexist is null)
                 {
-                    await loggerService.CreateNewLogger(new AddLoggerViewModel(Id, Lon, Lat, Id));
+                    await loggerService.CreateNewGPSDevice(new AddGPSDeviceViewModel(Id, Lon, Lat, Id));
                 }
                 else
                 {
                     if (Stolen && Lat != 0 && Lon != 0)
                     {
-                        await loggerService.UpdateLoggerStatus(new UpdateLoggerViewModel(Lon, Lat, isexist.Name, Battery, Temp, true, "ON", TimeStamp), Id);
+                        await loggerService.UpdateGPSDeviceStatus(new UpdateGPSDeviceViewModel(Lon, Lat, isexist.Name, "", Battery, Temp, true, "ON", TimeStamp), Id);
                         await stolenLineService.AddNewStolenLine(new AddStolenLineViewModel(Id, Lon, Lat, Battery, TimeStamp));
                     }
                     else if (!Stolen && Lat != 0 && Lon != 0)
                     {
 
-                        await loggerService.UpdateLoggerStatus(new UpdateLoggerViewModel(Lon, Lat, isexist.Name, Battery, Temp, false, "ON", TimeStamp), Id);
+                        await loggerService.UpdateGPSDeviceStatus(new UpdateGPSDeviceViewModel(Lon, Lat, isexist.Name, "", Battery, Temp, false, "ON", TimeStamp), Id);
                     }
                     else
                     {
-                        await loggerService.UpdateLoggerStatus(new UpdateLoggerViewModel(isexist.Longtitude, isexist.Latitude, isexist.Name, Battery, Temp, isexist.Stolen, Bluetooth, TimeStamp), Id);
+                        await loggerService.UpdateGPSDeviceStatus(new UpdateGPSDeviceViewModel(isexist.Longitude, isexist.Latitude, isexist.Name, "", Battery, Temp, isexist.Stolen, Bluetooth, TimeStamp), Id);
                     }
                 }    
             }

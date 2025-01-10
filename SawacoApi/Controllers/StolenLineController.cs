@@ -24,13 +24,13 @@ namespace SawacoApi.Controllers
             return await _stolenLineService.GetByDate(id, startDate, endDate);
         }
         [HttpDelete]
-        [Route("DeleteStolenLineByLoggerId/LoggerId={loggerId}")]
+        [Route("DeleteStolenLineByLoggerId/GPSDeviceId={loggerId}")]
         public async Task<IActionResult> DeleteStolenLineByLoggerId([FromRoute] string loggerId)
         {
             return new OkObjectResult(await _stolenLineService.DeleteByLoggerId(loggerId));
         }
         [HttpDelete]
-        [Route("DeleteStolenLineByDate/LoggerId={loggerId}")]
+        [Route("DeleteStolenLineByDate/GPSDeviceId={loggerId}")]
         public async Task<IActionResult> DeleteStolenLineByDate([FromRoute] string loggerId, [FromQuery] DateTime startDate, [FromQuery]DateTime endDate)
         {
             return new OkObjectResult(await _stolenLineService.DeleteByDate(loggerId, startDate, endDate));

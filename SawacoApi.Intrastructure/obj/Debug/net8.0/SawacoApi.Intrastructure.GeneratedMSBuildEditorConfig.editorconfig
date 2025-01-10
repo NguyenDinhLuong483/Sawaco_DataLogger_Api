@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SawacoApi.Intrastructure
-build_property.ProjectDir = D:\Project\ASP.NET Core\SawacoApi\SawacoApi.Intrastructure\
+build_property.ProjectDir = C:\My Folder\Projects\Sawaco_DataLogger_Api\SawacoApi.Intrastructure\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

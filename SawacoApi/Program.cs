@@ -3,9 +3,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(); 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 
 builder.Services.AddSignalR();
 
@@ -22,8 +23,9 @@ builder.Services.AddCors(options =>
         });
 });
 
+
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("SawacoApi.API"))
 );
 
 builder.Services.AddHostedService<ScadaHost>();
@@ -32,10 +34,14 @@ builder.Services.AddSingleton<ManagedMqttClient>();
 builder.Services.AddSingleton<SawacoApi.Intrastructure.MQTTClients.Buffer>();
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-builder.Services.AddScoped<ILoggerService, LoggerService>();
-builder.Services.AddScoped<ILoggerRepository, LoggerRepository>();
+builder.Services.AddScoped<IGPSDeviceService, GPSDeviceService>();
+builder.Services.AddScoped<IGPSDeviceRepository, GPSDeviceRepository>();
 builder.Services.AddScoped<IStolenLineService, StolenLineService>();
 builder.Services.AddScoped<IStolenLineRepository, StolenLineRepository>();
+builder.Services.AddScoped<ICustomerService, CustomerService>();
+builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+builder.Services.AddScoped<IGPSObjectService, GPSObjectService>();
+builder.Services.AddScoped<IGPSObjectRepository, GPSObjectRepository>();
 
 builder.Services.AddAutoMapper(typeof(ModelToViewModelProfile));
 

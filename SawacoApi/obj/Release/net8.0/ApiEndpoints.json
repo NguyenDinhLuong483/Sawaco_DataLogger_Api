@@ -1,47 +1,47 @@
 [
   {
-    "ContainingType": "SawacoApi.Controllers.LoggerController",
-    "Method": "CreateNewLogger",
-    "RelativePath": "Logger/CreateNewLogger",
-    "HttpMethod": "POST",
+    "ContainingType": "SawacoApi.API.Controllers.CustomerController",
+    "Method": "ChangeCustomerPhoneNumber",
+    "RelativePath": "Customer/ChangeCustomerPhoneNumber",
+    "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "addLogger",
-        "Type": "SawacoApi.Intrastructure.ViewModel.Logger.AddLoggerViewModel",
+        "Name": "viewmodel",
+        "Type": "SawacoApi.Intrastructure.ViewModel.Customers.ChangeCustomerPhoneNumberViewModel",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "SawacoApi.Controllers.LoggerController",
-    "Method": "DeleteLogger",
-    "RelativePath": "Logger/DeleteLogger/Id={LoggerId}",
+    "ContainingType": "SawacoApi.API.Controllers.CustomerController",
+    "Method": "DeleteCustomerByPhoneNumber",
+    "RelativePath": "Customer/DeleteCustomerByPhoneNumber",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "LoggerId",
+        "Name": "customerPhoneNumber",
         "Type": "System.String",
-        "IsRequired": true
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "SawacoApi.Controllers.LoggerController",
-    "Method": "GetAllLoggers",
-    "RelativePath": "Logger/GetAllLoggers",
+    "ContainingType": "SawacoApi.API.Controllers.CustomerController",
+    "Method": "GetAllCustomers",
+    "RelativePath": "Customer/GetAllCustomers",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[SawacoApi.Intrastructure.ViewModel.Logger.LoggerViewModel, SawacoApi.Intrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[SawacoApi.Intrastructure.ViewModel.Customers.CustomerViewModel, SawacoApi.Intrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -52,9 +52,103 @@
     ]
   },
   {
-    "ContainingType": "SawacoApi.Controllers.LoggerController",
-    "Method": "GetLoggerById",
-    "RelativePath": "Logger/GetLoggerById",
+    "ContainingType": "SawacoApi.API.Controllers.CustomerController",
+    "Method": "GetCustomerByPhoneNumber",
+    "RelativePath": "Customer/GetCustomerByPhoneNumber",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "phoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SawacoApi.Intrastructure.ViewModel.Customers.CustomerViewModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SawacoApi.API.Controllers.CustomerController",
+    "Method": "RegisterNewCustomer",
+    "RelativePath": "Customer/RegisterNewCustomer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customer",
+        "Type": "SawacoApi.Intrastructure.ViewModel.Customers.AddNewCustomerViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SawacoApi.Controllers.GPSDeviceController",
+    "Method": "CreateNewGPSDevice",
+    "RelativePath": "GPSDevice/CreateNewGPSDevice",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addGPSDevice",
+        "Type": "SawacoApi.Intrastructure.ViewModel.GPSDevices.AddGPSDeviceViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SawacoApi.Controllers.GPSDeviceController",
+    "Method": "DeleteGPSDevice",
+    "RelativePath": "GPSDevice/DeleteGPSDevice/Id={GPSDeviceId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "GPSDeviceId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SawacoApi.Controllers.GPSDeviceController",
+    "Method": "GetAllGPSDevices",
+    "RelativePath": "GPSDevice/GetAllGPSDevices",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SawacoApi.Intrastructure.ViewModel.GPSDevices.GPSDeviceViewModel, SawacoApi.Intrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SawacoApi.Controllers.GPSDeviceController",
+    "Method": "GetGPSDeviceById",
+    "RelativePath": "GPSDevice/GetGPSDeviceById",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -67,7 +161,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "SawacoApi.Intrastructure.ViewModel.Logger.LoggerViewModel",
+        "Type": "SawacoApi.Intrastructure.ViewModel.GPSDevices.GPSDeviceViewModel",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -78,22 +172,85 @@
     ]
   },
   {
-    "ContainingType": "SawacoApi.Controllers.LoggerController",
-    "Method": "UpdateLoggerStatus",
-    "RelativePath": "Logger/UpdateLoggerStatus/Id={loggerId}",
+    "ContainingType": "SawacoApi.Controllers.GPSDeviceController",
+    "Method": "UpdateGPSDeviceStatus",
+    "RelativePath": "GPSDevice/UpdateGPSDeviceStatus/Id={GPSDeviceId}",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "updateLogger",
-        "Type": "SawacoApi.Intrastructure.ViewModel.Logger.UpdateLoggerViewModel",
+        "Name": "updateGPSDevice",
+        "Type": "SawacoApi.Intrastructure.ViewModel.GPSDevices.UpdateGPSDeviceViewModel",
         "IsRequired": true
       },
       {
-        "Name": "loggerId",
+        "Name": "GPSDeviceId",
         "Type": "System.String",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SawacoApi.API.Controllers.GPSObjectController",
+    "Method": "CreateNewObject",
+    "RelativePath": "GPSObject/CreateNewObject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "viewModel",
+        "Type": "SawacoApi.Intrastructure.ViewModel.GPSObjects.CreateNewObjectViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SawacoApi.API.Controllers.GPSObjectController",
+    "Method": "GetObjectById",
+    "RelativePath": "GPSObject/GetObjectById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SawacoApi.Intrastructure.ViewModel.GPSObjects.GPSObjectViewModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SawacoApi.API.Controllers.GPSObjectController",
+    "Method": "SetupDeviceForObject",
+    "RelativePath": "GPSObject/SetupDeviceForObject",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ObjectId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DeviceId",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -108,7 +265,7 @@
     "Parameters": [
       {
         "Name": "stolenLineViewModel",
-        "Type": "SawacoApi.Intrastructure.ViewModel.StolenLine.AddStolenLineViewModel",
+        "Type": "SawacoApi.Intrastructure.ViewModel.StolenLines.AddStolenLineViewModel",
         "IsRequired": true
       }
     ],
@@ -117,7 +274,7 @@
   {
     "ContainingType": "SawacoApi.Controllers.StolenLineController",
     "Method": "DeleteStolenLineByDate",
-    "RelativePath": "StolenLine/DeleteStolenLineByDate/LoggerId={loggerId}",
+    "RelativePath": "StolenLine/DeleteStolenLineByDate/GPSDeviceId={loggerId}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -143,7 +300,7 @@
   {
     "ContainingType": "SawacoApi.Controllers.StolenLineController",
     "Method": "DeleteStolenLineByLoggerId",
-    "RelativePath": "StolenLine/DeleteStolenLineByLoggerId/LoggerId={loggerId}",
+    "RelativePath": "StolenLine/DeleteStolenLineByLoggerId/GPSDeviceId={loggerId}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -182,7 +339,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[SawacoApi.Intrastructure.ViewModel.StolenLine.StolenLineViewModel, SawacoApi.Intrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[SawacoApi.Intrastructure.ViewModel.StolenLines.StolenLineViewModel, SawacoApi.Intrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -208,7 +365,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[SawacoApi.Intrastructure.ViewModel.StolenLine.StolenLineViewModel, SawacoApi.Intrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[SawacoApi.Intrastructure.ViewModel.StolenLines.StolenLineViewModel, SawacoApi.Intrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

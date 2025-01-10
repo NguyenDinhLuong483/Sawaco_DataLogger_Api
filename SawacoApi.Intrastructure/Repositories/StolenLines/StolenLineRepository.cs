@@ -9,12 +9,12 @@ namespace SawacoApi.Intrastructure.Repositories.StolenLines
 
         public async Task<List<StolenLine>> GetByLoggerIdAsync(string loggerId)
         {
-            return await _context.StolenLines.OrderBy(x => x.LoggerId == loggerId).ToListAsync();
+            return await _context.StolenLines.OrderBy(x => x.GPSDeviceId == loggerId).ToListAsync();
         }
 
         public async Task<List<StolenLine>> GetByDateAsync(string id, DateTime startDate, DateTime endDate)
         {
-            return await _context.StolenLines.Where(x => x.LoggerId == id && x.TimeStamp >= startDate && x.TimeStamp <= endDate).ToListAsync();
+            return await _context.StolenLines.Where(x => x.GPSDeviceId == id && x.TimeStamp >= startDate && x.TimeStamp <= endDate).ToListAsync();
         }
 
         public bool DeleteAsync(List<StolenLine> stolenLine)

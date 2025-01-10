@@ -26,7 +26,7 @@ namespace SawacoApi.Hubs
         {
             _mqttClient.MessageReceived += OnMqttClientMessageReceived;
             await _mqttClient.ConnectAsync();
-            await _mqttClient.Subscribe("SAWACO/+");
+            await _mqttClient.Subscribe("SHRIMP_POND");
         }
         private async Task OnMqttClientMessageReceived(MqttMessage arg)
         {
