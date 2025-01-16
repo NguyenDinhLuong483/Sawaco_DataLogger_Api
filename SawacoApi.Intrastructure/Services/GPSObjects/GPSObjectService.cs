@@ -1,6 +1,4 @@
 ﻿
-using SawacoApi.Intrastructure.Models;
-
 namespace SawacoApi.Intrastructure.Services.GPSObjects
 {
     public class GPSObjectService : IGPSObjectService
@@ -29,7 +27,7 @@ namespace SawacoApi.Intrastructure.Services.GPSObjects
             do
             {
                 viewModel.Id = new Random().Next(100000, 999999).ToString();
-                isExist = await _gPSObjectRepository.IsExistObjectid(viewModel.Id);
+                isExist = await _gPSObjectRepository.IsExistObject(viewModel.Id);
             }
             while (isExist);
             var newobject = _mapper.Map<CreateNewObjectViewModel, GPSObject>(viewModel);
@@ -41,35 +39,57 @@ namespace SawacoApi.Intrastructure.Services.GPSObjects
 
         public async Task<bool> SetupDeviceForObject(SetupDeviceViewModel viewModel)
         {
-            var isExistDevice = await _gPSObjectRepository.IsExistDevice(DeviceId);
-            var isExistObject = await _gPSObjectRepository.IsExistObjectid(ObjectId);
+            var isExistDevice = await _gPSObjectRepository.IsExistDevice(viewModel.DeviceId);
+            var isExistObject = await _gPSObjectRepository.IsExistObject(viewModel.ObjectId);
             if (isExistDevice && isExistObject)
             {
-                var currentObject = await _gPSObjectRepository.FindObjectConnected(DeviceId);
-                if (currentObject == null)
+                var checkDevice = await _gPSObjectRepository.GetDeviceByIdAsync(viewModel.DeviceId);
+                var checkObject = await _gPSObjectRepository.GetObjectByIdAsync(viewModel.ObjectId);
+                if(viewModel.PhoneNumber != checkDevice.CustomerPhoneNumber || viewModel.PhoneNumber != checkObject.CustomerPhoneNumber)
                 {
-                    var newObject = await _gPSObjectRepository.GetObjectByIdAsync(ObjectId);
-                    newObject.Connected = true;
-                    newObject.GPSDeviceId = DeviceId;
-                    _gPSObjectRepository.UpdateObject(newObject);
+                    return false;
                 }
                 else
                 {
-                    currentObject.Connected = false;
-                    _gPSObjectRepository.UpdateObject(currentObject);
+                    var currentObject = await _gPSObjectRepository.FindObjectConnected(viewModel.DeviceId);
+                    if (currentObject == null)
+                    {
+                        var newObject = await _gPSObjectRepository.GetObjectByIdAsync(viewModel.ObjectId);
+                        newObject.Connected = true;
+                        newObject.GPSDeviceId = viewModel.DeviceId;
+                        _gPSObjectRepository.UpdateObject(newObject);
+                    }
+                    else
+                    {
+                        currentObject.Connected = false;
+                        _gPSObjectRepository.UpdateObject(currentObject);
 
-                    var newObject = await _gPSObjectRepository.GetObjectByIdAsync(ObjectId);
-                    newObject.Connected = true;
-                    newObject.GPSDeviceId = DeviceId;
-                    _gPSObjectRepository.UpdateObject(newObject);
+                        var newObject = await _gPSObjectRepository.GetObjectByIdAsync(viewModel.ObjectId);
+                        newObject.Connected = true;
+                        newObject.GPSDeviceId = viewModel.DeviceId;
+                        _gPSObjectRepository.UpdateObject(newObject);
+                    }
+                    return await _unitOfWork.CompleteAsync();
                 }
-                
-                return await _unitOfWork.CompleteAsync();
             }
             else
             {
                 return false;
             }
+        }
+
+        public async Task<GPSObjectViewModel> GetObjectByPhoneNumber(string phoneNumber)
+        {
+            var source = await _gPSObjectRepository.GetObjectByPhoneNumberAsync(phoneNumber);
+            var result = _mapper.Map<GPSObject, GPSObjectViewModel>(source);
+            return result;
+        }
+
+        public async Task<bool> DeleteObjectById(string Id)
+        {
+            var objects = await _gPSObjectRepository.GetObjectByIdAsync(Id);
+            await _gPSObjectRepository.DeleteObjectByIdAsync(objects);
+            return await _unitOfWork.CompleteAsync();
         }
     }
 }

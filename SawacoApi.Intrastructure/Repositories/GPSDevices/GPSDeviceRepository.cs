@@ -13,7 +13,7 @@
 
         public async Task<GPSDevice> GetDeviceByIdAsync(string id)
         {
-            return await _context.GPSDevices.Include(x => x.StolenLines).FirstOrDefaultAsync(x => x.Id == id);
+            return await _context.GPSDevices.Include(x => x.StolenLines).FirstOrDefaultAsync(x => x.Id == id) ?? throw new ResourceNotFoundException("Not found device!");
         }
 
         public async Task<GPSDevice> FindDevice(string id)
@@ -43,6 +43,11 @@
         {
             _context.Update(updateDevice);
             return true;
+        }
+
+        public async Task<bool> IsExistDevice(string id)
+        {
+            return await _context.GPSDevices.AnyAsync(x => x.Id == id);
         }
     }
 }

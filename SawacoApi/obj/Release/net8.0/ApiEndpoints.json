@@ -17,6 +17,27 @@
   },
   {
     "ContainingType": "SawacoApi.API.Controllers.CustomerController",
+    "Method": "ChangePassword",
+    "RelativePath": "Customer/ChangePassword",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "passwordViewModel",
+        "Type": "SawacoApi.Intrastructure.ViewModel.Customers.ChangePasswordViewModel",
+        "IsRequired": true
+      },
+      {
+        "Name": "phoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SawacoApi.API.Controllers.CustomerController",
     "Method": "DeleteCustomerByPhoneNumber",
     "RelativePath": "Customer/DeleteCustomerByPhoneNumber",
     "HttpMethod": "DELETE",
@@ -112,7 +133,7 @@
   {
     "ContainingType": "SawacoApi.Controllers.GPSDeviceController",
     "Method": "DeleteGPSDevice",
-    "RelativePath": "GPSDevice/DeleteGPSDevice/Id={GPSDeviceId}",
+    "RelativePath": "GPSDevice/DeleteGPSDevice",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -120,7 +141,7 @@
       {
         "Name": "GPSDeviceId",
         "Type": "System.String",
-        "IsRequired": true
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -174,7 +195,7 @@
   {
     "ContainingType": "SawacoApi.Controllers.GPSDeviceController",
     "Method": "UpdateGPSDeviceStatus",
-    "RelativePath": "GPSDevice/UpdateGPSDeviceStatus/Id={GPSDeviceId}",
+    "RelativePath": "GPSDevice/UpdateGPSDeviceStatus",
     "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
@@ -187,7 +208,7 @@
       {
         "Name": "GPSDeviceId",
         "Type": "System.String",
-        "IsRequired": true
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -204,6 +225,22 @@
         "Name": "viewModel",
         "Type": "SawacoApi.Intrastructure.ViewModel.GPSObjects.CreateNewObjectViewModel",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SawacoApi.API.Controllers.GPSObjectController",
+    "Method": "DeleteObjectById",
+    "RelativePath": "GPSObject/DeleteObjectById",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objectId",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -236,6 +273,32 @@
   },
   {
     "ContainingType": "SawacoApi.API.Controllers.GPSObjectController",
+    "Method": "GetObjectByPhoneNumber",
+    "RelativePath": "GPSObject/GetObjectByPhoneNumber",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "phoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SawacoApi.Intrastructure.ViewModel.GPSObjects.GPSObjectViewModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SawacoApi.API.Controllers.GPSObjectController",
     "Method": "SetupDeviceForObject",
     "RelativePath": "GPSObject/SetupDeviceForObject",
     "HttpMethod": "PATCH",
@@ -243,14 +306,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "ObjectId",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "DeviceId",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "viewModel",
+        "Type": "SawacoApi.Intrastructure.ViewModel.GPSObjects.SetupDeviceViewModel",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -274,15 +332,15 @@
   {
     "ContainingType": "SawacoApi.Controllers.StolenLineController",
     "Method": "DeleteStolenLineByDate",
-    "RelativePath": "StolenLine/DeleteStolenLineByDate/GPSDeviceId={loggerId}",
+    "RelativePath": "StolenLine/DeleteStolenLineByDate",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "loggerId",
+        "Name": "DeviceId",
         "Type": "System.String",
-        "IsRequired": true
+        "IsRequired": false
       },
       {
         "Name": "startDate",
@@ -300,15 +358,15 @@
   {
     "ContainingType": "SawacoApi.Controllers.StolenLineController",
     "Method": "DeleteStolenLineByLoggerId",
-    "RelativePath": "StolenLine/DeleteStolenLineByLoggerId/GPSDeviceId={loggerId}",
+    "RelativePath": "StolenLine/DeleteStolenLineByDeviceId",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "loggerId",
+        "Name": "DeviceId",
         "Type": "System.String",
-        "IsRequired": true
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -316,7 +374,7 @@
   {
     "ContainingType": "SawacoApi.Controllers.StolenLineController",
     "Method": "GetStolenLineByDate",
-    "RelativePath": "StolenLine/GetStolenLineByDate/Id={id}",
+    "RelativePath": "StolenLine/GetStolenLineByDate",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -324,7 +382,7 @@
       {
         "Name": "id",
         "Type": "System.String",
-        "IsRequired": true
+        "IsRequired": false
       },
       {
         "Name": "startDate",
@@ -352,13 +410,13 @@
   {
     "ContainingType": "SawacoApi.Controllers.StolenLineController",
     "Method": "GetStolenLineByLoggerId",
-    "RelativePath": "StolenLine/GetStolenLineByLoggerId",
+    "RelativePath": "StolenLine/GetStolenLineByDeviceId",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "LoggerId",
+        "Name": "DeviceId",
         "Type": "System.String",
         "IsRequired": false
       }

@@ -54,6 +54,20 @@ namespace SawacoApi.API.Controllers
                 return new OkObjectResult("Current phone number or password is not correct!");
             }
         }
+        [HttpPatch]
+        [Route("ChangePassword")]
+        public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordViewModel passwordViewModel, [FromQuery] string phoneNumber)
+        {
+            var isSuccess = await _customerService.ChangeLoginInformation(passwordViewModel, phoneNumber);
+            if (isSuccess)
+            {
+                return new OkObjectResult("Changed password successfully.");
+            }
+            else
+            {
+                return new OkObjectResult("Current phone number or password is not correct!");
+            }
+        }
         [HttpDelete]
         [Route("DeleteCustomerByPhoneNumber")]
         public async Task<IActionResult> DeleteCustomerByPhoneNumber([FromQuery] string customerPhoneNumber)

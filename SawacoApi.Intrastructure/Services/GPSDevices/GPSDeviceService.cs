@@ -1,4 +1,7 @@
 ﻿
+using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
+
 namespace SawacoApi.Intrastructure.Services.GPSDevices
 {
     public class GPSDeviceService : IGPSDeviceService
@@ -40,19 +43,82 @@ namespace SawacoApi.Intrastructure.Services.GPSDevices
             return await _unitOfWork.CompleteAsync();
         }
 
-        public async Task<bool> DeleteGPSDevice(string loggerId)
+        public async Task<bool> DeleteGPSDevice(string deviceId)
         {
-            var IsExist = await _GPSDeviceRepository.GetDeviceByIdAsync(loggerId) ?? throw new ResourceNotFoundException("Not found this Device!");
+            var IsExist = await _GPSDeviceRepository.GetDeviceByIdAsync(deviceId);
             _GPSDeviceRepository.DeleteDeviceAsync(IsExist);
             return await _unitOfWork.CompleteAsync();
         }
 
         public async Task<bool> UpdateGPSDeviceStatus(UpdateGPSDeviceViewModel updateDevice, string deviceId)
         {
-            var IsExist = await _GPSDeviceRepository.GetDeviceByIdAsync(deviceId) ?? throw new ResourceNotFoundException();
-            IsExist.UpdateAll(updateDevice.Longitude, updateDevice.Latitude, updateDevice.Name, updateDevice.Battery, updateDevice.Temperature, updateDevice.Stolen, updateDevice.Bluetooth, updateDevice.TimeStamp);
-            var update = _GPSDeviceRepository.UpdateDeviceAsync(IsExist);
-            return await _unitOfWork.CompleteAsync();
+            var isExist = await _GPSDeviceRepository.IsExistDevice(deviceId);
+            if (isExist)
+            {
+                var device = await _GPSDeviceRepository.GetDeviceByIdAsync(deviceId);
+                if (!string.IsNullOrEmpty(updateDevice.CustomerPhoneNumber))
+                {
+                    device.CustomerPhoneNumber = updateDevice.CustomerPhoneNumber;
+                }
+                if (updateDevice.Longitude != 0)
+                {
+                    device.Longitude = updateDevice.Longitude;
+                }
+                if (updateDevice.Latitude != 0)
+                {
+                    device.Latitude = updateDevice.Latitude;
+                }
+                if (!string.IsNullOrEmpty(updateDevice.Name))
+                {
+                    device.Name = updateDevice.Name;
+                }
+                if (!string.IsNullOrEmpty(updateDevice.ImagePath))
+                {
+                    device.ImagePath = updateDevice.ImagePath;
+                }
+                if (updateDevice.Battery != 0)
+                {
+                    device.Battery = updateDevice.Battery;
+                }
+                if (updateDevice.Temperature != 0)
+                {
+                    device.Temperature = updateDevice.Temperature;
+                }
+                if (!string.IsNullOrEmpty(updateDevice.Stolen.ToString())) // Assuming Stolen is boolean and default is false
+                {
+                    device.Stolen = updateDevice.Stolen;
+                }
+                if (!string.IsNullOrEmpty(updateDevice.Bluetooth))
+                {
+                    device.Bluetooth = updateDevice.Bluetooth;
+                }
+                if (!string.IsNullOrEmpty(updateDevice.TimeStamp.ToString()))
+                {
+                    device.TimeStamp = updateDevice.TimeStamp;
+                }
+                if (!string.IsNullOrEmpty(updateDevice.SMSNumber))
+                {
+                    device.SMSNumber = updateDevice.SMSNumber;
+                }
+                if (!string.IsNullOrEmpty(updateDevice.Package))
+                {
+                    device.Package = updateDevice.Package;
+                }
+                if (!string.IsNullOrEmpty(updateDevice.RegistationDate.ToString()))
+                {
+                    device.RegistationDate = updateDevice.RegistationDate;
+                }
+                if (!string.IsNullOrEmpty(updateDevice.ExpirationDate.ToString()))
+                {
+                    device.ExpirationDate = updateDevice.ExpirationDate;
+                }
+                _GPSDeviceRepository.UpdateDeviceAsync(device);
+                return await _unitOfWork.CompleteAsync();
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

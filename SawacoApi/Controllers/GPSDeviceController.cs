@@ -39,8 +39,8 @@ namespace SawacoApi.Controllers
             }
         }
         [HttpDelete]
-        [Route("DeleteGPSDevice/Id={GPSDeviceId}")]
-        public async Task<IActionResult> DeleteGPSDevice([FromRoute] string GPSDeviceId) 
+        [Route("DeleteGPSDevice")]
+        public async Task<IActionResult> DeleteGPSDevice([FromQuery] string GPSDeviceId) 
         {
             try
             {
@@ -53,8 +53,8 @@ namespace SawacoApi.Controllers
             }
         }
         [HttpPatch]
-        [Route("UpdateGPSDeviceStatus/Id={GPSDeviceId}")]
-        public async Task<IActionResult> UpdateGPSDeviceStatus([FromBody] UpdateGPSDeviceViewModel updateGPSDevice, [FromRoute] string GPSDeviceId)
+        [Route("UpdateGPSDeviceStatus")]
+        public async Task<IActionResult> UpdateGPSDeviceStatus([FromBody] UpdateGPSDeviceViewModel updateGPSDevice, [FromQuery] string GPSDeviceId)
         {
             try
             {

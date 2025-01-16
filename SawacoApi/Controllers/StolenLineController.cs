@@ -12,28 +12,28 @@ namespace SawacoApi.Controllers
             _stolenLineService = stolenLineService;
         }
         [HttpGet]
-        [Route("GetStolenLineByLoggerId")]
-        public async Task<List<StolenLineViewModel>> GetStolenLineByLoggerId([FromQuery] string LoggerId)
+        [Route("GetStolenLineByDeviceId")]
+        public async Task<List<StolenLineViewModel>> GetStolenLineByLoggerId([FromQuery] string DeviceId)
         {
-            return await _stolenLineService.GetByLoggerId(LoggerId);
+            return await _stolenLineService.GetByLoggerId(DeviceId);
         }
         [HttpGet]
-        [Route("GetStolenLineByDate/Id={id}")]
-        public async Task<List<StolenLineViewModel>> GetStolenLineByDate([FromRoute] string id, [FromQuery] DateTime startDate, [FromQuery] DateTime endDate)
+        [Route("GetStolenLineByDate")]
+        public async Task<List<StolenLineViewModel>> GetStolenLineByDate([FromQuery] string id, [FromQuery] DateTime startDate, [FromQuery] DateTime endDate)
         {
             return await _stolenLineService.GetByDate(id, startDate, endDate);
         }
         [HttpDelete]
-        [Route("DeleteStolenLineByLoggerId/GPSDeviceId={loggerId}")]
-        public async Task<IActionResult> DeleteStolenLineByLoggerId([FromRoute] string loggerId)
+        [Route("DeleteStolenLineByDeviceId")]
+        public async Task<IActionResult> DeleteStolenLineByLoggerId([FromQuery] string DeviceId)
         {
-            return new OkObjectResult(await _stolenLineService.DeleteByLoggerId(loggerId));
+            return new OkObjectResult(await _stolenLineService.DeleteByLoggerId(DeviceId));
         }
         [HttpDelete]
-        [Route("DeleteStolenLineByDate/GPSDeviceId={loggerId}")]
-        public async Task<IActionResult> DeleteStolenLineByDate([FromRoute] string loggerId, [FromQuery] DateTime startDate, [FromQuery]DateTime endDate)
+        [Route("DeleteStolenLineByDate")]
+        public async Task<IActionResult> DeleteStolenLineByDate([FromQuery] string DeviceId, [FromQuery] DateTime startDate, [FromQuery]DateTime endDate)
         {
-            return new OkObjectResult(await _stolenLineService.DeleteByDate(loggerId, startDate, endDate));
+            return new OkObjectResult(await _stolenLineService.DeleteByDate(DeviceId, startDate, endDate));
         }
         [HttpPost]
         [Route("AddStolenLine")]

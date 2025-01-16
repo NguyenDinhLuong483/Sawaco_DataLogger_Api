@@ -72,5 +72,21 @@ namespace SawacoApi.Intrastructure.Services.Customers
                 return false;
             }
         }
+
+        public async Task<bool> ChangeLoginInformation(ChangePasswordViewModel logininfo, string phoneNumber)
+        {
+            var isCorrect = await _customerRepository.IdentifyCustomer(phoneNumber, logininfo.CurrentPassword);
+            if (isCorrect)
+            {
+                var customer = await _customerRepository.GetCustomerByPhoneNumberAsync(phoneNumber);
+                customer.Password = logininfo.NewPassword;
+                await _customerRepository.UpdateInformation(customer);
+                return await _unitOfWork.CompleteAsync();
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

@@ -3,60 +3,36 @@
   "WorkspaceRootPath": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\Migrations\\20250110180416_Init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SawacoApi\\Migrations\\20250110180416_Init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.API.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.API.csproj|solutionrelative:sawacoapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi.intrastructure\\context\\configuration\\gpsobjectentitytypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|solutionrelative:sawacoapi.intrastructure\\context\\configuration\\gpsobjectentitytypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi.intrastructure\\services\\gpsdevices\\gpsdeviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|solutionrelative:sawacoapi.intrastructure\\services\\gpsdevices\\gpsdeviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi.intrastructure\\context\\configuration\\gpsdeviceentitytypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|solutionrelative:sawacoapi.intrastructure\\context\\configuration\\gpsdeviceentitytypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi.intrastructure\\services\\gpsdevices\\igpsdeviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|solutionrelative:sawacoapi.intrastructure\\services\\gpsdevices\\igpsdeviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi.intrastructure\\viewmodel\\gpsdevices\\updategpsdeviceviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|solutionrelative:sawacoapi.intrastructure\\viewmodel\\gpsdevices\\updategpsdeviceviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi.intrastructure\\models\\gpsdevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|solutionrelative:sawacoapi.intrastructure\\models\\gpsdevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi.intrastructure\\context\\configuration\\customerentitytypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|solutionrelative:sawacoapi.intrastructure\\context\\configuration\\customerentitytypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi.intrastructure\\repositories\\gpsdevices\\igpsdevicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|solutionrelative:sawacoapi.intrastructure\\repositories\\gpsdevices\\igpsdevicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi.intrastructure\\models\\gpsobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|solutionrelative:sawacoapi.intrastructure\\models\\gpsobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi.intrastructure\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|solutionrelative:sawacoapi.intrastructure\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi.intrastructure\\repositories\\gpsdevices\\gpsdevicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|solutionrelative:sawacoapi.intrastructure\\repositories\\gpsdevices\\gpsdevicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.API.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi\\controllers\\gpsdevicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.API.csproj|solutionrelative:sawacoapi\\controllers\\gpsdevicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.API.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.API.csproj|solutionrelative:sawacoapi\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi.intrastructure\\services\\gpsobjects\\gpsobjectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|solutionrelative:sawacoapi.intrastructure\\services\\gpsobjects\\gpsobjectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi.intrastructure\\repositories\\gpsobjects\\igpsobjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|solutionrelative:sawacoapi.intrastructure\\repositories\\gpsobjects\\igpsobjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi.intrastructure\\repositories\\gpsobjects\\gpsobjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|solutionrelative:sawacoapi.intrastructure\\repositories\\gpsobjects\\gpsobjectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi.intrastructure\\services\\gpsobjects\\igpsobjectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|solutionrelative:sawacoapi.intrastructure\\services\\gpsobjects\\igpsobjectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.API.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi\\controllers\\gpsobjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.API.csproj|solutionrelative:sawacoapi\\controllers\\gpsobjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -79,106 +55,87 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "20250110180416_Init.cs",
-              "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\Migrations\\20250110180416_Init.cs",
-              "RelativeDocumentMoniker": "SawacoApi\\Migrations\\20250110180416_Init.cs",
-              "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\Migrations\\20250110180416_Init.cs",
-              "RelativeToolTip": "SawacoApi\\Migrations\\20250110180416_Init.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\Program.cs",
+              "RelativeDocumentMoniker": "SawacoApi\\Program.cs",
+              "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\Program.cs",
+              "RelativeToolTip": "SawacoApi\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T18:04:16.75Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GPSDeviceEntityTypeConfiguration.cs",
-              "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Context\\Configuration\\GPSDeviceEntityTypeConfiguration.cs",
-              "RelativeDocumentMoniker": "SawacoApi.Intrastructure\\Context\\Configuration\\GPSDeviceEntityTypeConfiguration.cs",
-              "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Context\\Configuration\\GPSDeviceEntityTypeConfiguration.cs",
-              "RelativeToolTip": "SawacoApi.Intrastructure\\Context\\Configuration\\GPSDeviceEntityTypeConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T18:02:11.453Z",
+              "WhenOpened": "2025-01-11T08:24:00.315Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "UpdateGPSDeviceViewModel.cs",
+              "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\ViewModel\\GPSDevices\\UpdateGPSDeviceViewModel.cs",
+              "RelativeDocumentMoniker": "SawacoApi.Intrastructure\\ViewModel\\GPSDevices\\UpdateGPSDeviceViewModel.cs",
+              "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\ViewModel\\GPSDevices\\UpdateGPSDeviceViewModel.cs",
+              "RelativeToolTip": "SawacoApi.Intrastructure\\ViewModel\\GPSDevices\\UpdateGPSDeviceViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T07:59:15.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IGPSDeviceService.cs",
+              "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Services\\GPSDevices\\IGPSDeviceService.cs",
+              "RelativeDocumentMoniker": "SawacoApi.Intrastructure\\Services\\GPSDevices\\IGPSDeviceService.cs",
+              "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Services\\GPSDevices\\IGPSDeviceService.cs",
+              "RelativeToolTip": "SawacoApi.Intrastructure\\Services\\GPSDevices\\IGPSDeviceService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T07:47:58.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GPSDeviceService.cs",
+              "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Services\\GPSDevices\\GPSDeviceService.cs",
+              "RelativeDocumentMoniker": "SawacoApi.Intrastructure\\Services\\GPSDevices\\GPSDeviceService.cs",
+              "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Services\\GPSDevices\\GPSDeviceService.cs",
+              "RelativeToolTip": "SawacoApi.Intrastructure\\Services\\GPSDevices\\GPSDeviceService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG8AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T07:47:57.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IGPSDeviceRepository.cs",
+              "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Repositories\\GPSDevices\\IGPSDeviceRepository.cs",
+              "RelativeDocumentMoniker": "SawacoApi.Intrastructure\\Repositories\\GPSDevices\\IGPSDeviceRepository.cs",
+              "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Repositories\\GPSDevices\\IGPSDeviceRepository.cs",
+              "RelativeToolTip": "SawacoApi.Intrastructure\\Repositories\\GPSDevices\\IGPSDeviceRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T07:47:42.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GPSDeviceRepository.cs",
+              "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Repositories\\GPSDevices\\GPSDeviceRepository.cs",
+              "RelativeDocumentMoniker": "SawacoApi.Intrastructure\\Repositories\\GPSDevices\\GPSDeviceRepository.cs",
+              "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Repositories\\GPSDevices\\GPSDeviceRepository.cs",
+              "RelativeToolTip": "SawacoApi.Intrastructure\\Repositories\\GPSDevices\\GPSDeviceRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAACqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T07:47:39.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "GPSDevice.cs",
               "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Models\\GPSDevice.cs",
               "RelativeDocumentMoniker": "SawacoApi.Intrastructure\\Models\\GPSDevice.cs",
               "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Models\\GPSDevice.cs",
               "RelativeToolTip": "SawacoApi.Intrastructure\\Models\\GPSDevice.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T18:02:07.028Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GPSObject.cs",
-              "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Models\\GPSObject.cs",
-              "RelativeDocumentMoniker": "SawacoApi.Intrastructure\\Models\\GPSObject.cs",
-              "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Models\\GPSObject.cs",
-              "RelativeToolTip": "SawacoApi.Intrastructure\\Models\\GPSObject.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T17:57:50.679Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CustomerEntityTypeConfiguration.cs",
-              "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Context\\Configuration\\CustomerEntityTypeConfiguration.cs",
-              "RelativeDocumentMoniker": "SawacoApi.Intrastructure\\Context\\Configuration\\CustomerEntityTypeConfiguration.cs",
-              "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Context\\Configuration\\CustomerEntityTypeConfiguration.cs",
-              "RelativeToolTip": "SawacoApi.Intrastructure\\Context\\Configuration\\CustomerEntityTypeConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T17:49:11.746Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Models\\Customer.cs",
-              "RelativeDocumentMoniker": "SawacoApi.Intrastructure\\Models\\Customer.cs",
-              "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Models\\Customer.cs",
-              "RelativeToolTip": "SawacoApi.Intrastructure\\Models\\Customer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T17:48:48.118Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GPSObjectEntityTypeConfiguration.cs",
-              "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Context\\Configuration\\GPSObjectEntityTypeConfiguration.cs",
-              "RelativeDocumentMoniker": "SawacoApi.Intrastructure\\Context\\Configuration\\GPSObjectEntityTypeConfiguration.cs",
-              "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Context\\Configuration\\GPSObjectEntityTypeConfiguration.cs",
-              "RelativeToolTip": "SawacoApi.Intrastructure\\Context\\Configuration\\GPSObjectEntityTypeConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T17:39:22.241Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CustomerController.cs",
-              "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\Controllers\\CustomerController.cs",
-              "RelativeDocumentMoniker": "SawacoApi\\Controllers\\CustomerController.cs",
-              "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\Controllers\\CustomerController.cs",
-              "RelativeToolTip": "SawacoApi\\Controllers\\CustomerController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAAAsAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T17:21:25.797Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-11T07:43:51.893Z"
             },
             {
               "$type": "Document",
@@ -188,75 +145,9 @@
               "RelativeDocumentMoniker": "SawacoApi\\Controllers\\GPSDeviceController.cs",
               "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\Controllers\\GPSDeviceController.cs",
               "RelativeToolTip": "SawacoApi\\Controllers\\GPSDeviceController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAABYAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T15:27:05.676Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "GPSObjectRepository.cs",
-              "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Repositories\\GPSObjects\\GPSObjectRepository.cs",
-              "RelativeDocumentMoniker": "SawacoApi.Intrastructure\\Repositories\\GPSObjects\\GPSObjectRepository.cs",
-              "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Repositories\\GPSObjects\\GPSObjectRepository.cs",
-              "RelativeToolTip": "SawacoApi.Intrastructure\\Repositories\\GPSObjects\\GPSObjectRepository.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAABQAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T08:33:53.858Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IGPSObjectRepository.cs",
-              "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Repositories\\GPSObjects\\IGPSObjectRepository.cs",
-              "RelativeDocumentMoniker": "SawacoApi.Intrastructure\\Repositories\\GPSObjects\\IGPSObjectRepository.cs",
-              "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Repositories\\GPSObjects\\IGPSObjectRepository.cs",
-              "RelativeToolTip": "SawacoApi.Intrastructure\\Repositories\\GPSObjects\\IGPSObjectRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T08:34:20.597Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "GPSObjectService.cs",
-              "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Services\\GPSObjects\\GPSObjectService.cs",
-              "RelativeDocumentMoniker": "SawacoApi.Intrastructure\\Services\\GPSObjects\\GPSObjectService.cs",
-              "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Services\\GPSObjects\\GPSObjectService.cs",
-              "RelativeToolTip": "SawacoApi.Intrastructure\\Services\\GPSObjects\\GPSObjectService.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAAAEMAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T08:35:42.769Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IGPSObjectService.cs",
-              "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Services\\GPSObjects\\IGPSObjectService.cs",
-              "RelativeDocumentMoniker": "SawacoApi.Intrastructure\\Services\\GPSObjects\\IGPSObjectService.cs",
-              "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Services\\GPSObjects\\IGPSObjectService.cs",
-              "RelativeToolTip": "SawacoApi.Intrastructure\\Services\\GPSObjects\\IGPSObjectService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T08:35:20.607Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "GPSObjectController.cs",
-              "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\Controllers\\GPSObjectController.cs",
-              "RelativeDocumentMoniker": "SawacoApi\\Controllers\\GPSObjectController.cs",
-              "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\Controllers\\GPSObjectController.cs",
-              "RelativeToolTip": "SawacoApi\\Controllers\\GPSObjectController.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAAAC0AAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T08:30:33.943Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-11T07:42:49.36Z"
             }
           ]
         }

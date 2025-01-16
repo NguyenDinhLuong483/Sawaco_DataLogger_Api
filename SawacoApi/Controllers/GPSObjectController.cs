@@ -11,7 +11,12 @@ namespace SawacoApi.API.Controllers
         {
             _GPSObjectService = gPSObjectService;
         }
-
+        [HttpGet]
+        [Route("GetObjectByPhoneNumber")]
+        public async Task<GPSObjectViewModel> GetObjectByPhoneNumber([FromQuery] string phoneNumber) 
+        {
+            return await _GPSObjectService.GetObjectByPhoneNumber(phoneNumber);
+        }
         [HttpGet]
         [Route("GetObjectById")]
         public async Task<GPSObjectViewModel> GetObjectById([FromQuery] string id)
@@ -37,6 +42,20 @@ namespace SawacoApi.API.Controllers
         public async Task<IActionResult> SetupDeviceForObject([FromBody] SetupDeviceViewModel viewModel)
         {
             var isSuccess = await _GPSObjectService.SetupDeviceForObject(viewModel);
+            if (isSuccess)
+            {
+                return new OkObjectResult("Setup successfully!");
+            }
+            else
+            {
+                return new OkObjectResult("ObjectId or DeviceId is not correct!");
+            }
+        }
+        [HttpDelete]
+        [Route("DeleteObjectById")]
+        public async Task<IActionResult> DeleteObjectById([FromQuery] string objectId)
+        {
+            var isSuccess = await _GPSObjectService.DeleteObjectById(objectId);
             if (isSuccess)
             {
                 return new OkObjectResult("Setup successfully!");
