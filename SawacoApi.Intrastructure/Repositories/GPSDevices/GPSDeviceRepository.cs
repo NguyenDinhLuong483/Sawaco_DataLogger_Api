@@ -16,12 +16,7 @@
             return await _context.GPSDevices.Include(x => x.StolenLines).FirstOrDefaultAsync(x => x.Id == id) ?? throw new ResourceNotFoundException("Not found device!");
         }
 
-        public async Task<GPSDevice> FindDevice(string id)
-        {
-            return await _context.GPSDevices.FindAsync(id) ?? throw new ResourceNotFoundException("Not found this device!");
-        }
-
-        public GPSDevice CreateDeviceAsync(GPSDevice newDevice)
+        public async Task<GPSDevice> CreateDeviceAsync(GPSDevice newDevice)
         {
             if (newDevice.Id == "")
             {
@@ -29,7 +24,8 @@
             }
             else
             {
-                return _context.GPSDevices.Add(newDevice).Entity;
+                var entity = await _context.GPSDevices.AddAsync(newDevice);
+                return entity.Entity;
             }
         }
 
@@ -39,10 +35,10 @@
             return true;
         }
 
-        public bool UpdateDeviceAsync(GPSDevice updateDevice)
+        public async Task UpdateDeviceAsync(GPSDevice updateDevice)
         {
             _context.Update(updateDevice);
-            return true;
+            await _context.SaveChangesAsync();
         }
 
         public async Task<bool> IsExistDevice(string id)

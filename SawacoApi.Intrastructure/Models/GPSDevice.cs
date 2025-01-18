@@ -46,17 +46,5 @@ namespace SawacoApi.Intrastructure.Models
             RegistationDate = registationDate;
             ExpirationDate = expirationDate;
         }
-
-        public void UpdateAll(double longtitude, double latitude, string name, double battery, double temp, bool stolen, string bluetooth, DateTime timeStamp)
-        {
-            Longitude = longtitude;
-            Latitude = latitude;
-            Name = name;
-            Battery = battery;
-            Temperature = temp;
-            Stolen = stolen;
-            Bluetooth = bluetooth;
-            TimeStamp = timeStamp;
-        }
     }
 }

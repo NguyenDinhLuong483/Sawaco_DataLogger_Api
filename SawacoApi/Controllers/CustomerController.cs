@@ -1,5 +1,5 @@
 ﻿
-using SawacoApi.Intrastructure.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SawacoApi.API.Controllers
 {
@@ -51,7 +51,7 @@ namespace SawacoApi.API.Controllers
             }
             else
             {
-                return new OkObjectResult("Current phone number or password is not correct!");
+                return new OkObjectResult("Current phone number/password not correct or new phonenumber is exist!");
             }
         }
         [HttpPatch]
@@ -81,6 +81,14 @@ namespace SawacoApi.API.Controllers
             {
                 return new OkObjectResult("Phone number is not correct!");
             }
+        }
+        [HttpPost]
+        [AllowAnonymous]
+        [Route("Login")]
+        public async Task<IActionResult> Login([FromBody] LoginViewModel login)
+        {
+            var token = await _customerService.Login(login);
+            return new OkObjectResult(token);
         }
     }
 }

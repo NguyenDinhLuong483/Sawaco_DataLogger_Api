@@ -9,5 +9,6 @@ namespace SawacoApi.Intrastructure.Services.Customers
         public Task<bool> ChangeCustomerPhoneNumber(ChangeCustomerPhoneNumberViewModel viewmodel);
         public Task<bool> ChangeLoginInformation(ChangePasswordViewModel logininfo, string phoneNumber);
         public Task<bool> DeleteCustomerByPhoneNumber(string phoneNumber);
+        public Task<string> Login(LoginViewModel loginViewModel);
     }
 }

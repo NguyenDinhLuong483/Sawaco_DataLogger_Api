@@ -13,9 +13,9 @@
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<List<StolenLineViewModel>> GetByLoggerId(string loggerId)
+        public async Task<List<StolenLineViewModel>> GetByDeviceId(string Id)
         {
-            var source = await _stolenLineRepository.GetByLoggerIdAsync(loggerId) ?? throw new ResourceNotFoundException("Not found this logger!");
+            var source = await _stolenLineRepository.GetByDeviceIdAsync(Id) ?? throw new ResourceNotFoundException("Not found this logger!");
             var stolenLine = _mapper.Map<List<StolenLine>, List<StolenLineViewModel>>(source);
             return stolenLine;
         }
@@ -27,9 +27,9 @@
             return stolenLine;
         }
 
-        public async Task<bool> DeleteByLoggerId(string loggerId)
+        public async Task<bool> DeleteByDeviceId(string deviceId)
         {
-            var stolenLine = await _stolenLineRepository.GetByLoggerIdAsync(loggerId) ?? throw new ResourceNotFoundException("Not found this logger!");
+            var stolenLine = await _stolenLineRepository.GetByDeviceIdAsync(deviceId) ?? throw new ResourceNotFoundException("Not found this logger!");
             _stolenLineRepository.DeleteAsync(stolenLine);
             return await _unitOfWork.CompleteAsync();
         }

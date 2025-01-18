@@ -33,12 +33,12 @@ namespace SawacoApi.Intrastructure.Services.GPSDevices
 
         public async Task<bool> CreateNewGPSDevice(AddGPSDeviceViewModel addDevice)
         {
-            var mapping = _mapper.Map<AddGPSDeviceViewModel, GPSDevice>(addDevice);
-            var IsExist = await _GPSDeviceRepository.FindDevice(mapping.Id);
-            if (IsExist is not null)
+            var IsExist = await _GPSDeviceRepository.IsExistDevice(addDevice.Id);
+            if (IsExist)
             {
                 throw new EntityDuplicationException("This device is existing!");
             }
+            var mapping = _mapper.Map<AddGPSDeviceViewModel, GPSDevice>(addDevice);
             var newdevice = _GPSDeviceRepository.CreateDeviceAsync(mapping);
             return await _unitOfWork.CompleteAsync();
         }
@@ -60,11 +60,11 @@ namespace SawacoApi.Intrastructure.Services.GPSDevices
                 {
                     device.CustomerPhoneNumber = updateDevice.CustomerPhoneNumber;
                 }
-                if (updateDevice.Longitude != 0)
+                if (!string.IsNullOrEmpty(updateDevice.Longitude.ToString()))
                 {
                     device.Longitude = updateDevice.Longitude;
                 }
-                if (updateDevice.Latitude != 0)
+                if (!string.IsNullOrEmpty(updateDevice.Latitude.ToString()))
                 {
                     device.Latitude = updateDevice.Latitude;
                 }
@@ -76,15 +76,15 @@ namespace SawacoApi.Intrastructure.Services.GPSDevices
                 {
                     device.ImagePath = updateDevice.ImagePath;
                 }
-                if (updateDevice.Battery != 0)
+                if (!string.IsNullOrEmpty(updateDevice.Battery.ToString()))
                 {
                     device.Battery = updateDevice.Battery;
                 }
-                if (updateDevice.Temperature != 0)
+                if (!string.IsNullOrEmpty(updateDevice.Temperature.ToString()))
                 {
                     device.Temperature = updateDevice.Temperature;
                 }
-                if (!string.IsNullOrEmpty(updateDevice.Stolen.ToString())) // Assuming Stolen is boolean and default is false
+                if (!string.IsNullOrEmpty(updateDevice.Stolen.ToString()))
                 {
                     device.Stolen = updateDevice.Stolen;
                 }
@@ -112,7 +112,7 @@ namespace SawacoApi.Intrastructure.Services.GPSDevices
                 {
                     device.ExpirationDate = updateDevice.ExpirationDate;
                 }
-                _GPSDeviceRepository.UpdateDeviceAsync(device);
+                await _GPSDeviceRepository.UpdateDeviceAsync(device);
                 return await _unitOfWork.CompleteAsync();
             }
             else

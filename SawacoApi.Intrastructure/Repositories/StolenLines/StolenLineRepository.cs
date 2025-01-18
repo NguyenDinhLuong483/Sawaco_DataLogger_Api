@@ -7,7 +7,7 @@ namespace SawacoApi.Intrastructure.Repositories.StolenLines
         {
         }
 
-        public async Task<List<StolenLine>> GetByLoggerIdAsync(string loggerId)
+        public async Task<List<StolenLine>> GetByDeviceIdAsync(string loggerId)
         {
             return await _context.StolenLines.OrderBy(x => x.GPSDeviceId == loggerId).ToListAsync();
         }

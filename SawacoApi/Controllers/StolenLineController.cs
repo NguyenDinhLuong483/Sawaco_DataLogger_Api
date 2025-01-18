@@ -15,7 +15,7 @@ namespace SawacoApi.Controllers
         [Route("GetStolenLineByDeviceId")]
         public async Task<List<StolenLineViewModel>> GetStolenLineByLoggerId([FromQuery] string DeviceId)
         {
-            return await _stolenLineService.GetByLoggerId(DeviceId);
+            return await _stolenLineService.GetByDeviceId(DeviceId);
         }
         [HttpGet]
         [Route("GetStolenLineByDate")]
@@ -27,7 +27,7 @@ namespace SawacoApi.Controllers
         [Route("DeleteStolenLineByDeviceId")]
         public async Task<IActionResult> DeleteStolenLineByLoggerId([FromQuery] string DeviceId)
         {
-            return new OkObjectResult(await _stolenLineService.DeleteByLoggerId(DeviceId));
+            return new OkObjectResult(await _stolenLineService.DeleteByDeviceId(DeviceId));
         }
         [HttpDelete]
         [Route("DeleteStolenLineByDate")]

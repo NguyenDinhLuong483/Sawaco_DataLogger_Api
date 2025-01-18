@@ -77,28 +77,31 @@ namespace SawacoApi.Host.Hosting
             using (IServiceScope scope = _serviceScopeFactory.CreateScope())
             {
                 var stolenLineService = scope.ServiceProvider.GetRequiredService<IStolenLineService>();
-                var loggerService = scope.ServiceProvider.GetRequiredService<IGPSDeviceService>();
+                var deviceService = scope.ServiceProvider.GetRequiredService<IGPSDeviceService>();
 
-                var isexist = await loggerService.GetGPSDeviceById(Id);
+                var isexist = await deviceService.GetGPSDeviceById(Id);
                 if(isexist is null)
                 {
-                    await loggerService.CreateNewGPSDevice(new AddGPSDeviceViewModel(Id, Lon, Lat, Id));
+                    await deviceService.CreateNewGPSDevice(new AddGPSDeviceViewModel(Id, Lon, Lat, Id));
                 }
                 else
                 {
+                    var device = new UpdateGPSDeviceViewModel();
                     if (Stolen && Lat != 0 && Lon != 0)
                     {
-                        await loggerService.UpdateGPSDeviceStatus(new UpdateGPSDeviceViewModel(Lon, Lat, isexist.Name, "", Battery, Temp, true, "ON", TimeStamp), Id);
+                        device.HostingUpdate(Lon, Lat, Battery, Temp, true, Bluetooth, TimeStamp);
+                        await deviceService.UpdateGPSDeviceStatus(device, Id);
                         await stolenLineService.AddNewStolenLine(new AddStolenLineViewModel(Id, Lon, Lat, Battery, TimeStamp));
                     }
                     else if (!Stolen && Lat != 0 && Lon != 0)
                     {
-
-                        await loggerService.UpdateGPSDeviceStatus(new UpdateGPSDeviceViewModel(Lon, Lat, isexist.Name, "", Battery, Temp, false, "ON", TimeStamp), Id);
+                        device.HostingUpdate(Lon, Lat, Battery, Temp, false, Bluetooth, TimeStamp);
+                        await deviceService.UpdateGPSDeviceStatus(device, Id);
                     }
                     else
                     {
-                        await loggerService.UpdateGPSDeviceStatus(new UpdateGPSDeviceViewModel(isexist.Longitude, isexist.Latitude, isexist.Name, "", Battery, Temp, isexist.Stolen, Bluetooth, TimeStamp), Id);
+                        device.HostingUpdate(isexist.Longitude, isexist.Latitude, Battery, Temp, Stolen, Bluetooth, TimeStamp);
+                        await deviceService.UpdateGPSDeviceStatus(device, Id);
                     }
                 }    
             }

@@ -59,7 +59,15 @@ namespace SawacoApi.Controllers
             try
             {
                 var result = await _GPSDeviceService.UpdateGPSDeviceStatus(updateGPSDevice, GPSDeviceId);
-                return new OkObjectResult(result);
+                if(result)
+                {
+                    return new OkObjectResult("Update successful!");
+                }
+                else
+                {
+                    return new OkObjectResult("Not found device!");
+                }
+                
             }
             catch (Exception ex)
             {

@@ -15,7 +15,6 @@ namespace SawacoApi.Intrastructure.Mapping
             CreateMap<AddStolenLineViewModel, StolenLine>();
             CreateMap<AddNewCustomerViewModel,  Customer>();
             CreateMap<AddGPSDeviceViewModel, GPSDevice>();
-            CreateMap<UpdateGPSDeviceViewModel, GPSDevice>();
             CreateMap<CreateNewObjectViewModel, GPSObject>();
         }
     }
