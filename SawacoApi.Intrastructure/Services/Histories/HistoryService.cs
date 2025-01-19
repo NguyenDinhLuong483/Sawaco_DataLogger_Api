@@ -1,0 +1,59 @@
+﻿
+namespace SawacoApi.Intrastructure.Services.Histories
+{
+    public class HistoryService : IHistoryService
+    {
+        public IHistoryRepository _historyRepository { get; set; }
+        public IMapper _mapper { get; set; }
+        public IUnitOfWork _unitOfWork { get; set; }
+
+        public HistoryService(IHistoryRepository historyRepository, IMapper mapper, IUnitOfWork unitOfWork)
+        {
+            _historyRepository = historyRepository;
+            _mapper = mapper;
+            _unitOfWork = unitOfWork;
+        }
+
+        public async Task<bool> AddBatteryHistory(AddBatteryHistoryViewModel viewModel)
+        {
+            var source = _mapper.Map<AddBatteryHistoryViewModel, BatteryHistory>(viewModel);
+            await _historyRepository.AddBatteryHistoryAsync(source);
+            return await _unitOfWork.CompleteAsync();
+        }
+
+        public async Task<List<BatteryHistoryViewModel>> GetBatteryHistory(DateTime startDate, DateTime endDate)
+        {
+            var source = await _historyRepository.GetBatteryHistoryAsync(startDate, endDate);
+            var result = _mapper.Map<List<BatteryHistory>, List<BatteryHistoryViewModel>>(source);
+            return result;
+        }
+
+        public async Task<bool> AddDevicePositionHistory(AddDevicePositionHistoryViewModel viewModel)
+        {
+            var source = _mapper.Map<AddDevicePositionHistoryViewModel, DevicePositionHistory>(viewModel);
+            await _historyRepository.AddDevicePositionHistoryAsync(source);
+            return await _unitOfWork.CompleteAsync();
+        }
+
+        public async Task<List<DevicePositionHistoryViewModel>> GetDevicePositionHistory(DateTime startDate, DateTime endDate)
+        {
+            var source = await _historyRepository.GetDevicePositionHistoryAsync(startDate, endDate);
+            var result = _mapper.Map<List<DevicePositionHistory>, List<DevicePositionHistoryViewModel>>(source);
+            return result;
+        }
+
+        public async Task<bool> AddObjectPositionHistory(AddObjectPositionHistoryViewModel viewModel)
+        {
+            var source = _mapper.Map<AddObjectPositionHistoryViewModel, ObjectPositionHistory>(viewModel);
+            await _historyRepository.AddObjectPositionHistoryAsync(source);
+            return await _unitOfWork.CompleteAsync();
+        }
+
+        public async Task<List<ObjectPositionHistoryViewModel>> GetObjectPositionHistory(DateTime startDate, DateTime endDate)
+        {
+            var source = await _historyRepository.GetObjectPositionHistoryAsync(startDate, endDate);
+            var result = _mapper.Map<List<ObjectPositionHistory>, List<ObjectPositionHistoryViewModel>>(source);
+            return result;
+        }
+    }
+}

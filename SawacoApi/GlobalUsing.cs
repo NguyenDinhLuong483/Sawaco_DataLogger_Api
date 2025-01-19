@@ -25,3 +25,10 @@ global using SawacoApi.Intrastructure.Repositories.Customers;
 global using SawacoApi.Intrastructure.Repositories.GPSObjects;
 global using SawacoApi.Intrastructure.Services.GPSObjects;
 global using SawacoApi.Intrastructure.ViewModel.GPSObjects;
+global using Microsoft.AspNetCore.Authentication.JwtBearer;
+global using Microsoft.IdentityModel.Tokens;
+global using System.Text;
+global using SawacoApi.Intrastructure.Services.Histories;
+global using SawacoApi.Intrastructure.ViewModel.Histories;
+global using SawacoApi.Intrastructure.Repositories.Histories;
+
