@@ -23,17 +23,25 @@ namespace SawacoApi.Intrastructure.Services.GPSObjects
 
         public async Task<string> CreateNewObject(CreateNewObjectViewModel viewModel)
         {
-            bool isExist;
-            do
+            var customer = await _gPSObjectRepository.IsExistPhoneNumber(viewModel.CustomerPhoneNumber);
+            if (customer)
             {
-                viewModel.Id = new Random().Next(100000, 999999).ToString();
-                isExist = await _gPSObjectRepository.IsExistObject(viewModel.Id);
+                bool isExist;
+                do
+                {
+                    viewModel.Id = new Random().Next(100000, 999999).ToString();
+                    isExist = await _gPSObjectRepository.IsExistObject(viewModel.Id);
+                }
+                while (isExist);
+                var newobject = _mapper.Map<CreateNewObjectViewModel, GPSObject>(viewModel);
+                await _gPSObjectRepository.AddNewObject(newobject);
+                await _unitOfWork.CompleteAsync();
+                return newobject.Id;
             }
-            while (isExist);
-            var newobject = _mapper.Map<CreateNewObjectViewModel, GPSObject>(viewModel);
-            await _gPSObjectRepository.AddNewObject(newobject);
-            await _unitOfWork.CompleteAsync();
-            return newobject.Id;
+            else
+            {
+                return "Phone Number is not correct!";
+            }
 
         }
 
@@ -57,17 +65,17 @@ namespace SawacoApi.Intrastructure.Services.GPSObjects
                         var newObject = await _gPSObjectRepository.GetObjectByIdAsync(viewModel.ObjectId);
                         newObject.Connected = true;
                         newObject.GPSDeviceId = viewModel.DeviceId;
-                        _gPSObjectRepository.UpdateObject(newObject);
+                        await _gPSObjectRepository.UpdateObject(newObject);
                     }
                     else
                     {
                         currentObject.Connected = false;
-                        _gPSObjectRepository.UpdateObject(currentObject);
+                        await _gPSObjectRepository.UpdateObject(currentObject);
 
                         var newObject = await _gPSObjectRepository.GetObjectByIdAsync(viewModel.ObjectId);
                         newObject.Connected = true;
                         newObject.GPSDeviceId = viewModel.DeviceId;
-                        _gPSObjectRepository.UpdateObject(newObject);
+                        await _gPSObjectRepository.UpdateObject(newObject);
                     }
                     return await _unitOfWork.CompleteAsync();
                 }
@@ -78,10 +86,10 @@ namespace SawacoApi.Intrastructure.Services.GPSObjects
             }
         }
 
-        public async Task<GPSObjectViewModel> GetObjectByPhoneNumber(string phoneNumber)
+        public async Task<List<GPSObjectViewModel>> GetObjectByPhoneNumber(string phoneNumber)
         {
             var source = await _gPSObjectRepository.GetObjectByPhoneNumberAsync(phoneNumber);
-            var result = _mapper.Map<GPSObject, GPSObjectViewModel>(source);
+            var result = _mapper.Map<List<GPSObject>, List<GPSObjectViewModel>>(source);
             return result;
         }
 
@@ -90,6 +98,69 @@ namespace SawacoApi.Intrastructure.Services.GPSObjects
             var objects = await _gPSObjectRepository.GetObjectByIdAsync(Id);
             await _gPSObjectRepository.DeleteObjectByIdAsync(objects);
             return await _unitOfWork.CompleteAsync();
+        }
+
+        public async Task<bool> UpdateObjectInformation(UpdateGPSObjectViewModel viewModel, string id)
+        {
+            var isExist = await _gPSObjectRepository.IsExistObject(id);
+            if (isExist) 
+            {
+                var updateObject = await _gPSObjectRepository.GetObjectByIdAsync(id);
+                if (!string.IsNullOrEmpty(viewModel.CustomerPhoneNumber))
+                {
+                    updateObject.CustomerPhoneNumber = viewModel.CustomerPhoneNumber;
+                }
+                if (!string.IsNullOrEmpty(viewModel.Longitude.ToString()))
+                {
+                    updateObject.Longitude = viewModel.Longitude;
+                }
+                if (!string.IsNullOrEmpty(viewModel.Latitude.ToString()))
+                {
+                    updateObject.Latitude = viewModel.Latitude;
+                }
+                if (!string.IsNullOrEmpty(viewModel.Name))
+                {
+                    updateObject.Name = viewModel.Name;
+                }
+                if (!string.IsNullOrEmpty(viewModel.ImagePath))
+                {
+                    updateObject.ImagePath = viewModel.ImagePath;
+                }
+                if (!string.IsNullOrEmpty(viewModel.Description))
+                {
+                    updateObject.Description = viewModel.Description;
+                }
+                if (!string.IsNullOrEmpty(viewModel.SafeRadius.ToString()))
+                {
+                    updateObject.SafeRadius = viewModel.SafeRadius;
+                }
+                if (!string.IsNullOrEmpty(viewModel.Size))
+                {
+                    updateObject.Size = viewModel.Size;
+                }
+                await _gPSObjectRepository.UpdateObject(updateObject);
+                return await _unitOfWork.CompleteAsync();
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> CancelConnection(string id)
+        {
+            var isExist = await _gPSObjectRepository.IsExistObject(id);
+            if (isExist)
+            {
+                var updateObject = await _gPSObjectRepository.GetObjectByIdAsync(id);
+                updateObject.Connected = false;
+                await _gPSObjectRepository.UpdateObject(updateObject);
+                return await _unitOfWork.CompleteAsync();
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

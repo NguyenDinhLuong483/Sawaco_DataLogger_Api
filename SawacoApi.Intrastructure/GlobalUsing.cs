@@ -27,3 +27,5 @@ global using SawacoApi.Intrastructure.Repositories.GPSObjects;
 global using SawacoApi.Intrastructure.ViewModel.GPSObjects;
 global using SawacoApi.Intrastructure.ViewModel.Histories;
 global using SawacoApi.Intrastructure.Repositories.Histories;
+global using SawacoApi.Intrastructure.Repositories.Notifications;
+global using SawacoApi.Intrastructure.ViewModel.Notifications;

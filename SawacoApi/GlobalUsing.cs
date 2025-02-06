@@ -31,4 +31,7 @@ global using System.Text;
 global using SawacoApi.Intrastructure.Services.Histories;
 global using SawacoApi.Intrastructure.ViewModel.Histories;
 global using SawacoApi.Intrastructure.Repositories.Histories;
-
+global using SawacoApi.Intrastructure.Repositories.Notifications;
+global using SawacoApi.Intrastructure.ViewModel.Notifications;
+global using SawacoApi.Intrastructure.Services.Notifications;
+global using Microsoft.AspNetCore.SignalR;

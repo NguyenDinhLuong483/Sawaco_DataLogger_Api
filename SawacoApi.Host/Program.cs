@@ -15,6 +15,8 @@ IHost host = Host.CreateDefaultBuilder(args)
         services.AddScoped<IGPSDeviceRepository, GPSDeviceRepository>();
         services.AddScoped<IStolenLineService, StolenLineService>();
         services.AddScoped<IStolenLineRepository, StolenLineRepository>();
+        services.AddScoped<INotificationService, NotificationService>();
+        services.AddScoped<INotificationRepository, NotificationRepository>();
 
         services.AddWindowsService(options =>
         {

@@ -1,7 +1,4 @@
 ﻿
-using Microsoft.AspNetCore.SignalR;
-using Microsoft.Extensions.DependencyInjection;
-
 namespace SawacoApi.Hubs
 {
     public sealed class ScadaHost : BackgroundService
@@ -26,7 +23,7 @@ namespace SawacoApi.Hubs
         {
             _mqttClient.MessageReceived += OnMqttClientMessageReceived;
             await _mqttClient.ConnectAsync();
-            await _mqttClient.Subscribe("SHRIMP_POND");
+            await _mqttClient.Subscribe("gps_tracker/+");
         }
         private async Task OnMqttClientMessageReceived(MqttMessage arg)
         {

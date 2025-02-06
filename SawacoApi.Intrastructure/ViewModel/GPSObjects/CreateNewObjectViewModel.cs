@@ -8,6 +8,7 @@ namespace SawacoApi.Intrastructure.ViewModel.GPSObjects
         public string Id { get; set; }
         [JsonIgnore]
         public string GPSDeviceId { get; set; }
+        public string CustomerPhoneNumber { get; set; }
         public string Name { get; set; }
         public double Longitude { get; set; }
         public double Latitude { get; set; }
@@ -18,7 +19,7 @@ namespace SawacoApi.Intrastructure.ViewModel.GPSObjects
         [JsonIgnore]
         public bool Connected { get; set; }
 
-        public CreateNewObjectViewModel(string name, double longitude, double latitude, string description, string imagePath, int safeRadius, string size)
+        public CreateNewObjectViewModel(string name, double longitude, double latitude, string description, string imagePath, int safeRadius, string size, string customerPhoneNumber)
         {
             Id = "";
             GPSDeviceId = "";
@@ -30,7 +31,7 @@ namespace SawacoApi.Intrastructure.ViewModel.GPSObjects
             SafeRadius = safeRadius;
             Size = size;
             Connected = false;
-
+            CustomerPhoneNumber = customerPhoneNumber;
         }
     }
 }

@@ -14,6 +14,7 @@ namespace SawacoApi.Intrastructure.Context
         public DbSet<Customer> Customers { get; set; }
         public DbSet<DevicePositionHistory> DevicePositionHistories { get; set; }
         public DbSet<ObjectPositionHistory> ObjectPositionHistories { get; set; }
+        public DbSet<Notification> Notifications { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -24,6 +25,7 @@ namespace SawacoApi.Intrastructure.Context
             modelBuilder.ApplyConfiguration(new CustomerEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new DevicePositionHistoryEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new ObjectPositionHistoryEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new NotificationEntityTypeConfiguration());
         }
     }
 }

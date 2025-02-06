@@ -8,6 +8,7 @@ namespace SawacoApi.Intrastructure.Models
         public string Password {  get; set; }
         public List<GPSObject> GPSObjects { get; set; }
         public List<GPSDevice> GPSDevices { get; set; }
+        public List<Notification> Notification { get; set; }
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
         public Customer()

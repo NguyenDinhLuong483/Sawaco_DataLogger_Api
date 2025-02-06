@@ -72,7 +72,7 @@ namespace SawacoApi.API.Controllers
         }
 
         [HttpGet]
-        [Route("GetDeviceObjectHistory")]
+        [Route("GetObjectPositionHistory")]
         public async Task<List<ObjectPositionHistoryViewModel>> GetDeviceObjectHistory([FromQuery] DateTime startDate, [FromQuery] DateTime endDate)
         {
             return await _historyService.GetObjectPositionHistory(startDate, endDate);

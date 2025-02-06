@@ -231,6 +231,22 @@
   },
   {
     "ContainingType": "SawacoApi.API.Controllers.GPSObjectController",
+    "Method": "CancelConnection",
+    "RelativePath": "GPSObject/CancelConnection",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ObjectId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SawacoApi.API.Controllers.GPSObjectController",
     "Method": "CreateNewObject",
     "RelativePath": "GPSObject/CreateNewObject",
     "HttpMethod": "POST",
@@ -303,7 +319,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "SawacoApi.Intrastructure.ViewModel.GPSObjects.GPSObjectViewModel",
+        "Type": "System.Collections.Generic.List\u00601[[SawacoApi.Intrastructure.ViewModel.GPSObjects.GPSObjectViewModel, SawacoApi.Intrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -325,6 +341,27 @@
         "Name": "viewModel",
         "Type": "SawacoApi.Intrastructure.ViewModel.GPSObjects.SetupDeviceViewModel",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SawacoApi.API.Controllers.GPSObjectController",
+    "Method": "UpdateObjectInformation",
+    "RelativePath": "GPSObject/UpdateObjectInformation",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "viewModel",
+        "Type": "SawacoApi.Intrastructure.ViewModel.GPSObjects.UpdateGPSObjectViewModel",
+        "IsRequired": true
+      },
+      {
+        "Name": "ObjectId",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -410,8 +447,39 @@
   },
   {
     "ContainingType": "SawacoApi.API.Controllers.HistoryController",
+    "Method": "GetDevicePositionHistory",
+    "RelativePath": "History/GetDevicePositionHistory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "startDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SawacoApi.Intrastructure.ViewModel.Histories.DevicePositionHistoryViewModel, SawacoApi.Intrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SawacoApi.API.Controllers.HistoryController",
     "Method": "GetDeviceObjectHistory",
-    "RelativePath": "History/GetDeviceObjectHistory",
+    "RelativePath": "History/GetObjectPositionHistory",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -440,27 +508,38 @@
     ]
   },
   {
-    "ContainingType": "SawacoApi.API.Controllers.HistoryController",
-    "Method": "GetDevicePositionHistory",
-    "RelativePath": "History/GetDevicePositionHistory",
+    "ContainingType": "SawacoApi.API.Controllers.NotificationController",
+    "Method": "AddNewNotification",
+    "RelativePath": "Notification/AddNewNotification",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "viewModel",
+        "Type": "SawacoApi.Intrastructure.ViewModel.Notifications.AddNewNotificationViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SawacoApi.API.Controllers.NotificationController",
+    "Method": "GetNotificationByPhoneNumber",
+    "RelativePath": "Notification/GetNotificationByPhoneNumber",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "startDate",
-        "Type": "System.DateTime",
-        "IsRequired": false
-      },
-      {
-        "Name": "endDate",
-        "Type": "System.DateTime",
+        "Name": "phoneNumber",
+        "Type": "System.String",
         "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[SawacoApi.Intrastructure.ViewModel.Histories.DevicePositionHistoryViewModel, SawacoApi.Intrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[SawacoApi.Intrastructure.ViewModel.Notifications.NotificationViewModel, SawacoApi.Intrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

@@ -14,6 +14,7 @@ namespace SawacoApi.Intrastructure.Mapping
             CreateMap<BatteryHistory, BatteryHistoryViewModel>();
             CreateMap<DevicePositionHistory, DevicePositionHistoryViewModel>();
             CreateMap<ObjectPositionHistory, ObjectPositionHistoryViewModel>();
+            CreateMap<Notification, NotificationViewModel>();
 
             CreateMap<AddStolenLineViewModel, StolenLine>();
             CreateMap<AddNewCustomerViewModel,  Customer>();
@@ -22,6 +23,7 @@ namespace SawacoApi.Intrastructure.Mapping
             CreateMap<AddBatteryHistoryViewModel, BatteryHistory>();
             CreateMap<AddDevicePositionHistoryViewModel, DevicePositionHistory>();
             CreateMap<AddObjectPositionHistoryViewModel, ObjectPositionHistory>();
+            CreateMap<AddNewNotificationViewModel, Notification>();
         }
     }
 }

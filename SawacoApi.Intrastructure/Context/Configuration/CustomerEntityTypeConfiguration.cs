@@ -13,6 +13,7 @@ namespace SawacoApi.Intrastructure.Context.Configuration
 
             builder.HasMany(x => x.GPSDevices).WithOne(x => x.Customer).HasForeignKey(x => x.CustomerPhoneNumber).OnDelete(DeleteBehavior.Cascade);
             builder.HasMany(x => x.GPSObjects).WithOne(x => x.Customer).HasForeignKey(x => x.CustomerPhoneNumber).OnDelete(DeleteBehavior.Cascade);
+            builder.HasMany(x => x.Notification).WithOne(x => x.Customer).HasForeignKey(x => x.CustomerPhoneNumber).OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

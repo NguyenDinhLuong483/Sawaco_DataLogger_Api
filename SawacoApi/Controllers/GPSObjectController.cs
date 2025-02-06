@@ -11,18 +11,21 @@ namespace SawacoApi.API.Controllers
         {
             _GPSObjectService = gPSObjectService;
         }
+
         [HttpGet]
         [Route("GetObjectByPhoneNumber")]
-        public async Task<GPSObjectViewModel> GetObjectByPhoneNumber([FromQuery] string phoneNumber) 
+        public async Task<List<GPSObjectViewModel>> GetObjectByPhoneNumber([FromQuery] string phoneNumber) 
         {
             return await _GPSObjectService.GetObjectByPhoneNumber(phoneNumber);
         }
+
         [HttpGet]
         [Route("GetObjectById")]
         public async Task<GPSObjectViewModel> GetObjectById([FromQuery] string id)
         {
             return await _GPSObjectService.GetObjectById(id);
         }
+
         [HttpPost]
         [Route("CreateNewObject")]
         public async Task<IActionResult> CreateNewObject([FromBody] CreateNewObjectViewModel viewModel)
@@ -37,6 +40,7 @@ namespace SawacoApi.API.Controllers
                 return BadRequest(ex);
             }
         }
+
         [HttpPatch]
         [Route("SetupDeviceForObject")]
         public async Task<IActionResult> SetupDeviceForObject([FromBody] SetupDeviceViewModel viewModel)
@@ -51,6 +55,37 @@ namespace SawacoApi.API.Controllers
                 return new OkObjectResult("ObjectId or DeviceId is not correct!");
             }
         }
+
+        [HttpPatch]
+        [Route("UpdateObjectInformation")]
+        public async Task<IActionResult> UpdateObjectInformation([FromBody] UpdateGPSObjectViewModel viewModel, [FromQuery] string ObjectId)
+        {
+            var isSuccess = await _GPSObjectService.UpdateObjectInformation(viewModel, ObjectId);
+            if (isSuccess)
+            {
+                return new OkObjectResult("Update successfully!");
+            }
+            else
+            {
+                return new OkObjectResult("Object Id is not correct!");
+            }
+        }
+
+        [HttpPatch]
+        [Route("CancelConnection")]
+        public async Task<IActionResult> CancelConnection([FromQuery] string ObjectId)
+        {
+            var isSuccess = await _GPSObjectService.CancelConnection(ObjectId);
+            if (isSuccess)
+            {
+                return new OkObjectResult("Cancle connection successfully!");
+            }
+            else
+            {
+                return new OkObjectResult("Object Id is not correct!");
+            }
+        }
+
         [HttpDelete]
         [Route("DeleteObjectById")]
         public async Task<IActionResult> DeleteObjectById([FromQuery] string objectId)

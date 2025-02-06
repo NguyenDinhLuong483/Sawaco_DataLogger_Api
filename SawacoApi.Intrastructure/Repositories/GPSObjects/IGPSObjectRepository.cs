@@ -9,8 +9,9 @@ namespace SawacoApi.Intrastructure.Repositories.GPSObjects
         public Task<bool> IsExistObject(string id);
         public Task<bool> IsExistDevice(string id);
         public Task<GPSObject> FindObjectConnected(string deviceId);
-        public bool UpdateObject(GPSObject gpsObject);
-        public Task<GPSObject> GetObjectByPhoneNumberAsync(string phoneNumber);
+        public Task UpdateObject(GPSObject gpsObject);
+        public Task<List<GPSObject>> GetObjectByPhoneNumberAsync(string phoneNumber);
         public Task DeleteObjectByIdAsync(GPSObject objects);
+        public Task<bool> IsExistPhoneNumber(string phoneNumber);
     }
 }

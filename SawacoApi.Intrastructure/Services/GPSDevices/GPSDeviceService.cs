@@ -1,7 +1,4 @@
 ﻿
-using Microsoft.Extensions.Logging;
-using Microsoft.IdentityModel.Tokens;
-
 namespace SawacoApi.Intrastructure.Services.GPSDevices
 {
     public class GPSDeviceService : IGPSDeviceService
@@ -119,6 +116,11 @@ namespace SawacoApi.Intrastructure.Services.GPSDevices
             {
                 return false;
             }
+        }
+
+        public async Task<bool> IsExistDevice(string deviceId)
+        {
+            return await _GPSDeviceRepository.IsExistDevice(deviceId);
         }
     }
 }

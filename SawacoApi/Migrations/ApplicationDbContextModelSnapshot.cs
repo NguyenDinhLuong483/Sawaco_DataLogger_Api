@@ -36,7 +36,7 @@ namespace SawacoApi.API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("BatteryHistories");
+                    b.ToTable("BatteryHistories", (string)null);
                 });
 
             modelBuilder.Entity("SawacoApi.Intrastructure.Models.Customer", b =>
@@ -54,7 +54,7 @@ namespace SawacoApi.API.Migrations
 
                     b.HasKey("PhoneNumber");
 
-                    b.ToTable("Customers");
+                    b.ToTable("Customers", (string)null);
                 });
 
             modelBuilder.Entity("SawacoApi.Intrastructure.Models.DevicePositionHistory", b =>
@@ -82,7 +82,7 @@ namespace SawacoApi.API.Migrations
 
                     b.HasIndex("GPSDeviceId");
 
-                    b.ToTable("DevicePositionHistories");
+                    b.ToTable("DevicePositionHistories", (string)null);
                 });
 
             modelBuilder.Entity("SawacoApi.Intrastructure.Models.GPSDevice", b =>
@@ -145,7 +145,7 @@ namespace SawacoApi.API.Migrations
 
                     b.HasIndex("CustomerPhoneNumber");
 
-                    b.ToTable("GPSDevices");
+                    b.ToTable("GPSDevices", (string)null);
                 });
 
             modelBuilder.Entity("SawacoApi.Intrastructure.Models.GPSObject", b =>
@@ -193,7 +193,37 @@ namespace SawacoApi.API.Migrations
 
                     b.HasIndex("CustomerPhoneNumber");
 
-                    b.ToTable("GPSObjects");
+                    b.ToTable("GPSObjects", (string)null);
+                });
+
+            modelBuilder.Entity("SawacoApi.Intrastructure.Models.Notification", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("CustomerPhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsAcknowledge")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("Timestamp")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CustomerPhoneNumber");
+
+                    b.ToTable("Notifications", (string)null);
                 });
 
             modelBuilder.Entity("SawacoApi.Intrastructure.Models.ObjectPositionHistory", b =>
@@ -221,7 +251,7 @@ namespace SawacoApi.API.Migrations
 
                     b.HasIndex("GPSObjectId");
 
-                    b.ToTable("ObjectPositionHistories");
+                    b.ToTable("ObjectPositionHistories", (string)null);
                 });
 
             modelBuilder.Entity("SawacoApi.Intrastructure.Models.StolenLine", b =>
@@ -252,7 +282,7 @@ namespace SawacoApi.API.Migrations
 
                     b.HasIndex("GPSDeviceId");
 
-                    b.ToTable("StolenLines");
+                    b.ToTable("StolenLines", (string)null);
                 });
 
             modelBuilder.Entity("SawacoApi.Intrastructure.Models.DevicePositionHistory", b =>
@@ -288,6 +318,17 @@ namespace SawacoApi.API.Migrations
                     b.Navigation("Customer");
                 });
 
+            modelBuilder.Entity("SawacoApi.Intrastructure.Models.Notification", b =>
+                {
+                    b.HasOne("SawacoApi.Intrastructure.Models.Customer", "Customer")
+                        .WithMany("Notification")
+                        .HasForeignKey("CustomerPhoneNumber")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Customer");
+                });
+
             modelBuilder.Entity("SawacoApi.Intrastructure.Models.ObjectPositionHistory", b =>
                 {
                     b.HasOne("SawacoApi.Intrastructure.Models.GPSObject", "GPSObject")
@@ -315,6 +356,8 @@ namespace SawacoApi.API.Migrations
                     b.Navigation("GPSDevices");
 
                     b.Navigation("GPSObjects");
+
+                    b.Navigation("Notification");
                 });
 
             modelBuilder.Entity("SawacoApi.Intrastructure.Models.GPSDevice", b =>

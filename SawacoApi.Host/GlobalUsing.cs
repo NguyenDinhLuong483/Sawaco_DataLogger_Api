@@ -19,3 +19,6 @@ global using SawacoApi.Intrastructure.Services.GPSDevices;
 global using SawacoApi.Intrastructure.Services.Stolens;
 global using SawacoApi.Intrastructure.ViewModel.StolenLines;
 global using SawacoApi.Intrastructure.ViewModel.GPSDevices;
+global using SawacoApi.Intrastructure.Services.Notifications;
+global using SawacoApi.Intrastructure.ViewModel.Notifications;
+global using SawacoApi.Intrastructure.Repositories.Notifications;

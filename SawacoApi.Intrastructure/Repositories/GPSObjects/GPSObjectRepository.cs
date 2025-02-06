@@ -34,9 +34,9 @@ namespace SawacoApi.Intrastructure.Repositories.GPSObjects
             return await _context.GPSObjects.FindAsync(id) ?? throw new ResourceNotFoundException("Not found object id!");
         }
 
-        public async Task<GPSObject> GetObjectByPhoneNumberAsync(string phoneNumber)
+        public async Task<List<GPSObject>> GetObjectByPhoneNumberAsync(string phoneNumber)
         {
-            return await _context.GPSObjects.FirstOrDefaultAsync(x => x.CustomerPhoneNumber == phoneNumber) ?? throw new ResourceNotFoundException("Not found any object with this phone number!");
+            return await _context.GPSObjects.Where(x => x.CustomerPhoneNumber == phoneNumber).ToListAsync();
         }
 
         public async Task<bool> IsExistDevice(string id)
@@ -49,10 +49,15 @@ namespace SawacoApi.Intrastructure.Repositories.GPSObjects
             return await _context.GPSObjects.AnyAsync(x => x.Id == id);
         }
 
-        public bool UpdateObject(GPSObject gpsObject)
+        public async Task<bool> IsExistPhoneNumber(string phoneNumber)
+        {
+            return await _context.Customers.AnyAsync(x => x.PhoneNumber == phoneNumber);
+        }
+
+        public async Task UpdateObject(GPSObject gpsObject)
         {
             _context.GPSObjects.Update(gpsObject);
-            return true;
+            await _context.SaveChangesAsync();
         }
     }
 }

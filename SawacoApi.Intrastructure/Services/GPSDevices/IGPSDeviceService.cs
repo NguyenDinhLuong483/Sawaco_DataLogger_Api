@@ -7,5 +7,6 @@
         public Task<bool> CreateNewGPSDevice(AddGPSDeviceViewModel addLogger);
         public Task<bool> DeleteGPSDevice(string loggerId);
         public Task<bool> UpdateGPSDeviceStatus(UpdateGPSDeviceViewModel updateDevice, string deviceId);
+        public Task<bool> IsExistDevice(string deviceId);   
     }
 }
