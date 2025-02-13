@@ -6,12 +6,14 @@ namespace SawacoApi.Intrastructure.Services.GPSDevices
         public IGPSDeviceRepository _GPSDeviceRepository { get; set; }
         public IMapper _mapper { get; set; }
         public IUnitOfWork _unitOfWork { get; set; }
+        public ManagedMqttClient _mqttClient { get; set; }
 
-        public GPSDeviceService(IGPSDeviceRepository loggerRepository, IMapper mapper, IUnitOfWork unitOfWork)
+        public GPSDeviceService(IGPSDeviceRepository loggerRepository, IMapper mapper, IUnitOfWork unitOfWork, ManagedMqttClient mqttClient)
         {
             _GPSDeviceRepository = loggerRepository;
             _mapper = mapper;
             _unitOfWork = unitOfWork;
+            _mqttClient = mqttClient;
         }
 
         public async Task<List<GPSDeviceViewModel>> GetGPSDevice()
@@ -52,6 +54,8 @@ namespace SawacoApi.Intrastructure.Services.GPSDevices
             var isExist = await _GPSDeviceRepository.IsExistDevice(deviceId);
             if (isExist)
             {
+                var topic = $"GPS/Setting/{deviceId}";
+                var data = new MqttSettingObject();
                 var device = await _GPSDeviceRepository.GetDeviceByIdAsync(deviceId);
                 if (!string.IsNullOrEmpty(updateDevice.CustomerPhoneNumber))
                 {

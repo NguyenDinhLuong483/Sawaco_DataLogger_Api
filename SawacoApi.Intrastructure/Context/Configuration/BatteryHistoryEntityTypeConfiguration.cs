@@ -8,6 +8,7 @@ namespace SawacoApi.Intrastructure.Context.Configuration
         {
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Property(x => x.GPSDeviceId).IsRequired();
             builder.Property(x => x.Value).IsRequired();
             builder.Property(x => x.Timestamp).IsRequired();    
         }

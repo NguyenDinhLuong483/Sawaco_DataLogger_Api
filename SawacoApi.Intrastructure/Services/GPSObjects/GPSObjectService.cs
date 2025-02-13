@@ -1,4 +1,6 @@
 ﻿
+using Newtonsoft.Json;
+
 namespace SawacoApi.Intrastructure.Services.GPSObjects
 {
     public class GPSObjectService : IGPSObjectService
@@ -6,12 +8,14 @@ namespace SawacoApi.Intrastructure.Services.GPSObjects
         public IGPSObjectRepository _gPSObjectRepository { get; set; }
         public IUnitOfWork _unitOfWork { get; set; }
         public IMapper _mapper { get; set; }
+        public ManagedMqttClient _mqttClient;
 
-        public GPSObjectService(IGPSObjectRepository gPSObjectRepository, IUnitOfWork unitOfWork, IMapper mapper)
+        public GPSObjectService(IGPSObjectRepository gPSObjectRepository, IUnitOfWork unitOfWork, IMapper mapper, ManagedMqttClient mqttClient)
         {
             _gPSObjectRepository = gPSObjectRepository;
             _unitOfWork = unitOfWork;
             _mapper = mapper;
+            _mqttClient = mqttClient;
         }
 
         public async Task<GPSObjectViewModel> GetObjectById(string id)
@@ -105,19 +109,35 @@ namespace SawacoApi.Intrastructure.Services.GPSObjects
             var isExist = await _gPSObjectRepository.IsExistObject(id);
             if (isExist) 
             {
+                
+                var data = new MqttSettingObject();
                 var updateObject = await _gPSObjectRepository.GetObjectByIdAsync(id);
+                var topic = $"GPS/Setting/{updateObject.GPSDeviceId}";
                 if (!string.IsNullOrEmpty(viewModel.CustomerPhoneNumber))
                 {
                     updateObject.CustomerPhoneNumber = viewModel.CustomerPhoneNumber;
                 }
+
                 if (!string.IsNullOrEmpty(viewModel.Longitude.ToString()))
                 {
                     updateObject.Longitude = viewModel.Longitude;
+                    data.Longitude = viewModel.Longitude;
                 }
+                else
+                {
+                    data.Longitude = updateObject.Longitude;
+                }
+
                 if (!string.IsNullOrEmpty(viewModel.Latitude.ToString()))
                 {
                     updateObject.Latitude = viewModel.Latitude;
+                    data.Latitude = viewModel.Latitude;
                 }
+                else
+                {
+                    data.Latitude = updateObject.Latitude;
+                }
+
                 if (!string.IsNullOrEmpty(viewModel.Name))
                 {
                     updateObject.Name = viewModel.Name;
@@ -133,11 +153,35 @@ namespace SawacoApi.Intrastructure.Services.GPSObjects
                 if (!string.IsNullOrEmpty(viewModel.SafeRadius.ToString()))
                 {
                     updateObject.SafeRadius = viewModel.SafeRadius;
+                    data.SafeRadius = viewModel.SafeRadius;
+                }
+                else
+                {
+                    data.SafeRadius = updateObject.SafeRadius;
                 }
                 if (!string.IsNullOrEmpty(viewModel.Size))
                 {
                     updateObject.Size = viewModel.Size;
                 }
+                if (!string.IsNullOrEmpty(viewModel.CurrentTime.ToString()))
+                {
+                    data.CurrentTime = viewModel.CurrentTime;
+                }
+                if (!string.IsNullOrEmpty(viewModel.AlarmTime.ToString()))
+                {
+                    data.AlarmTime = viewModel.AlarmTime;
+                }
+                if (!string.IsNullOrEmpty(viewModel.BlueTooth))
+                {
+                    data.BlueTooth = viewModel.BlueTooth;
+                }
+
+                var message = JsonConvert.SerializeObject(data);
+                if (updateObject.Connected)
+                {
+                    await _mqttClient.Publish(topic, message, true);
+                }
+                
                 await _gPSObjectRepository.UpdateObject(updateObject);
                 return await _unitOfWork.CompleteAsync();
             }
@@ -161,6 +205,11 @@ namespace SawacoApi.Intrastructure.Services.GPSObjects
             {
                 return false;
             }
+        }
+
+        public async Task<GPSObject> FindObjectConnected(string deviceId)
+        {
+            return await _gPSObjectRepository.FindObjectConnected(deviceId);
         }
     }
 }

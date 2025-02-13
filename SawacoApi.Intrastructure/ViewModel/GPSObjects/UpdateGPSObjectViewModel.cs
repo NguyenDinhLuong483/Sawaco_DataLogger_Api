@@ -11,5 +11,8 @@ namespace SawacoApi.Intrastructure.ViewModel.GPSObjects
         public string ImagePath { get; set; } = "";
         public int SafeRadius { get; set; }
         public string Size { get; set; } = "";
+        public DateTime CurrentTime { get; set; }
+        public DateTime AlarmTime { get; set; }
+        public string BlueTooth { get; set; } = "";
     }
 }

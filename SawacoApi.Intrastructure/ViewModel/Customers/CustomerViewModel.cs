@@ -6,7 +6,7 @@ namespace SawacoApi.Intrastructure.ViewModel.Customers
         public string PhoneNumber { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
-        public List<DeviceIdViewModel> DeviceIds { get; set; }
-        public List<ObjectNameViewModel> ObjectNames { get; set; }
+        public List<DeviceIdViewModel> GPSDevices { get; set; }
+        public List<ObjectNameViewModel> GPSObjects { get; set; }
     }
 }

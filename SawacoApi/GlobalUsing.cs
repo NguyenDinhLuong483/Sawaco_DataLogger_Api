@@ -35,3 +35,4 @@ global using SawacoApi.Intrastructure.Repositories.Notifications;
 global using SawacoApi.Intrastructure.ViewModel.Notifications;
 global using SawacoApi.Intrastructure.Services.Notifications;
 global using Microsoft.AspNetCore.SignalR;
+global using Microsoft.EntityFrameworkCore.Migrations;

@@ -3,11 +3,11 @@ namespace SawacoApi.Intrastructure.Services.Histories
 {
     public class HistoryService : IHistoryService
     {
-        public IHistoryRepository _historyRepository { get; set; }
+        public IGPSHistoryRepository _historyRepository { get; set; }
         public IMapper _mapper { get; set; }
         public IUnitOfWork _unitOfWork { get; set; }
 
-        public HistoryService(IHistoryRepository historyRepository, IMapper mapper, IUnitOfWork unitOfWork)
+        public HistoryService(IGPSHistoryRepository historyRepository, IMapper mapper, IUnitOfWork unitOfWork)
         {
             _historyRepository = historyRepository;
             _mapper = mapper;
@@ -21,9 +21,9 @@ namespace SawacoApi.Intrastructure.Services.Histories
             return await _unitOfWork.CompleteAsync();
         }
 
-        public async Task<List<BatteryHistoryViewModel>> GetBatteryHistory(DateTime startDate, DateTime endDate)
+        public async Task<List<BatteryHistoryViewModel>> GetBatteryHistory(string DeviceId, DateTime startDate, DateTime endDate)
         {
-            var source = await _historyRepository.GetBatteryHistoryAsync(startDate, endDate);
+            var source = await _historyRepository.GetBatteryHistoryAsync(DeviceId, startDate, endDate);
             var result = _mapper.Map<List<BatteryHistory>, List<BatteryHistoryViewModel>>(source);
             return result;
         }
@@ -35,9 +35,9 @@ namespace SawacoApi.Intrastructure.Services.Histories
             return await _unitOfWork.CompleteAsync();
         }
 
-        public async Task<List<DevicePositionHistoryViewModel>> GetDevicePositionHistory(DateTime startDate, DateTime endDate)
+        public async Task<List<DevicePositionHistoryViewModel>> GetDevicePositionHistory(string DeviceId, DateTime startDate, DateTime endDate)
         {
-            var source = await _historyRepository.GetDevicePositionHistoryAsync(startDate, endDate);
+            var source = await _historyRepository.GetDevicePositionHistoryAsync(DeviceId, startDate, endDate);
             var result = _mapper.Map<List<DevicePositionHistory>, List<DevicePositionHistoryViewModel>>(source);
             return result;
         }
@@ -49,9 +49,9 @@ namespace SawacoApi.Intrastructure.Services.Histories
             return await _unitOfWork.CompleteAsync();
         }
 
-        public async Task<List<ObjectPositionHistoryViewModel>> GetObjectPositionHistory(DateTime startDate, DateTime endDate)
+        public async Task<List<ObjectPositionHistoryViewModel>> GetObjectPositionHistory(string ObjectId, DateTime startDate, DateTime endDate)
         {
-            var source = await _historyRepository.GetObjectPositionHistoryAsync(startDate, endDate);
+            var source = await _historyRepository.GetObjectPositionHistoryAsync(ObjectId, startDate, endDate);
             var result = _mapper.Map<List<ObjectPositionHistory>, List<ObjectPositionHistoryViewModel>>(source);
             return result;
         }

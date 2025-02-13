@@ -1,6 +1,4 @@
 ﻿
-using Azure.Identity;
-
 namespace SawacoApi.Host.Hosting
 {
     public class HostWorker : BackgroundService
@@ -29,7 +27,7 @@ namespace SawacoApi.Host.Hosting
         {
             _mqttClient.MessageReceived += OnMqttClientMessageReceived;
             await _mqttClient.ConnectAsync();
-            await _mqttClient.Subscribe("gps_tracker/+");
+            await _mqttClient.Subscribe("GPS/Status/+");
         }
         private async Task OnMqttClientMessageReceived(MqttMessage arg)
         {
@@ -42,7 +40,7 @@ namespace SawacoApi.Host.Hosting
             }
 
             string[] splitTopic = topic.Split('/');
-            string Id = splitTopic[1];
+            string Id = splitTopic[2];
             var metrics = JsonConvert.DeserializeObject<List<TagChangedNotification>>(payloadMessage);
             if (metrics is null)
             {
@@ -55,26 +53,23 @@ namespace SawacoApi.Host.Hosting
                 metric.LoggerId = Id;
                 switch (metric.Name)
                 {
-                    case "longitude":
+                    case "Longitude":
                         Lon = ParseDouble(metric.Value);
                         TimeStamp = DateTime.Parse(DateTime.UtcNow.AddHours(7).ToShortDateString() + " " + metric.Timestamp.ToString("HH:mm:ss"));
                         break;
-                    case "latitude":
+                    case "Latitude":
                         Lat = ParseDouble(metric.Value);
                         break;
-                    case "stolen":
+                    case "Stolen":
                         Stolen = ParseBool(metric.Value);
-                        break;
-                    case "Temperature":
-                        Temp = ParseDouble(metric.Value);
                         break;
                     case "Bluetooth":
                         Bluetooth = metric.Value.ToString() ?? string.Empty;
                         break;
-                    case "battery":
+                    case "Battery":
                         Battery = ParseDouble(metric.Value);
                         break;
-                    case "move":
+                    case "Move":
                         Move = ParseBool(metric.Value);
                         break;
                 }
@@ -84,7 +79,9 @@ namespace SawacoApi.Host.Hosting
             {
                 var stolenLineService = scope.ServiceProvider.GetRequiredService<IStolenLineService>();
                 var deviceService = scope.ServiceProvider.GetRequiredService<IGPSDeviceService>();
+                var objectService = scope.ServiceProvider.GetRequiredService<IGPSObjectService>();
                 var notificationService = scope.ServiceProvider.GetRequiredService<INotificationService>();
+                var history = scope.ServiceProvider.GetRequiredService<IHistoryService>();
 
                 var isexist = await deviceService.IsExistDevice(Id);
                 if(!isexist)
@@ -95,10 +92,15 @@ namespace SawacoApi.Host.Hosting
                 {
                     var updateDevice = new UpdateGPSDeviceViewModel();
                     var device = await deviceService.GetGPSDeviceById(Id);
+                    var objectConnected = await objectService.FindObjectConnected(Id);
+                    
                     if (Stolen && Lat != 0 && Lon != 0)
                     {
                         updateDevice.HostingUpdate(Lon, Lat, Battery, Temp, true, Bluetooth, TimeStamp);
                         await deviceService.UpdateGPSDeviceStatus(updateDevice, Id);
+                        await history.AddBatteryHistory(new AddBatteryHistoryViewModel(Id, Battery, TimeStamp));
+                        await history.AddDevicePositionHistory(new AddDevicePositionHistoryViewModel(Id, Lon, Lat, TimeStamp));
+                        await history.AddObjectPositionHistory(new AddObjectPositionHistoryViewModel(objectConnected.Id, Lon, Lat, TimeStamp));
                         await stolenLineService.AddNewStolenLine(new AddStolenLineViewModel(Id, Lon, Lat, Battery, TimeStamp));
                         await notificationService.AddNewNotification(new AddNewNotificationViewModel(device.CustomerPhoneNumber, "Vùng an toàn", $"Thiết bị {Id} rời khỏi vùng an toàn. Longitude: {Lon}; Latitude: {Lat}", TimeStamp, false));
                     }
@@ -106,12 +108,18 @@ namespace SawacoApi.Host.Hosting
                     {
                         updateDevice.HostingUpdate(Lon, Lat, Battery, Temp, false, Bluetooth, TimeStamp);
                         await deviceService.UpdateGPSDeviceStatus(updateDevice, Id);
+                        await history.AddBatteryHistory(new AddBatteryHistoryViewModel(Id, Battery, TimeStamp));
+                        await history.AddDevicePositionHistory(new AddDevicePositionHistoryViewModel(Id, Lon, Lat, TimeStamp));
+                        await history.AddObjectPositionHistory(new AddObjectPositionHistoryViewModel(objectConnected.Id, Lon, Lat, TimeStamp));
                         await notificationService.AddNewNotification(new AddNewNotificationViewModel(device.CustomerPhoneNumber, "Cập nhật vị trí", $"Thiết bị {Id} cập nhật vị trí. Longitude: {Lon}; Latitude: {Lat}", TimeStamp, false));
 
                     }
                     else
                     {
                         updateDevice.HostingUpdate(device.Longitude, device.Latitude, Battery, Temp, Stolen, Bluetooth, TimeStamp);
+                        await history.AddBatteryHistory(new AddBatteryHistoryViewModel(Id, Battery, TimeStamp));
+                        await history.AddDevicePositionHistory(new AddDevicePositionHistoryViewModel(Id, device.Longitude, device.Latitude, TimeStamp));
+                        await history.AddObjectPositionHistory(new AddObjectPositionHistoryViewModel(objectConnected.Id, device.Longitude, device.Latitude, TimeStamp));
                         await deviceService.UpdateGPSDeviceStatus(updateDevice, Id);
                     }
                     if (Move)

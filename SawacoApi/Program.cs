@@ -43,7 +43,7 @@ builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 builder.Services.AddScoped<IGPSObjectService, GPSObjectService>();
 builder.Services.AddScoped<IGPSObjectRepository, GPSObjectRepository>();
 builder.Services.AddScoped<IHistoryService, HistoryService>();
-builder.Services.AddScoped<IHistoryRepository, HistoryRepository>();
+builder.Services.AddScoped<IGPSHistoryRepository, GPSHistoryRepository>();
 builder.Services.AddScoped<INotificationService, NotificationService>();
 builder.Services.AddScoped<INotificationRepository, NotificationRepository>();
 

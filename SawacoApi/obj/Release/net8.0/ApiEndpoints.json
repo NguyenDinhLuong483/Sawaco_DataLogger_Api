@@ -417,11 +417,16 @@
   {
     "ContainingType": "SawacoApi.API.Controllers.HistoryController",
     "Method": "GetBatteryHistory",
-    "RelativePath": "History/GetBatteryHistory",
+    "RelativePath": "History/GetBatteryHistory/DeviceId={DeviceId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "DeviceId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
       {
         "Name": "startDate",
         "Type": "System.DateTime",
@@ -448,11 +453,16 @@
   {
     "ContainingType": "SawacoApi.API.Controllers.HistoryController",
     "Method": "GetDevicePositionHistory",
-    "RelativePath": "History/GetDevicePositionHistory",
+    "RelativePath": "History/GetDevicePositionHistory/DeviceId={DeviceId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "DeviceId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
       {
         "Name": "startDate",
         "Type": "System.DateTime",
@@ -479,11 +489,16 @@
   {
     "ContainingType": "SawacoApi.API.Controllers.HistoryController",
     "Method": "GetDeviceObjectHistory",
-    "RelativePath": "History/GetObjectPositionHistory",
+    "RelativePath": "History/GetObjectPositionHistory/ObjectId={ObjectId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "ObjectId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
       {
         "Name": "startDate",
         "Type": "System.DateTime",

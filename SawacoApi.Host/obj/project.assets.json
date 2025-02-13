@@ -1595,7 +1595,8 @@
           "AutoMapper": "13.0.1",
           "MQTTnet": "4.3.7.1207",
           "Microsoft.EntityFrameworkCore": "8.0.8",
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8"
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8",
+          "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
           "bin/placeholder/SawacoApi.Intrastructure.dll": {}

@@ -28,10 +28,10 @@ namespace SawacoApi.API.Controllers
         }
 
         [HttpGet]
-        [Route("GetBatteryHistory")]
-        public async Task<List<BatteryHistoryViewModel>> GetBatteryHistory([FromQuery] DateTime startDate, [FromQuery] DateTime endDate)
+        [Route("GetBatteryHistory/DeviceId={DeviceId}")]
+        public async Task<List<BatteryHistoryViewModel>> GetBatteryHistory([FromRoute] string DeviceId,[FromQuery] DateTime startDate, [FromQuery] DateTime endDate)
         {
-            return await _historyService.GetBatteryHistory(startDate, endDate);
+            return await _historyService.GetBatteryHistory(DeviceId, startDate, endDate);
         }
 
         [HttpPost]
@@ -50,10 +50,10 @@ namespace SawacoApi.API.Controllers
         }
 
         [HttpGet]
-        [Route("GetDevicePositionHistory")]
-        public async Task<List<DevicePositionHistoryViewModel>> GetDevicePositionHistory([FromQuery] DateTime startDate, [FromQuery] DateTime endDate)
+        [Route("GetDevicePositionHistory/DeviceId={DeviceId}")]
+        public async Task<List<DevicePositionHistoryViewModel>> GetDevicePositionHistory([FromRoute] string DeviceId, [FromQuery] DateTime startDate, [FromQuery] DateTime endDate)
         {
-            return await _historyService.GetDevicePositionHistory(startDate, endDate);
+            return await _historyService.GetDevicePositionHistory(DeviceId, startDate, endDate);
         }
 
         [HttpPost]
@@ -72,10 +72,10 @@ namespace SawacoApi.API.Controllers
         }
 
         [HttpGet]
-        [Route("GetObjectPositionHistory")]
-        public async Task<List<ObjectPositionHistoryViewModel>> GetDeviceObjectHistory([FromQuery] DateTime startDate, [FromQuery] DateTime endDate)
+        [Route("GetObjectPositionHistory/ObjectId={ObjectId}")]
+        public async Task<List<ObjectPositionHistoryViewModel>> GetDeviceObjectHistory([FromRoute] string ObjectId, [FromQuery] DateTime startDate, [FromQuery] DateTime endDate)
         {
-            return await _historyService.GetObjectPositionHistory(startDate, endDate);
+            return await _historyService.GetObjectPositionHistory(ObjectId, startDate, endDate);
         }
     }
 }

@@ -20,7 +20,7 @@ namespace SawacoApi.Intrastructure.Repositories.Customers
 
         public async Task<Customer> GetCustomerByPhoneNumberAsync(string phoneNumber)
         {
-            return await _context.Customers.FindAsync(phoneNumber) ?? throw new ResourceNotFoundException("Not found this customer!");
+            return await _context.Customers.Include(x => x.GPSDevices).Include(x => x.GPSObjects).FirstOrDefaultAsync(x => x.PhoneNumber == phoneNumber) ?? throw new ResourceNotFoundException("Not found this customer!");
         }
 
         public async Task<List<GPSDevice>> GetGPSDeviceAsync(string phoneNumber)

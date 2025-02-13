@@ -10,5 +10,6 @@ namespace SawacoApi.Intrastructure.Services.GPSObjects
         public Task<bool> DeleteObjectById(string Id);
         public Task<bool> UpdateObjectInformation(UpdateGPSObjectViewModel viewModel, string id);
         public Task<bool> CancelConnection(string id);
+        public Task<GPSObject> FindObjectConnected(string deviceId);
     }
 }

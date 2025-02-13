@@ -23,7 +23,7 @@ namespace SawacoApi.Hubs
         {
             _mqttClient.MessageReceived += OnMqttClientMessageReceived;
             await _mqttClient.ConnectAsync();
-            await _mqttClient.Subscribe("gps_tracker/+");
+            await _mqttClient.Subscribe("GPS/Status/+");
         }
         private async Task OnMqttClientMessageReceived(MqttMessage arg)
         {
@@ -34,7 +34,7 @@ namespace SawacoApi.Hubs
                 return;
             }
             string[] splitTopic = topic.Split('/');
-            string Id = splitTopic[1];
+            string Id = splitTopic[2];
             var metrics = JsonConvert.DeserializeObject<List<TagChangedNotification>>(payloadMessage);
             if (metrics is null)
             {
