@@ -131,6 +131,94 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "SawacoApi.API.Controllers.FirmwareController",
+    "Method": "CheckForUpdate",
+    "RelativePath": "Firmware/check-update/{currentVersion}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "currentVersion",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SawacoApi.API.Controllers.FirmwareController",
+    "Method": "DownloadFirmware",
+    "RelativePath": "Firmware/download/{version}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "version",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SawacoApi.API.Controllers.FirmwareController",
+    "Method": "UploadFirmware",
+    "RelativePath": "Firmware/upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ContentType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentDisposition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Headers",
+        "Type": "Microsoft.AspNetCore.Http.IHeaderDictionary",
+        "IsRequired": false
+      },
+      {
+        "Name": "Length",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FileName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "version",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SawacoApi.API.Controllers.FirmwareController",
+    "Method": "GetLatestVersion",
+    "RelativePath": "Firmware/version",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "SawacoApi.Controllers.GPSDeviceController",
     "Method": "CreateNewGPSDevice",
     "RelativePath": "GPSDevice/CreateNewGPSDevice",
