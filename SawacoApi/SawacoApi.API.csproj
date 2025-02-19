@@ -27,4 +27,8 @@
     <ProjectReference Include="..\SawacoApi.Intrastructure\SawacoApi.Intrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
 </Project>

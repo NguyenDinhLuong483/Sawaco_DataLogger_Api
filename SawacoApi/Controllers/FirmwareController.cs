@@ -6,7 +6,7 @@ namespace SawacoApi.API.Controllers
     public class FirmwareController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
-        private readonly IWebHostEnvironment _env;
+        private IWebHostEnvironment _env;
 
         public FirmwareController(ApplicationDbContext context, IWebHostEnvironment env)
         {
@@ -15,12 +15,12 @@ namespace SawacoApi.API.Controllers
         }
 
         // Upload firmware mới
-        [HttpPost("upload")]
-        public async Task<IActionResult> UploadFirmware([FromForm] IFormFile file, [FromForm] string version)
+        [HttpPost("upload/{version}")]
+        public async Task<IActionResult> UploadFirmware(List<IFormFile> files, [FromRoute] string version)
         {
-            if (file == null || file.Length == 0)
+            if (files == null)
             {
-                return BadRequest("No file uploaded.");
+                return BadRequest("No files uploaded.");
             }
 
             // Kiểm tra xem phiên bản đã tồn tại chưa
@@ -30,31 +30,32 @@ namespace SawacoApi.API.Controllers
                 return BadRequest("Version already exists.");
             }
 
-            // Lưu file vào thư mục wwwroot/firmware
-            var uploadDir = Path.Combine(_env.WebRootPath, "firmware");
-            if (!Directory.Exists(uploadDir))
+            foreach (var formFile in files)
             {
-                Directory.CreateDirectory(uploadDir);
+                // Lưu files vào thư mục wwwroot/firmware
+                var uploadDir = Path.Combine(_env.WebRootPath, "firmware");
+                if (!Directory.Exists(uploadDir))
+                {
+                    Directory.CreateDirectory(uploadDir);
+                }
+
+                var filePath = Path.Combine(uploadDir, formFile.FileName);
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await formFile.CopyToAsync(stream);
+                }
+                // Lưu thông tin vào database
+                var firmware = new Firmware
+                {
+                    Version = version,
+                    ReleaseDate = DateTime.UtcNow,
+                    FilePath = Path.Combine("firmware", formFile.FileName) // Lưu đường dẫn tương đối
+                };
+
+                _context.Firmwares.Add(firmware);
+                await _context.SaveChangesAsync();
             }
-
-            var filePath = Path.Combine(uploadDir, file.FileName);
-            using (var stream = new FileStream(filePath, FileMode.Create))
-            {
-                await file.CopyToAsync(stream);
-            }
-
-            // Lưu thông tin vào database
-            var firmware = new Firmware
-            {
-                Version = version,
-                ReleaseDate = DateTime.UtcNow,
-                FilePath = Path.Combine("firmware", file.FileName) // Lưu đường dẫn tương đối
-            };
-
-            _context.Firmwares.Add(firmware);
-            await _context.SaveChangesAsync();
-
-            return Ok(new { message = "Firmware uploaded successfully!", version = firmware.Version });
+            return Ok(new { message = "Firmware uploaded successfully!", version });
         }
 
         // Lấy phiên bản firmware mới nhất
@@ -114,7 +115,7 @@ namespace SawacoApi.API.Controllers
             var filePath = Path.Combine(_env.WebRootPath, firmware.FilePath);
             if (!System.IO.File.Exists(filePath))
             {
-                return NotFound("Firmware file not found.");
+                return NotFound("Firmware files not found.");
             }
 
             var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read);

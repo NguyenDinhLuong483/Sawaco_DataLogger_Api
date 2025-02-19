@@ -1,0 +1,1 @@
+{"ContentRoots":["C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\wwwroot\\"],"Root":{"Children":{"firmware":{"Children":{"bootloader.bin":{"Children":null,"Asset":{"ContentRootIndex":0,"SubPath":"firmware/bootloader.bin"},"Patterns":null}},"Asset":null,"Patterns":null}},"Asset":null,"Patterns":[{"ContentRootIndex":0,"Pattern":"**","Depth":0}]}}

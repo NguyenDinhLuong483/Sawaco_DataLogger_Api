@@ -1,0 +1,22 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\firmware\bootloader.bin'))">
+      <SourceType>Package</SourceType>
+      <SourceId>SawacoApi.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/SawacoApi.API</BasePath>
+      <RelativePath>firmware/bootloader.bin</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>5dy0i4pm8z</Fingerprint>
+      <Integrity>+Z8ePaOeqlIZvNoOuuKHhRRh2N2/mr1tPBDB7+7y9Io=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\firmware\bootloader.bin'))</OriginalItemSpec>
+    </StaticWebAsset>
+  </ItemGroup>
+</Project>

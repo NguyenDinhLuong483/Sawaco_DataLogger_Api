@@ -1,0 +1,16 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/SawacoApi.API/firmware/bootloader.5dy0i4pm8z.bin">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\firmware\bootloader.bin'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"5dy0i4pm8z"},{"Name":"integrity","Value":"sha256-\u002BZ8ePaOeqlIZvNoOuuKHhRRh2N2/mr1tPBDB7\u002B7y9Io="},{"Name":"label","Value":"_content/SawacoApi.API/firmware/bootloader.bin"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"26720"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022\u002BZ8ePaOeqlIZvNoOuuKHhRRh2N2/mr1tPBDB7\u002B7y9Io=\u0022"},{"Name":"Last-Modified","Value":"Wed, 19 Feb 2025 17:59:39 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SawacoApi.API/firmware/bootloader.bin">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\firmware\bootloader.bin'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-\u002BZ8ePaOeqlIZvNoOuuKHhRRh2N2/mr1tPBDB7\u002B7y9Io="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"26720"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022\u002BZ8ePaOeqlIZvNoOuuKHhRRh2N2/mr1tPBDB7\u002B7y9Io=\u0022"},{"Name":"Last-Modified","Value":"Wed, 19 Feb 2025 17:59:39 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

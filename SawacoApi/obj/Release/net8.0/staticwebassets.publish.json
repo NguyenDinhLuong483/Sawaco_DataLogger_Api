@@ -1,11 +1,125 @@
 {
   "Version": 1,
-  "Hash": "0izCC013lDoztWwZQfAhns/4mabZKCn49AINdZOsM58=",
+  "Hash": "0ILT4eOZSmuVBw5e0Cd6rz7rx4NBzjU0J994nubJW4Q=",
   "Source": "SawacoApi.API",
   "BasePath": "_content/SawacoApi.API",
   "Mode": "Default",
   "ManifestType": "Publish",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "SawacoApi.API\\wwwroot",
+      "Source": "SawacoApi.API",
+      "ContentRoot": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\wwwroot\\",
+      "BasePath": "_content/SawacoApi.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\wwwroot\\firmware\\bootloader.bin",
+      "SourceId": "SawacoApi.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\wwwroot\\",
+      "BasePath": "_content/SawacoApi.API",
+      "RelativePath": "firmware/bootloader#[.{fingerprint}]?.bin",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5dy0i4pm8z",
+      "Integrity": "+Z8ePaOeqlIZvNoOuuKHhRRh2N2/mr1tPBDB7+7y9Io=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\firmware\\bootloader.bin"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "firmware/bootloader.5dy0i4pm8z.bin",
+      "AssetFile": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\wwwroot\\firmware\\bootloader.bin",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "26720"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+Z8ePaOeqlIZvNoOuuKHhRRh2N2/mr1tPBDB7+7y9Io=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Feb 2025 17:59:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5dy0i4pm8z"
+        },
+        {
+          "Name": "label",
+          "Value": "firmware/bootloader.bin"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+Z8ePaOeqlIZvNoOuuKHhRRh2N2/mr1tPBDB7+7y9Io="
+        }
+      ]
+    },
+    {
+      "Route": "firmware/bootloader.bin",
+      "AssetFile": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\wwwroot\\firmware\\bootloader.bin",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "26720"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+Z8ePaOeqlIZvNoOuuKHhRRh2N2/mr1tPBDB7+7y9Io=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 19 Feb 2025 17:59:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+Z8ePaOeqlIZvNoOuuKHhRRh2N2/mr1tPBDB7+7y9Io="
+        }
+      ]
+    }
+  ]
 }

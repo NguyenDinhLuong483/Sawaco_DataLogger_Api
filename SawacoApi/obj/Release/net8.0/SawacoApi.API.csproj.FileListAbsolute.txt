@@ -298,3 +298,8 @@ C:\My Folder\Projects\Sawaco_DataLogger_Api\SawacoApi\obj\Release\net8.0\refint\
 C:\My Folder\Projects\Sawaco_DataLogger_Api\SawacoApi\obj\Release\net8.0\SawacoApi.API.pdb
 C:\My Folder\Projects\Sawaco_DataLogger_Api\SawacoApi\obj\Release\net8.0\SawacoApi.API.genruntimeconfig.cache
 C:\My Folder\Projects\Sawaco_DataLogger_Api\SawacoApi\obj\Release\net8.0\ref\SawacoApi.API.dll
+C:\My Folder\Projects\Sawaco_DataLogger_Api\SawacoApi\bin\Release\net8.0\SawacoApi.API.staticwebassets.endpoints.json
+C:\My Folder\Projects\Sawaco_DataLogger_Api\SawacoApi\obj\Release\net8.0\staticwebassets.build.endpoints.json
+C:\My Folder\Projects\Sawaco_DataLogger_Api\SawacoApi\obj\Release\net8.0\staticwebassets\msbuild.SawacoApi.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\My Folder\Projects\Sawaco_DataLogger_Api\SawacoApi\obj\Release\net8.0\staticwebassets.upToDateCheck.txt
+C:\My Folder\Projects\Sawaco_DataLogger_Api\SawacoApi\bin\Release\net8.0\SawacoApi.API.staticwebassets.runtime.json

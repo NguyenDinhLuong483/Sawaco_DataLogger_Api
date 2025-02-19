@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SawacoApi.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e79449aa5b888fcad07da806549a70344e12a63f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88afc5ab492cf4686c865746789c1e9250ccfc44")]
 [assembly: System.Reflection.AssemblyProductAttribute("SawacoApi.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SawacoApi.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

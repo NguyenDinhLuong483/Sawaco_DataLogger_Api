@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\wwwroot\\firmware\\bootloader.bin",
+      "PackagePath": "staticwebassets\\firmware\\bootloader.bin"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.SawacoApi.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.SawacoApi.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.SawacoApi.API.props",
+      "PackagePath": "build\\SawacoApi.API.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.SawacoApi.API.props",
+      "PackagePath": "buildMultiTargeting\\SawacoApi.API.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.SawacoApi.API.props",
+      "PackagePath": "buildTransitive\\SawacoApi.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
