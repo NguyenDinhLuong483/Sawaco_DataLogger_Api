@@ -235,7 +235,7 @@
         }
       }
     },
-    "/Firmware/upload/{version}": {
+    "/Firmware/upload/version={version}": {
       "post": {
         "tags": [
           "Firmware"
@@ -292,7 +292,7 @@
         }
       }
     },
-    "/Firmware/check-update/{currentVersion}": {
+    "/Firmware/checkUpdate/currentVersion={currentVersion}": {
       "get": {
         "tags": [
           "Firmware"
@@ -314,7 +314,7 @@
         }
       }
     },
-    "/Firmware/download/{version}": {
+    "/Firmware/download/version={version}": {
       "get": {
         "tags": [
           "Firmware"

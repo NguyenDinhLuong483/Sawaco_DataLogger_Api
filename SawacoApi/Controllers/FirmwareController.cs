@@ -15,7 +15,7 @@ namespace SawacoApi.API.Controllers
         }
 
         // Upload firmware mới
-        [HttpPost("upload/{version}")]
+        [HttpPost("upload/version={version}")]
         public async Task<IActionResult> UploadFirmware(List<IFormFile> files, [FromRoute] string version)
         {
             if (files == null)
@@ -33,11 +33,8 @@ namespace SawacoApi.API.Controllers
             foreach (var formFile in files)
             {
                 // Lưu files vào thư mục wwwroot/firmware
-                var uploadDir = Path.Combine(_env.WebRootPath, "firmware");
-                if (!Directory.Exists(uploadDir))
-                {
-                    Directory.CreateDirectory(uploadDir);
-                }
+                var uploadDir = Path.Combine(_env.WebRootPath, $"firmwareVersion{version}");
+                Directory.CreateDirectory(uploadDir);
 
                 var filePath = Path.Combine(uploadDir, formFile.FileName);
                 using (var stream = new FileStream(filePath, FileMode.Create))
@@ -48,7 +45,7 @@ namespace SawacoApi.API.Controllers
                 var firmware = new Firmware
                 {
                     Version = version,
-                    ReleaseDate = DateTime.UtcNow,
+                    ReleaseDate = DateTime.UtcNow.AddHours(7),
                     FilePath = Path.Combine("firmware", formFile.FileName) // Lưu đường dẫn tương đối
                 };
 
@@ -75,7 +72,7 @@ namespace SawacoApi.API.Controllers
         }
 
         // Kiểm tra cập nhật từ ESP32
-        [HttpGet("check-update/{currentVersion}")]
+        [HttpGet("checkUpdate/currentVersion={currentVersion}")]
         public async Task<IActionResult> CheckForUpdate(string currentVersion)
         {
             var latestFirmware = await _context.Firmwares
@@ -101,7 +98,7 @@ namespace SawacoApi.API.Controllers
         }
 
         // Tải firmware theo phiên bản
-        [HttpGet("download/{version}")]
+        [HttpGet("download/version={version}")]
         public async Task<IActionResult> DownloadFirmware(string version)
         {
             var firmware = await _context.Firmwares

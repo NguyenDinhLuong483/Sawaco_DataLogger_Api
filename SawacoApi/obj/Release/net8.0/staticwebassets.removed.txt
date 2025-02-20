@@ -1,0 +1,1 @@
+C:\My Folder\Projects\Sawaco_DataLogger_Api\SawacoApi\wwwroot\firmware\bootloader.bin

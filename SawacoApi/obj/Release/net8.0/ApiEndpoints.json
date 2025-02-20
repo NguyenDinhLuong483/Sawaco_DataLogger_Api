@@ -133,7 +133,7 @@
   {
     "ContainingType": "SawacoApi.API.Controllers.FirmwareController",
     "Method": "CheckForUpdate",
-    "RelativePath": "Firmware/check-update/{currentVersion}",
+    "RelativePath": "Firmware/checkUpdate/currentVersion={currentVersion}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -149,7 +149,7 @@
   {
     "ContainingType": "SawacoApi.API.Controllers.FirmwareController",
     "Method": "DownloadFirmware",
-    "RelativePath": "Firmware/download/{version}",
+    "RelativePath": "Firmware/download/version={version}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -165,7 +165,7 @@
   {
     "ContainingType": "SawacoApi.API.Controllers.FirmwareController",
     "Method": "UploadFirmware",
-    "RelativePath": "Firmware/upload/{version}",
+    "RelativePath": "Firmware/upload/version={version}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
