@@ -13,12 +13,14 @@
         public bool Stolen { get; set; }
         public string Bluetooth { get; set; }
         public DateTime TimeStamp { get; set; }
+        public DateTime AlarmTime { get; set; }
+        public bool Emergency { get; set; }
         public string SMSNumber { get; set; }
         public string Package { get; set; }
         public DateTime RegistationDate { get; set; }
         public DateTime ExpirationDate { get; set; }
 
-        public GPSDeviceViewModel(string id, string customerPhoneNumber, double longitude, double latitude, string name, string imagePath, double battery, double temperature, bool stolen, string bluetooth, DateTime timeStamp, string sMSNumber, string package, DateTime registationDate, DateTime expirationDate)
+        public GPSDeviceViewModel(string id, string customerPhoneNumber, double longitude, double latitude, string name, string imagePath, double battery, double temperature, bool stolen, string bluetooth, DateTime timeStamp, DateTime alarmtime, bool emer, string sMSNumber, string package, DateTime registationDate, DateTime expirationDate)
         {
             Id = id;
             CustomerPhoneNumber = customerPhoneNumber;
@@ -31,10 +33,16 @@
             Stolen = stolen;
             Bluetooth = bluetooth;
             TimeStamp = timeStamp;
+            AlarmTime = alarmtime;
+            Emergency = emer;
             SMSNumber = sMSNumber;
             Package = package;
             RegistationDate = registationDate;
             ExpirationDate = expirationDate;
+        }
+
+        public GPSDeviceViewModel()
+        {
         }
     }
 }

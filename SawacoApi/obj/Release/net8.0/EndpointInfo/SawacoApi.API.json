@@ -1923,6 +1923,9 @@
           "blueTooth": {
             "type": "string",
             "nullable": true
+          },
+          "emergency": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false

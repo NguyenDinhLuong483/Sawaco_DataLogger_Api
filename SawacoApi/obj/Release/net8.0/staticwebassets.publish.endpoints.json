@@ -1,5 +1,252 @@
 {
   "Version": 1,
   "ManifestType": "Publish",
-  "Endpoints": []
+  "Endpoints": [
+    {
+      "Route": "firmwareVersion1.0.0/bootloader.5dy0i4pm8z.bin",
+      "AssetFile": "firmwareVersion1.0.0/bootloader.bin",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "26720"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+Z8ePaOeqlIZvNoOuuKHhRRh2N2/mr1tPBDB7+7y9Io=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Feb 2025 07:47:53 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5dy0i4pm8z"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+Z8ePaOeqlIZvNoOuuKHhRRh2N2/mr1tPBDB7+7y9Io="
+        },
+        {
+          "Name": "label",
+          "Value": "firmwareVersion1.0.0/bootloader.bin"
+        }
+      ]
+    },
+    {
+      "Route": "firmwareVersion1.0.0/bootloader.bin",
+      "AssetFile": "firmwareVersion1.0.0/bootloader.bin",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "26720"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+Z8ePaOeqlIZvNoOuuKHhRRh2N2/mr1tPBDB7+7y9Io=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Feb 2025 07:47:53 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+Z8ePaOeqlIZvNoOuuKHhRRh2N2/mr1tPBDB7+7y9Io="
+        }
+      ]
+    },
+    {
+      "Route": "firmwareVersion1.0.0/partition-table.bin",
+      "AssetFile": "firmwareVersion1.0.0/partition-table.bin",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3072"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fwC2wEKomxWwysU0+C7ZiMryknj/VwCwxRHrG1u3yCA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Feb 2025 07:47:54 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-fwC2wEKomxWwysU0+C7ZiMryknj/VwCwxRHrG1u3yCA="
+        }
+      ]
+    },
+    {
+      "Route": "firmwareVersion1.0.0/partition-table.xszlvqbq7b.bin",
+      "AssetFile": "firmwareVersion1.0.0/partition-table.bin",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3072"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fwC2wEKomxWwysU0+C7ZiMryknj/VwCwxRHrG1u3yCA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Feb 2025 07:47:54 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xszlvqbq7b"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fwC2wEKomxWwysU0+C7ZiMryknj/VwCwxRHrG1u3yCA="
+        },
+        {
+          "Name": "label",
+          "Value": "firmwareVersion1.0.0/partition-table.bin"
+        }
+      ]
+    },
+    {
+      "Route": "firmwareVersion1.0.0/wifi_station.17omnun0dj.bin",
+      "AssetFile": "firmwareVersion1.0.0/wifi_station.bin",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "769712"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/UKA56YFC6B8AuVWDtikuuqIc+HnGKeSNeKsZhZ6YUQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Feb 2025 07:47:54 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "17omnun0dj"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/UKA56YFC6B8AuVWDtikuuqIc+HnGKeSNeKsZhZ6YUQ="
+        },
+        {
+          "Name": "label",
+          "Value": "firmwareVersion1.0.0/wifi_station.bin"
+        }
+      ]
+    },
+    {
+      "Route": "firmwareVersion1.0.0/wifi_station.bin",
+      "AssetFile": "firmwareVersion1.0.0/wifi_station.bin",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "769712"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/UKA56YFC6B8AuVWDtikuuqIc+HnGKeSNeKsZhZ6YUQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Feb 2025 07:47:54 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/UKA56YFC6B8AuVWDtikuuqIc+HnGKeSNeKsZhZ6YUQ="
+        }
+      ]
+    }
+  ]
 }

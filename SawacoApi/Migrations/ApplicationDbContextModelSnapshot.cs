@@ -119,6 +119,9 @@ namespace SawacoApi.API.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
+                    b.Property<DateTime>("AlarmTime")
+                        .HasColumnType("datetime2");
+
                     b.Property<double>("Battery")
                         .HasColumnType("float");
 
@@ -130,6 +133,9 @@ namespace SawacoApi.API.Migrations
                     b.Property<string>("CustomerPhoneNumber")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<bool>("Emergency")
+                        .HasColumnType("bit");
 
                     b.Property<DateTime>("ExpirationDate")
                         .HasColumnType("datetime2");

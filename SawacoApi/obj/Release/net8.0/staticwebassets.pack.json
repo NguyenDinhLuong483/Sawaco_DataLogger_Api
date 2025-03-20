@@ -1,8 +1,16 @@
 {
   "Files": [
     {
-      "Id": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\wwwroot\\firmware\\bootloader.bin",
-      "PackagePath": "staticwebassets\\firmware\\bootloader.bin"
+      "Id": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\wwwroot\\firmwareVersion1.0.0\\bootloader.bin",
+      "PackagePath": "staticwebassets\\firmwareVersion1.0.0\\bootloader.bin"
+    },
+    {
+      "Id": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\wwwroot\\firmwareVersion1.0.0\\partition-table.bin",
+      "PackagePath": "staticwebassets\\firmwareVersion1.0.0\\partition-table.bin"
+    },
+    {
+      "Id": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\wwwroot\\firmwareVersion1.0.0\\wifi_station.bin",
+      "PackagePath": "staticwebassets\\firmwareVersion1.0.0\\wifi_station.bin"
     },
     {
       "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.SawacoApi.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

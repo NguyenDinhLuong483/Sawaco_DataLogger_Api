@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SawacoApi.Host")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88afc5ab492cf4686c865746789c1e9250ccfc44")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f153c08bd26b042bc91f35149344e531fdd4fd52")]
 [assembly: System.Reflection.AssemblyProductAttribute("SawacoApi.Host")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SawacoApi.Host")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

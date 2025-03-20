@@ -1,4 +1,7 @@
 ﻿
+using SawacoApi.Intrastructure.Services.Notifications;
+using SawacoApi.Intrastructure.Services.Stolens;
+
 namespace SawacoApi.Hubs
 {
     public sealed class ScadaHost : BackgroundService
@@ -6,7 +9,13 @@ namespace SawacoApi.Hubs
         public ManagedMqttClient _mqttClient;
         public IHubContext<NotificationHub> _notificationHub;
         public Intrastructure.MQTTClients.Buffer _buffer;
-        
+        public double Lon, Lat;
+        public DateTime TimeStamp;
+        public bool Stolen = false;
+        public bool Move = false;
+        public string Bluetooth = "";
+        public double Battery, Temp;
+
         public ScadaHost(ManagedMqttClient mqttClient, IHubContext<NotificationHub> notificationHub, Intrastructure.MQTTClients.Buffer buffer)
         {
             _mqttClient = mqttClient;
@@ -40,15 +49,69 @@ namespace SawacoApi.Hubs
             {
                 return;
             }
-
             foreach (var metric in metrics)
             {
                 metric.LoggerId = Id;
+                switch (metric.Name)
+                {
+                    case "Longitude":
+                        Lon = ParseDouble(metric.Value);
+                        TimeStamp = DateTime.Parse(DateTime.UtcNow.AddHours(7).ToShortDateString() + " " + metric.Timestamp.ToString("HH:mm:ss"));
+                        break;
+                    case "Latitude":
+                        Lat = ParseDouble(metric.Value);
+                        break;
+                    case "Stolen":
+                        Stolen = ParseBool(metric.Value);
+                        break;
+                    case "Bluetooth":
+                        Bluetooth = metric.Value.ToString() ?? string.Empty;
+                        break;
+                    case "Battery":
+                        Battery = ParseDouble(metric.Value);
+                        break;
+                    case "Move":
+                        Move = ParseBool(metric.Value);
+                        break;
+                }
                 _buffer.Update(metric);
                 var json = JsonConvert.SerializeObject(metric);
                 await _notificationHub.Clients.All.SendAsync("GetAll", json);
                 Console.WriteLine(json);
             }
+            if (Stolen && Lat != 0 && Lon != 0)
+            {
+                var noti = new NotificationChanged("Vùng an toàn", $"Thiết bị {Id} rời khỏi vùng an toàn. Longitude: {Lon}; Latitude: {Lat}", TimeStamp, false);
+                var json = JsonConvert.SerializeObject(noti);
+                await _notificationHub.Clients.All.SendAsync($"SendNotification{Id}", json);
+            }
+            else if (!Stolen && Lat != 0 && Lon != 0)
+            {
+                var noti = new NotificationChanged("Cập nhật vị trí", $"Thiết bị {Id} cập nhật vị trí. Longitude: {Lon}; Latitude: {Lat}", TimeStamp, false);
+                var json = JsonConvert.SerializeObject(noti);
+                await _notificationHub.Clients.All.SendAsync($"SendNotification{Id}", json);
+            }
+            if (Move)
+            {
+                var noti = new NotificationChanged("Cảnh báo chuyển động", $"Thiết bị {Id} chuyển động.", TimeStamp, false);
+                var json = JsonConvert.SerializeObject(noti);
+                await _notificationHub.Clients.All.SendAsync($"SendNotification{Id}", json);
+            }
+            if (Battery < 20)
+            {
+                var noti = new NotificationChanged("Pin yếu", $"Thiết bị {Id} pin yếu. Mức pin: {Battery}", TimeStamp, false);
+                var json = JsonConvert.SerializeObject(noti);
+                await _notificationHub.Clients.All.SendAsync($"SendNotification{Id}", json);
+            }
+        }
+        private double ParseDouble(object value)
+        {
+            return double.TryParse(value?.ToString(), out double result) ? result : 0;
+        }
+
+        private bool ParseBool(object value)
+        {
+            return bool.TryParse(value?.ToString(), out bool result) ? result : false;
         }
     }
 }

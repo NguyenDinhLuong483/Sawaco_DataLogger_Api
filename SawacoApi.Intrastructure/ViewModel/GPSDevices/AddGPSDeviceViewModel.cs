@@ -35,6 +35,12 @@ namespace SawacoApi.Intrastructure.ViewModel.GPSDevices
         public DateTime TimeStamp { get; set; }
         [DataMember]
         [JsonIgnore]
+        public DateTime AlarmTime { get; set; }
+        [DataMember]
+        [JsonIgnore]
+        public bool Emergency { get; set; }
+        [DataMember]
+        [JsonIgnore]
         public string SMSNumber { get; set; }
         [DataMember]
         [JsonIgnore]
@@ -56,8 +62,8 @@ namespace SawacoApi.Intrastructure.ViewModel.GPSDevices
             CustomerPhoneNumber = "NSX";
             Battery = 0;
             Temperature = 0;
-            Stolen = false;
-            TimeStamp = RegistationDate = ExpirationDate = DateTime.MinValue;
+            Stolen = Emergency = false;
+            TimeStamp = AlarmTime = RegistationDate = ExpirationDate = DateTime.MinValue;
         }
     }
 }

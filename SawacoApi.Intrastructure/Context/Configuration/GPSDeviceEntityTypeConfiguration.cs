@@ -16,6 +16,8 @@ namespace SawacoApi.Intrastructure.Context.Configuration
             builder.Property(x => x.Stolen);
             builder.Property(x => x.Bluetooth).HasMaxLength(10);
             builder.Property(x => x.TimeStamp);
+            builder.Property(x => x.AlarmTime);
+            builder.Property(x => x.Emergency);
             builder.Property(x => x.SMSNumber);
             builder.Property(x => x.Package);
             builder.Property(x => x.RegistationDate);

@@ -112,10 +112,16 @@ namespace SawacoApi.Intrastructure.Services.GPSObjects
                 
                 var data = new MqttSettingObject();
                 var updateObject = await _gPSObjectRepository.GetObjectByIdAsync(id);
+                var updateDevice = await _gPSObjectRepository.GetDeviceByIdAsync(updateObject.GPSDeviceId);
                 var topic = $"GPS/Setting/{updateObject.GPSDeviceId}";
                 if (!string.IsNullOrEmpty(viewModel.CustomerPhoneNumber))
                 {
                     updateObject.CustomerPhoneNumber = viewModel.CustomerPhoneNumber;
+                    data.PhoneNumber = viewModel.CustomerPhoneNumber;
+                }
+                else
+                {
+                    data.PhoneNumber = updateObject.CustomerPhoneNumber;
                 }
 
                 if (!string.IsNullOrEmpty(viewModel.Longitude.ToString()))
@@ -170,10 +176,16 @@ namespace SawacoApi.Intrastructure.Services.GPSObjects
                 if (!string.IsNullOrEmpty(viewModel.AlarmTime.ToString()))
                 {
                     data.AlarmTime = viewModel.AlarmTime;
+                    updateDevice.AlarmTime = viewModel.AlarmTime;
                 }
                 if (!string.IsNullOrEmpty(viewModel.BlueTooth))
                 {
                     data.BlueTooth = viewModel.BlueTooth;
+                }
+                if (!string.IsNullOrEmpty(viewModel.Emergency.ToString()))
+                {
+                    data.Emergency = viewModel.Emergency;
+                    updateDevice.Emergency = viewModel.Emergency;
                 }
 
                 var message = JsonConvert.SerializeObject(data);
@@ -183,6 +195,7 @@ namespace SawacoApi.Intrastructure.Services.GPSObjects
                 }
                 
                 await _gPSObjectRepository.UpdateObject(updateObject);
+                await _gPSObjectRepository.UpdateDevice(updateDevice);
                 return await _unitOfWork.CompleteAsync();
             }
             else

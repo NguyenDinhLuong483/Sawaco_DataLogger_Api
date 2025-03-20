@@ -54,6 +54,12 @@ namespace SawacoApi.Intrastructure.Repositories.GPSObjects
             return await _context.Customers.AnyAsync(x => x.PhoneNumber == phoneNumber);
         }
 
+        public async Task UpdateDevice(GPSDevice gpsDevice)
+        {
+            _context.GPSDevices.Update(gpsDevice);
+            await _context.SaveChangesAsync();
+        }
+
         public async Task UpdateObject(GPSObject gpsObject)
         {
             _context.GPSObjects.Update(gpsObject);

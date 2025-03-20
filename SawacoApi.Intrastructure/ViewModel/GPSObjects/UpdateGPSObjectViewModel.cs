@@ -14,5 +14,6 @@ namespace SawacoApi.Intrastructure.ViewModel.GPSObjects
         public DateTime CurrentTime { get; set; }
         public DateTime AlarmTime { get; set; }
         public string BlueTooth { get; set; } = "";
+        public bool Emergency { get; set; }
     }
 }

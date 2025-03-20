@@ -126,9 +126,9 @@ namespace SawacoApi.Host.Hosting
                     {
                         await notificationService.AddNewNotification(new AddNewNotificationViewModel(device.CustomerPhoneNumber, "Cảnh báo chuyển động", $"Thiết bị {Id} chuyển động.", TimeStamp, false));
                     }
-                    if (Battery < 5)
+                    if (Battery < 20)
                     {
-                        await notificationService.AddNewNotification(new AddNewNotificationViewModel(device.CustomerPhoneNumber, "Pin yếu", $"Thiết bị {Id} pin yếu. Longitude: {Lon}; Latitude: {Lat}", TimeStamp, false));
+                        await notificationService.AddNewNotification(new AddNewNotificationViewModel(device.CustomerPhoneNumber, "Pin yếu", $"Thiết bị {Id} pin yếu. Mức pin: {Battery}", TimeStamp, false));
                     }
                 }    
             }
@@ -142,7 +142,5 @@ namespace SawacoApi.Host.Hosting
         {
             return bool.TryParse(value?.ToString(), out bool result) ? result : false;
         }
-
-
     }
 }
