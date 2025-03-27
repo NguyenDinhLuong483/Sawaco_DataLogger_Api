@@ -603,6 +603,32 @@
   },
   {
     "ContainingType": "SawacoApi.API.Controllers.NotificationController",
+    "Method": "DeleteNotification",
+    "RelativePath": "Notification/DeleteNotification/{phoneNumber}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "phoneNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "startDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SawacoApi.API.Controllers.NotificationController",
     "Method": "GetNotificationByPhoneNumber",
     "RelativePath": "Notification/GetNotificationByPhoneNumber",
     "HttpMethod": "GET",
@@ -626,6 +652,58 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "SawacoApi.API.Controllers.NotificationController",
+    "Method": "GetNotificationByPhoneNumberAndDateRange",
+    "RelativePath": "Notification/GetNotificationByPhoneNumberAndDateRange",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "phoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "startDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SawacoApi.Intrastructure.ViewModel.Notifications.NotificationViewModel, SawacoApi.Intrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SawacoApi.API.Controllers.NotificationController",
+    "Method": "UpdateNotification",
+    "RelativePath": "Notification/UpdateNotification",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "viewModel",
+        "Type": "SawacoApi.Intrastructure.ViewModel.Notifications.UpdateNotificationViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "SawacoApi.Controllers.StolenLineController",
