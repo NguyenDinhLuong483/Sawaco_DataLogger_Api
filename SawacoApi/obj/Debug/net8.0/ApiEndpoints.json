@@ -706,6 +706,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "SawacoApi.API.Controllers.RouteOptimizeController",
+    "Method": "OptimizeRoute",
+    "RelativePath": "RouteOptimize",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "coordinates",
+        "Type": "System.Collections.Generic.List\u00601[[SawacoApi.Intrastructure.ViewModel.RouteOptimize.Coordinate, SawacoApi.Intrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SawacoApi.Intrastructure.ViewModel.RouteOptimize.Coordinate, SawacoApi.Intrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "SawacoApi.Controllers.StolenLineController",
     "Method": "AddStolenLine",
     "RelativePath": "StolenLine/AddStolenLine",

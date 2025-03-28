@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SawacoApi.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9cfe8df00362677c3e5c0c6da1395488554b92be")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5113c640ff8d3130a6532bc05e5e9c7343c89042")]
 [assembly: System.Reflection.AssemblyProductAttribute("SawacoApi.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SawacoApi.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

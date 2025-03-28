@@ -37,3 +37,5 @@ global using SawacoApi.Intrastructure.Services.Notifications;
 global using Microsoft.AspNetCore.SignalR;
 global using Microsoft.EntityFrameworkCore.Migrations;
 global using Microsoft.AspNetCore.Authorization;
+global using SawacoApi.Intrastructure.Services.RouteOptimize;
+global using SawacoApi.Intrastructure.ViewModel.RouteOptimize;
