@@ -1018,6 +1018,38 @@
         }
       }
     },
+    "/Image/upload": {
+      "post": {
+        "tags": [
+          "Image"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "file": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/Notification/GetNotificationByPhoneNumber": {
       "get": {
         "tags": [
@@ -1221,6 +1253,27 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Notification/AcknowledgeAll": {
+      "patch": {
+        "tags": [
+          "Notification"
+        ],
+        "parameters": [
+          {
+            "name": "phoneNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Success"
@@ -2140,6 +2193,10 @@
             "format": "date-time"
           },
           "blueTooth": {
+            "type": "string",
+            "nullable": true
+          },
+          "buzzer": {
             "type": "string",
             "nullable": true
           },

@@ -9,6 +9,8 @@ namespace SawacoApi.Intrastructure.Repositories.Notifications
         public Task DeleteNotification(List<Notification> notifications);
         public Task<List<Notification>> GetNotificationByPhoneNumberAndDateRange(string phoneNumber, DateTime startDate, DateTime endDate);
         public Task UpdateNotification(Notification notification);
+        public Task UpdateMultiNotification(List<Notification> notifications);
         public Task<Notification> GetNotificationByPhoneNumberAndTimestamp(string phoneNumber, string title, DateTime timestamp);
+        public Task<List<Notification>> GetNotificationByPhoneNumber(string phoneNumber);
     }
 }

@@ -18,6 +18,11 @@ namespace SawacoApi.Intrastructure.Repositories.Notifications
             await _context.SaveChangesAsync();
         }
 
+        public async Task<List<Notification>> GetNotificationByPhoneNumber(string phoneNumber)
+        {
+            return await _context.Notifications.Where(x => x.CustomerPhoneNumber == phoneNumber && !x.IsAcknowledge).ToListAsync();
+        }
+
         public async Task<List<Notification>> GetNotificationByPhoneNumberAndDateRange(string phoneNumber, DateTime startDate, DateTime endDate)
         {
             return await _context.Notifications.Where(x => x.CustomerPhoneNumber == phoneNumber && x.Timestamp >= startDate && x.Timestamp <= endDate).ToListAsync();
@@ -36,6 +41,12 @@ namespace SawacoApi.Intrastructure.Repositories.Notifications
         public async Task<bool> IsExistCustomer(string phoneNumber)
         {
             return await _context.Customers.AnyAsync(customer => customer.PhoneNumber == phoneNumber);
+        }
+
+        public async Task UpdateMultiNotification(List<Notification> notifications)
+        {
+            _context.Notifications.UpdateRange(notifications);
+            await _context.SaveChangesAsync();
         }
 
         public async Task UpdateNotification(Notification notification)

@@ -586,6 +586,38 @@
     ]
   },
   {
+    "ContainingType": "SawacoApi.API.Controllers.ImageController",
+    "Method": "UploadImage",
+    "RelativePath": "Image/upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SawacoApi.API.Controllers.NotificationController",
+    "Method": "AcknowledgeAll",
+    "RelativePath": "Notification/AcknowledgeAll",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "phoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "SawacoApi.API.Controllers.NotificationController",
     "Method": "AddNewNotification",
     "RelativePath": "Notification/AddNewNotification",

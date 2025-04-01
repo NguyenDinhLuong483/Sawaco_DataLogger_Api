@@ -182,6 +182,10 @@ namespace SawacoApi.Intrastructure.Services.GPSObjects
                 {
                     data.BlueTooth = viewModel.BlueTooth;
                 }
+                if (!string.IsNullOrEmpty(viewModel.Buzzer))
+                {
+                    data.Buzzer = viewModel.Buzzer;
+                }
                 if (!string.IsNullOrEmpty(viewModel.Emergency.ToString()))
                 {
                     data.Emergency = viewModel.Emergency;

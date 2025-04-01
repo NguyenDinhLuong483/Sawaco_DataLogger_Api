@@ -1,7 +1,4 @@
 ﻿
-using SawacoApi.Intrastructure.Services.Notifications;
-using SawacoApi.Intrastructure.Services.Stolens;
-
 namespace SawacoApi.Hubs
 {
     public sealed class ScadaHost : BackgroundService

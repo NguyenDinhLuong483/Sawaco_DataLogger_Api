@@ -70,5 +70,19 @@ namespace SawacoApi.API.Controllers
                 return new OkObjectResult("Update notification failed!");
             }
         }
+        [HttpPatch]
+        [Route("AcknowledgeAll")]
+        public async Task<IActionResult> AcknowledgeAll(string phoneNumber)
+        {
+            var isSuccess = await _notificationService.AcknowledgeAll(phoneNumber);
+            if (isSuccess)
+            {
+                return new OkObjectResult("Acknowledge successfully.");
+            }
+            else
+            {
+                return new OkObjectResult("AcknowledgeAll failed!");
+            }
+        }
     }
 }

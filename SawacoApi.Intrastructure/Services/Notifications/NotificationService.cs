@@ -57,5 +57,21 @@ namespace SawacoApi.Intrastructure.Services.Notifications
             await _notificationRepository.UpdateNotification(source);
             return await _unitOfWork.CompleteAsync();
         }
+
+        public async Task<bool> AcknowledgeAll(string phoneNumber)
+        {
+            var notifications = await _notificationRepository.GetNotificationByPhoneNumber(phoneNumber);
+            if(notifications is null || notifications.Count == 0)
+            {
+                return false;
+            }
+
+            foreach (var notification in notifications)
+            {
+                notification.IsAcknowledge = true;
+            }
+            await _notificationRepository.UpdateMultiNotification(notifications);
+            return await _unitOfWork.CompleteAsync();
+        }
     }
 }

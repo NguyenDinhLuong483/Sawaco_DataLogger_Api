@@ -1,0 +1,3 @@
+C:\My Folder\Projects\Sawaco_DataLogger_Api\SawacoApi\wwwroot\firmwareVersion1.0.0\bootloader.bin
+C:\My Folder\Projects\Sawaco_DataLogger_Api\SawacoApi\wwwroot\firmwareVersion1.0.0\partition-table.bin
+C:\My Folder\Projects\Sawaco_DataLogger_Api\SawacoApi\wwwroot\firmwareVersion1.0.0\wifi_station.bin
