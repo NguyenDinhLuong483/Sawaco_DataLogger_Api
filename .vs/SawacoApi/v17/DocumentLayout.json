@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi.intrastructure\\services\\notifications\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|solutionrelative:sawacoapi.intrastructure\\services\\notifications\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi.intrastructure\\mqttclients\\tagchangednotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|solutionrelative:sawacoapi.intrastructure\\mqttclients\\tagchangednotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi.intrastructure\\services\\notifications\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|solutionrelative:sawacoapi.intrastructure\\services\\notifications\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.API.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi\\hubs\\scadahost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.API.csproj|solutionrelative:sawacoapi\\hubs\\scadahost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.API.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.API.csproj|solutionrelative:sawacoapi\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.API.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCB88BE6-AF60-46F6-A130-D2A63102D9C9}|SawacoApi\\SawacoApi.API.csproj|solutionrelative:sawacoapi\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi.intrastructure\\repositories\\notifications\\inotificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|solutionrelative:sawacoapi.intrastructure\\repositories\\notifications\\inotificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CBF95B55-A75E-4E7B-8CE1-3F2B54EEF639}|SawacoApi.Host\\SawacoApi.Host.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi.host\\hosting\\hostworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBF95B55-A75E-4E7B-8CE1-3F2B54EEF639}|SawacoApi.Host\\SawacoApi.Host.csproj|solutionrelative:sawacoapi.host\\hosting\\hostworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C77DA895-D0B7-43DE-A80A-1CA8714D228B}|SawacoApi.Intrastructure\\SawacoApi.Intrastructure.csproj|c:\\my folder\\projects\\sawaco_datalogger_api\\sawacoapi.intrastructure\\repositories\\notifications\\notificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,54 +42,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NotificationController.cs",
-              "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\Controllers\\NotificationController.cs",
-              "RelativeDocumentMoniker": "SawacoApi\\Controllers\\NotificationController.cs",
-              "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\Controllers\\NotificationController.cs",
-              "RelativeToolTip": "SawacoApi\\Controllers\\NotificationController.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAiwEwAAABFAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "TagChangedNotification.cs",
+              "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\MQTTClients\\TagChangedNotification.cs",
+              "RelativeDocumentMoniker": "SawacoApi.Intrastructure\\MQTTClients\\TagChangedNotification.cs",
+              "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\MQTTClients\\TagChangedNotification.cs",
+              "RelativeToolTip": "SawacoApi.Intrastructure\\MQTTClients\\TagChangedNotification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T08:19:24.693Z",
+              "WhenOpened": "2025-04-05T05:52:27.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NotificationHub.cs",
+              "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\Hubs\\NotificationHub.cs",
+              "RelativeDocumentMoniker": "SawacoApi\\Hubs\\NotificationHub.cs",
+              "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\Hubs\\NotificationHub.cs",
+              "RelativeToolTip": "SawacoApi\\Hubs\\NotificationHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T05:51:21.916Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "INotificationService.cs",
-              "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Services\\Notifications\\INotificationService.cs",
-              "RelativeDocumentMoniker": "SawacoApi.Intrastructure\\Services\\Notifications\\INotificationService.cs",
-              "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Services\\Notifications\\INotificationService.cs",
-              "RelativeToolTip": "SawacoApi.Intrastructure\\Services\\Notifications\\INotificationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA9AAAAAAAAAA==",
+              "Title": "ScadaHost.cs",
+              "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\Hubs\\ScadaHost.cs",
+              "RelativeDocumentMoniker": "SawacoApi\\Hubs\\ScadaHost.cs",
+              "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi\\Hubs\\ScadaHost.cs",
+              "RelativeToolTip": "SawacoApi\\Hubs\\ScadaHost.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAADIAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T08:18:53.975Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "NotificationService.cs",
-              "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Services\\Notifications\\NotificationService.cs",
-              "RelativeDocumentMoniker": "SawacoApi.Intrastructure\\Services\\Notifications\\NotificationService.cs",
-              "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Services\\Notifications\\NotificationService.cs",
-              "RelativeToolTip": "SawacoApi.Intrastructure\\Services\\Notifications\\NotificationService.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAEMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T08:17:59.413Z",
+              "WhenOpened": "2025-04-05T05:44:16.88Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "INotificationRepository.cs",
-              "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Repositories\\Notifications\\INotificationRepository.cs",
-              "RelativeDocumentMoniker": "SawacoApi.Intrastructure\\Repositories\\Notifications\\INotificationRepository.cs",
-              "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Repositories\\Notifications\\INotificationRepository.cs",
-              "RelativeToolTip": "SawacoApi.Intrastructure\\Repositories\\Notifications\\INotificationRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABOAAAAAAAAAA==",
+              "Title": "HostWorker.cs",
+              "DocumentMoniker": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Host\\Hosting\\HostWorker.cs",
+              "RelativeDocumentMoniker": "SawacoApi.Host\\Hosting\\HostWorker.cs",
+              "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Host\\Hosting\\HostWorker.cs",
+              "RelativeToolTip": "SawacoApi.Host\\Hosting\\HostWorker.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAHMAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T08:25:44.172Z",
+              "WhenOpened": "2025-04-05T05:42:58.149Z",
               "EditorCaption": ""
             },
             {
@@ -100,7 +100,7 @@
               "RelativeDocumentMoniker": "SawacoApi.Intrastructure\\Repositories\\Notifications\\NotificationRepository.cs",
               "ToolTip": "C:\\My Folder\\Projects\\Sawaco_DataLogger_Api\\SawacoApi.Intrastructure\\Repositories\\Notifications\\NotificationRepository.cs",
               "RelativeToolTip": "SawacoApi.Intrastructure\\Repositories\\Notifications\\NotificationRepository.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAADAAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-01T08:25:44.952Z",
               "EditorCaption": ""
