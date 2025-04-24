@@ -13,7 +13,7 @@ namespace SawacoApi.Intrastructure.MQTTClients
 
         public void Update(TagChangedNotification tagChangedNotification)
         {
-            var isExist = TagChanged.FirstOrDefault(x => x.Name == tagChangedNotification.Name);
+            var isExist = TagChanged.FirstOrDefault(x => x.Name == tagChangedNotification.Name && x.LoggerId == tagChangedNotification.LoggerId);
             if (isExist is null)
             {
                 TagChanged.Add(tagChangedNotification);

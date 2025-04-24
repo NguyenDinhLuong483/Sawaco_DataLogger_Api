@@ -63,12 +63,16 @@ namespace SawacoApi.Hubs
                         break;
                     case "Bluetooth":
                         Bluetooth = metric.Value.ToString() ?? string.Empty;
+                        await _notificationHub.Clients.All.SendAsync("Bluetooth", JsonConvert.SerializeObject(metric));
                         break;
                     case "Battery":
                         Battery = ParseDouble(metric.Value);
                         break;
                     case "Move":
                         Move = ParseBool(metric.Value);
+                        break;
+                    case "Buzzer":
+                        await _notificationHub.Clients.All.SendAsync("Buzzer", JsonConvert.SerializeObject(metric));
                         break;
                 }
                 _buffer.Update(metric);

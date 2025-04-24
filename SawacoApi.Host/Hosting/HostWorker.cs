@@ -93,35 +93,6 @@ namespace SawacoApi.Host.Hosting
                     var updateDevice = new UpdateGPSDeviceViewModel();
                     var device = await deviceService.GetGPSDeviceById(Id);
                     var objectConnected = await objectService.FindObjectConnected(Id);
-                    
-                    if (Stolen && Lat != 0 && Lon != 0)
-                    {
-                        updateDevice.HostingUpdate(Lon, Lat, Battery, Temp, true, Bluetooth, TimeStamp);
-                        await deviceService.UpdateGPSDeviceStatus(updateDevice, Id);
-                        await history.AddBatteryHistory(new AddBatteryHistoryViewModel(Id, Battery, TimeStamp));
-                        await history.AddDevicePositionHistory(new AddDevicePositionHistoryViewModel(Id, Lon, Lat, TimeStamp));
-                        await history.AddObjectPositionHistory(new AddObjectPositionHistoryViewModel(objectConnected.Id, Lon, Lat, TimeStamp));
-                        await stolenLineService.AddNewStolenLine(new AddStolenLineViewModel(Id, Lon, Lat, Battery, TimeStamp));
-                        await notificationService.AddNewNotification(new AddNewNotificationViewModel(device.CustomerPhoneNumber, "Vùng an toàn", $"Thiết bị {Id} rời khỏi vùng an toàn. Longitude: {Lon}; Latitude: {Lat}", TimeStamp, false));
-                    }
-                    else if (!Stolen && Lat != 0 && Lon != 0)
-                    {
-                        updateDevice.HostingUpdate(Lon, Lat, Battery, Temp, false, Bluetooth, TimeStamp);
-                        await deviceService.UpdateGPSDeviceStatus(updateDevice, Id);
-                        await history.AddBatteryHistory(new AddBatteryHistoryViewModel(Id, Battery, TimeStamp));
-                        await history.AddDevicePositionHistory(new AddDevicePositionHistoryViewModel(Id, Lon, Lat, TimeStamp));
-                        await history.AddObjectPositionHistory(new AddObjectPositionHistoryViewModel(objectConnected.Id, Lon, Lat, TimeStamp));
-                        await notificationService.AddNewNotification(new AddNewNotificationViewModel(device.CustomerPhoneNumber, "Cập nhật vị trí", $"Thiết bị {Id} cập nhật vị trí. Longitude: {Lon}; Latitude: {Lat}", TimeStamp, false));
-
-                    }
-                    else
-                    {
-                        updateDevice.HostingUpdate(device.Longitude, device.Latitude, Battery, Temp, Stolen, Bluetooth, TimeStamp);
-                        await history.AddBatteryHistory(new AddBatteryHistoryViewModel(Id, Battery, TimeStamp));
-                        await history.AddDevicePositionHistory(new AddDevicePositionHistoryViewModel(Id, device.Longitude, device.Latitude, TimeStamp));
-                        await history.AddObjectPositionHistory(new AddObjectPositionHistoryViewModel(objectConnected.Id, device.Longitude, device.Latitude, TimeStamp));
-                        await deviceService.UpdateGPSDeviceStatus(updateDevice, Id);
-                    }
                     if (Move)
                     {
                         await notificationService.AddNewNotification(new AddNewNotificationViewModel(device.CustomerPhoneNumber, "Cảnh báo chuyển động", $"Thiết bị {Id} chuyển động.", TimeStamp, false));
@@ -130,6 +101,37 @@ namespace SawacoApi.Host.Hosting
                     {
                         await notificationService.AddNewNotification(new AddNewNotificationViewModel(device.CustomerPhoneNumber, "Pin yếu", $"Thiết bị {Id} pin yếu. Mức pin: {Battery}", TimeStamp, false));
                     }
+                    if (Stolen && Lat != 0 && Lon != 0)
+                    {
+                        updateDevice.HostingUpdate(Lon, Lat, Battery, Temp, true, Bluetooth, TimeStamp);
+                        await deviceService.UpdateGPSDeviceStatus(updateDevice, Id);
+                        await stolenLineService.AddNewStolenLine(new AddStolenLineViewModel(Id, Lon, Lat, Battery, TimeStamp));
+                        await notificationService.AddNewNotification(new AddNewNotificationViewModel(device.CustomerPhoneNumber, "Vùng an toàn", $"Thiết bị {Id} rời khỏi vùng an toàn. Longitude: {Lon}; Latitude: {Lat}", TimeStamp, false));
+                        await history.AddBatteryHistory(new AddBatteryHistoryViewModel(Id, Battery, TimeStamp));
+                        await history.AddDevicePositionHistory(new AddDevicePositionHistoryViewModel(Id, Lon, Lat, TimeStamp));
+                        await history.AddObjectPositionHistory(new AddObjectPositionHistoryViewModel(objectConnected.Id, Lon, Lat, TimeStamp));
+                        
+                    }
+                    else if (!Stolen && Lat != 0 && Lon != 0)
+                    {
+                        updateDevice.HostingUpdate(Lon, Lat, Battery, Temp, false, Bluetooth, TimeStamp);
+                        await deviceService.UpdateGPSDeviceStatus(updateDevice, Id);
+                        await notificationService.AddNewNotification(new AddNewNotificationViewModel(device.CustomerPhoneNumber, "Cập nhật vị trí", $"Thiết bị {Id} cập nhật vị trí. Longitude: {Lon}; Latitude: {Lat}", TimeStamp, false));
+                        await history.AddBatteryHistory(new AddBatteryHistoryViewModel(Id, Battery, TimeStamp));
+                        await history.AddDevicePositionHistory(new AddDevicePositionHistoryViewModel(Id, Lon, Lat, TimeStamp));
+                        await history.AddObjectPositionHistory(new AddObjectPositionHistoryViewModel(objectConnected.Id, Lon, Lat, TimeStamp));
+                        
+                    }
+                    else
+                    {
+                        updateDevice.HostingUpdate(device.Longitude, device.Latitude, Battery, Temp, Stolen, Bluetooth, TimeStamp);
+                        await deviceService.UpdateGPSDeviceStatus(updateDevice, Id);
+                        await history.AddBatteryHistory(new AddBatteryHistoryViewModel(Id, Battery, TimeStamp));
+                        await history.AddDevicePositionHistory(new AddDevicePositionHistoryViewModel(Id, device.Longitude, device.Latitude, TimeStamp));
+                        await history.AddObjectPositionHistory(new AddObjectPositionHistoryViewModel(objectConnected.Id, device.Longitude, device.Latitude, TimeStamp));
+                        
+                    }
+                    
                 }    
             }
         }

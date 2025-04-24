@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SawacoApi.Intrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2f145db2e336597d79d301f13ac732d3a6b36e66")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1ea59e8f0ee98d708ec319f24c8f7fead0ed7184")]
 [assembly: System.Reflection.AssemblyProductAttribute("SawacoApi.Intrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SawacoApi.Intrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
