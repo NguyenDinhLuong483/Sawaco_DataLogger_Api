@@ -186,6 +186,14 @@ namespace SawacoApi.Intrastructure.Services.GPSObjects
                 {
                     data.Buzzer = viewModel.Buzzer;
                 }
+                if (!string.IsNullOrEmpty(viewModel.Sleep.ToString()))
+                {
+                    data.Sleep = viewModel.Sleep;
+                }
+                if (!string.IsNullOrEmpty(viewModel.Threshold.ToString()))
+                {
+                    data.Threshold = viewModel.Threshold;
+                }
                 if (!string.IsNullOrEmpty(viewModel.Emergency.ToString()))
                 {
                     data.Emergency = viewModel.Emergency;

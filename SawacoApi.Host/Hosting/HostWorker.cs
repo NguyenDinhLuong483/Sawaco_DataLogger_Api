@@ -41,7 +41,15 @@ namespace SawacoApi.Host.Hosting
 
             string[] splitTopic = topic.Split('/');
             string Id = splitTopic[2];
-            var metrics = JsonConvert.DeserializeObject<List<TagChangedNotification>>(payloadMessage);
+            List<TagChangedNotification> metrics;
+            try
+            {
+                metrics = JsonConvert.DeserializeObject<List<TagChangedNotification>>(payloadMessage);
+            }
+            catch
+            {
+                metrics = new List<TagChangedNotification>();
+            }
             if (metrics is null)
             {
                 return;
@@ -55,7 +63,14 @@ namespace SawacoApi.Host.Hosting
                 {
                     case "Longitude":
                         Lon = ParseDouble(metric.Value);
-                        TimeStamp = DateTime.Parse(DateTime.UtcNow.AddHours(7).ToShortDateString() + " " + metric.Timestamp.ToString("HH:mm:ss"));
+                        if (metric.Timestamp == DateTime.MinValue)
+                        {
+                            TimeStamp = DateTime.Parse(DateTime.UtcNow.AddHours(7).ToString("yyyy-MM-dd HH:mm:ss")); 
+                        }
+                        else
+                        {
+                            TimeStamp = DateTime.Parse(DateTime.UtcNow.AddHours(7).ToShortDateString() + " " + metric.Timestamp.ToString("HH:mm:ss"));
+                        }
                         break;
                     case "Latitude":
                         Lat = ParseDouble(metric.Value);
@@ -126,6 +141,7 @@ namespace SawacoApi.Host.Hosting
                     {
                         updateDevice.HostingUpdate(device.Longitude, device.Latitude, Battery, Temp, Stolen, Bluetooth, TimeStamp);
                         await deviceService.UpdateGPSDeviceStatus(updateDevice, Id);
+                        await notificationService.AddNewNotification(new AddNewNotificationViewModel(device.CustomerPhoneNumber, "Cập nhật vị trí", $"Thiết bị {Id} cập nhật vị trí. Longitude: {device.Longitude}; Latitude: {device.Latitude}", TimeStamp, false));
                         await history.AddBatteryHistory(new AddBatteryHistoryViewModel(Id, Battery, TimeStamp));
                         await history.AddDevicePositionHistory(new AddDevicePositionHistoryViewModel(Id, device.Longitude, device.Latitude, TimeStamp));
                         await history.AddObjectPositionHistory(new AddObjectPositionHistoryViewModel(objectConnected.Id, device.Longitude, device.Latitude, TimeStamp));

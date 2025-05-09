@@ -27,6 +27,21 @@ namespace SawacoApi.API.Controllers
             }
         }
 
+        [HttpPut]
+        [Route("UpdateBatteryHistory/gpsId={id}")]
+        public async Task<IActionResult> UpdateBatteryHistory(DateTime startDate, DateTime endDate, int battery, string id)
+        {
+            var isSuccess = await _historyService.UpdateBatteryHistory(id, startDate, endDate, battery);
+            if (isSuccess)
+            {
+                return new OkObjectResult("Update battery history successfully.");
+            }
+            else
+            {
+                return new OkObjectResult("Error!");
+            }
+        }
+
         [HttpGet]
         [Route("GetBatteryHistory/DeviceId={DeviceId}")]
         public async Task<List<BatteryHistoryViewModel>> GetBatteryHistory([FromRoute] string DeviceId,[FromQuery] DateTime startDate, [FromQuery] DateTime endDate)

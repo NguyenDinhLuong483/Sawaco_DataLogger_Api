@@ -55,5 +55,23 @@ namespace SawacoApi.Intrastructure.Services.Histories
             var result = _mapper.Map<List<ObjectPositionHistory>, List<ObjectPositionHistoryViewModel>>(source);
             return result;
         }
+
+        public async Task<bool> UpdateBatteryHistory(string id, DateTime startDate, DateTime endDate, int battery)
+        {
+            var source = await _historyRepository.GetBatteryHistoryAsync(id, startDate, endDate);
+            if(source == null || source.Count == 0)
+            {
+                return false;
+            }
+            else
+            {
+                foreach (var item in source)
+                {
+                    item.Value = battery;
+                }
+                await _historyRepository.UpdateBatteryHistory(source);
+                return await _unitOfWork.CompleteAsync();
+            }
+        }
     }
 }

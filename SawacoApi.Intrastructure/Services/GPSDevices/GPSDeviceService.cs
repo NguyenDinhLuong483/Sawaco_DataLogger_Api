@@ -54,8 +54,6 @@ namespace SawacoApi.Intrastructure.Services.GPSDevices
             var isExist = await _GPSDeviceRepository.IsExistDevice(deviceId);
             if (isExist)
             {
-                var topic = $"GPS/Setting/{deviceId}";
-                var data = new MqttSettingObject();
                 var device = await _GPSDeviceRepository.GetDeviceByIdAsync(deviceId);
                 if (!string.IsNullOrEmpty(updateDevice.CustomerPhoneNumber))
                 {

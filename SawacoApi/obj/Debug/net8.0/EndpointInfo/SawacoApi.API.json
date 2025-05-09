@@ -764,6 +764,52 @@
         }
       }
     },
+    "/History/UpdateBatteryHistory/gpsId={id}": {
+      "put": {
+        "tags": [
+          "History"
+        ],
+        "parameters": [
+          {
+            "name": "startDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "battery",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/History/GetBatteryHistory/DeviceId={DeviceId}": {
       "get": {
         "tags": [
@@ -2199,6 +2245,13 @@
           "buzzer": {
             "type": "string",
             "nullable": true
+          },
+          "sleep": {
+            "type": "boolean"
+          },
+          "threshold": {
+            "type": "number",
+            "format": "double"
           },
           "emergency": {
             "type": "boolean"

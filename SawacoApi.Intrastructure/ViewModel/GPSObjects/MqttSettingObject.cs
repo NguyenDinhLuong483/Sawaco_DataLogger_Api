@@ -12,5 +12,7 @@ namespace SawacoApi.Intrastructure.ViewModel.GPSObjects
         public string Buzzer { get; set; } = "";
         public bool Emergency {  get; set; }
         public string PhoneNumber { get; set; } = "";
+        public bool Sleep { get; set; } 
+        public double Threshold { get; set; }
     }
 }

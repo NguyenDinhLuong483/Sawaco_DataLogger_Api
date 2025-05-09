@@ -74,6 +74,12 @@ namespace SawacoApi.Hubs
                     case "Buzzer":
                         await _notificationHub.Clients.All.SendAsync("Buzzer", JsonConvert.SerializeObject(metric));
                         break;
+                    case "Sleep":
+                        await _notificationHub.Clients.All.SendAsync("Sleep", JsonConvert.SerializeObject(metric));
+                        break;
+                    case "Threshold":
+                        await _notificationHub.Clients.All.SendAsync("Threshold", JsonConvert.SerializeObject(metric));
+                        break;
                 }
                 _buffer.Update(metric);
                 var json = JsonConvert.SerializeObject(metric);

@@ -6,7 +6,7 @@ namespace SawacoApi.Intrastructure.MQTTClients
         public string LoggerId { get; set; }
         public string Name { get; set; }
         public object Value { get; set; }
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; set; } = DateTime.MinValue;
 
         public TagChangedNotification(string id, string name, object value, DateTime timestamp)
         {

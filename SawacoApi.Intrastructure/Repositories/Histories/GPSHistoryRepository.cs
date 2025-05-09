@@ -36,5 +36,12 @@ namespace SawacoApi.Intrastructure.Repositories.Histories
         {
             return await _context.ObjectPositionHistories.Where(x => x.GPSObjectId == ObjectId && x.Timestamp >= startDate && x.Timestamp <= endDate).ToListAsync();
         }
+
+        public async Task<bool> UpdateBatteryHistory(List<BatteryHistory> batteryHistory)
+        {
+            _context.BatteryHistories.UpdateRange(batteryHistory);
+            return await _context.SaveChangesAsync() > 0;
+
+        }
     }
 }

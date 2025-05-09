@@ -586,6 +586,37 @@
     ]
   },
   {
+    "ContainingType": "SawacoApi.API.Controllers.HistoryController",
+    "Method": "UpdateBatteryHistory",
+    "RelativePath": "History/UpdateBatteryHistory/gpsId={id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "startDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "battery",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "SawacoApi.API.Controllers.ImageController",
     "Method": "UploadImage",
     "RelativePath": "Image/upload",
