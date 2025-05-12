@@ -10,5 +10,6 @@ namespace SawacoApi.Intrastructure.Repositories.Histories
         public Task<List<BatteryHistory>> GetBatteryHistoryAsync(string DeviceId, DateTime startDate, DateTime endDate);
         public Task<List<DevicePositionHistory>> GetDevicePositionHistoryAsync(string DeviceId, DateTime startDate, DateTime endDate);
         public Task<List<ObjectPositionHistory>> GetObjectPositionHistoryAsync(string ObjectId, DateTime startDate, DateTime endDate);
+        public bool DeleteBatteryHistory(string id, DateTime startDate, DateTime endDate);
     }
 }

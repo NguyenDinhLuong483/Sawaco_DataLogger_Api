@@ -44,7 +44,7 @@ namespace SawacoApi.API.Controllers
 
         [HttpGet]
         [Route("GetBatteryHistory/DeviceId={DeviceId}")]
-        public async Task<List<BatteryHistoryViewModel>> GetBatteryHistory([FromRoute] string DeviceId,[FromQuery] DateTime startDate, [FromQuery] DateTime endDate)
+        public async Task<List<BatteryHistoryViewModel>> GetBatteryHistory([FromRoute] string DeviceId, [FromQuery] DateTime startDate, [FromQuery] DateTime endDate)
         {
             return await _historyService.GetBatteryHistory(DeviceId, startDate, endDate);
         }
@@ -91,6 +91,21 @@ namespace SawacoApi.API.Controllers
         public async Task<List<ObjectPositionHistoryViewModel>> GetDeviceObjectHistory([FromRoute] string ObjectId, [FromQuery] DateTime startDate, [FromQuery] DateTime endDate)
         {
             return await _historyService.GetObjectPositionHistory(ObjectId, startDate, endDate);
+        }
+
+        [HttpDelete]
+        [Route("DeleteBatteryHistory/{id}")]
+        public async Task<IActionResult> DeleteBatteryHistory(string id, DateTime startDate, DateTime endDate)
+        {
+            var isSuccess = await _historyService.DeleteBatteryHistory(id, startDate, endDate);
+            if (isSuccess)
+            {
+                return new OkObjectResult("Delete battery history successfully.");
+            }
+            else
+            {
+                return new OkObjectResult("Error!");
+            }
         }
     }
 }

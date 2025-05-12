@@ -22,6 +22,12 @@ namespace SawacoApi.Intrastructure.Repositories.Histories
             await _context.ObjectPositionHistories.AddAsync(devicePositionHistory);
         }
 
+        public bool DeleteBatteryHistory(string id, DateTime startDate, DateTime endDate)
+        {
+            _context.BatteryHistories.RemoveRange(_context.BatteryHistories.Where(x => x.GPSDeviceId == id && x.Timestamp >= startDate && x.Timestamp <= endDate));
+            return _context.SaveChanges() > 0;
+        }
+
         public async Task<List<BatteryHistory>> GetBatteryHistoryAsync(string DeviceId, DateTime startDate, DateTime endDate)
         {
             return await _context.BatteryHistories.Where(x => x.GPSDeviceId == DeviceId && x.Timestamp >= startDate && x.Timestamp <= endDate).ToListAsync();

@@ -14,7 +14,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowSpecificOrigins",
                builder =>
                {
-                   builder.WithOrigins("https://luanvan2.vercel.app", "http://localhost:3000")
+                   builder.WithOrigins("https://luanvan2.vercel.app", "https://gpstracker-viamlab-hcmut.vercel.app", "http://localhost:3000")
                           .AllowAnyMethod()
                           .AllowAnyHeader()
                           .AllowCredentials();

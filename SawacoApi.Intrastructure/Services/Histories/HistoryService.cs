@@ -73,5 +73,11 @@ namespace SawacoApi.Intrastructure.Services.Histories
                 return await _unitOfWork.CompleteAsync();
             }
         }
+
+        public Task<bool> DeleteBatteryHistory(string id, DateTime startDate, DateTime endDate)
+        {
+            _historyRepository.DeleteBatteryHistory(id, startDate, endDate);
+            return _unitOfWork.CompleteAsync();
+        }
     }
 }
